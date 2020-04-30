@@ -33,9 +33,9 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 
 /*  Passport  */
-//  const passport = require('passport');
-//  app.use(passport.initialize());
-//  app.use(passport.session());
+ const passport = require('passport');
+ app.use(passport.initialize());
+ app.use(passport.session());
 
 /*  Passport Local Mongoose  */
 //  const passportLocalMongoose = require('passport-local-mongoose');
