@@ -1,5 +1,7 @@
 /* Make the customizations here */
-
+$theme-colors: (
+    "info": indigo
+    );
 /* ------------------------ */
 /* import bootstrap to set changes */
 @import "~bootstrap/scss/bootstrap";

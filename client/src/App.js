@@ -18,7 +18,7 @@ function App() {
         <h1 className="text-center">Hello Group 2!</h1>
       </div>
       </Wrapper>
-      <Footer  fixed="bottom"/>
+      <Footer fixed="bottom"/>
     </div>
   );
 }

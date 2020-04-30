@@ -1,2 +1,10 @@
 @import "custom";
+@import url('href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400&display=swap');
 @import "~bootstrap/scss/bootstrap";
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Bangers', cursive;
+}
