@@ -45,7 +45,7 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/unlockit';
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /*  Models  */
-//  const db = require('./models');
+ const db = require('./models');
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
