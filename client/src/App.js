@@ -15,7 +15,7 @@ function App() {
       <Navbar fixed="top" className='bg-info'/>
       <Wrapper>
       <div className="container">
-        <h1 className="text-center">Hello Group 2!</h1>
+        <h2 className="text-center">Hello Group 2!</h2>
       </div>
       </Wrapper>
       <Footer fixed="bottom"/>

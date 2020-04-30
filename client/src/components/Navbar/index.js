@@ -4,8 +4,8 @@ import "./style.css";
 function Navbar() {
   return (
     <div>
-      <ul>
-      <li><h2>Unlock It!</h2></li>
+      <ul className="bg-info">
+      <li><h1>Unlock It!</h1></li>
       </ul>
     </div>
   );
