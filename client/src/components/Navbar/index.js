@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div>
       <ul className="bg-info">
-      <li><h1>Unlock It!</h1></li>
+      <li><h1>Unlock It! <img src="./images/unlock.gif"/></h1></li>
       </ul>
     </div>
   );

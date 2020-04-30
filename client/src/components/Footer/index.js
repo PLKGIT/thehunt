@@ -4,8 +4,8 @@ import "./style.css";
 function Footer() {
     return (
         <div>
-            <ul className="bg-info text-center">
-                <li>&copy; Copyright 2020 Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, Nida Memon</li>
+            <ul className="bg-info">
+                <li><p className="text-center">&copy; Copyright 2020 Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, Nida Memon</p></li>
             </ul>
         </div>
     )
