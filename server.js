@@ -33,16 +33,16 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 
 /*  Passport  */
- const passport = require('passport');
- app.use(passport.initialize());
- app.use(passport.session());
+//  const passport = require('passport');
+//  app.use(passport.initialize());
+//  app.use(passport.session());
 
 /*  Passport Local Mongoose  */
- const passportLocalMongoose = require('passport-local-mongoose');
+//  const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/unlockit';
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/unlockit';
+// mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /*  Models  */
 //  const db = require('./models');
