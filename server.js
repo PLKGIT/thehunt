@@ -14,7 +14,7 @@ app.use(express.json());
 
 /*  Express Session  */
 const expressSession = require('express-session')({
-  secret: process.env.SECRET_KEY,
+  secret: "iT20kC20uL20nU",
   resave: false,
   saveUninitialized: false
 });
