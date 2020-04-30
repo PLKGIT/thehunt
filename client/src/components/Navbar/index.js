@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div>
       <ul>
-      <li><h1>Unlock It!</h1></li>
+      <li><h2>Unlock It!</h2></li>
       </ul>
     </div>
   );

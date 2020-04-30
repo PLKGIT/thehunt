@@ -5,7 +5,7 @@ ul {
   padding-top: 20px;
   padding-bottom: 20px;
   overflow: hidden;
-  background-color: #333;
+  /* background-color: #333; */
 }
 
 li {
