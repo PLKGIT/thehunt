@@ -27,10 +27,10 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /*  Mongoose  */
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 /*  Axios  */
-// const axios = require('axios');
+const axios = require('axios');
 
 /*  Passport  */
 //  const passport = require('passport');
