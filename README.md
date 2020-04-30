@@ -28,7 +28,7 @@ TBD
 ### Technologies, Libraries, and Tools Used**
 
 #### GitHub
-* https://github.com/PLKGIT/unlockit
+* https://github.com/PLKGIT/thehunt
 * Version control system
 
 #### HTML and CSS
@@ -119,9 +119,9 @@ The project team must design and build a full-stack MERN application using the M
 5. Nida Memon
 
 ### GitHub Repository
-[GitHub](https://github.com/PLKGIT/unlockit) at https://github.com/PLKGIT/unlockit.
+[GitHub](https://github.com/PLKGIT/thehunt) at https://github.com/PLKGIT/thehunt.
 
 ### Deployed Application
-[Unlock It](TBD) deployed at TBD.
+[Unlock It](https://unlock-it.herokuapp.com/) deployed at https://unlock-it.herokuapp.com/.
 
 Copyright &copy; 2020 | Sonal Bhoraniya, Jyochsna Gongal, Pam Kelly, Hebah Memon, and Nida Memon
