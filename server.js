@@ -38,7 +38,7 @@ const axios = require('axios');
  app.use(passport.session());
 
 /*  Passport Local Mongoose  */
-//  const passportLocalMongoose = require('passport-local-mongoose');
+ const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/unlockit';
