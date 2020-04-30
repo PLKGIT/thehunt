@@ -3,10 +3,8 @@ import "./style.css";
 
 function Navbar() {
   return (
-    <div>
-      <ul className="bg-info">
-      <li><h1>Unlock It!</h1></li>
-      </ul>
+    <div className="container bg-info text-white py-3">
+      <h1>Unlock It!</h1>
     </div>
   );
 }
