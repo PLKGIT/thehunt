@@ -32,8 +32,8 @@ const axios = require('axios');
  const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/unlockit';
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
 
 /*  Express Session  */
 const expressSession = require('express-session')({
