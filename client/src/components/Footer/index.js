@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div>
             <ul>
-                <li><h5>&copy; Copyright 2020 Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, Nida Memon</h5></li>
+                <li><center><h5>&copy; Copyright 2020 Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, Nida Memon</h5></center></li>
             </ul>
         </div>
     )

@@ -12,15 +12,6 @@ require('dotenv').config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-/*  Express Session  */
-const expressSession = require('express-session')({
-  secret: "iT20kC20uL20nU",
-  resave: false,
-  saveUninitialized: false
-});
-
-app.use(expressSession);
-
 /*  Static Assets  */
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname,'client/build')));
@@ -43,6 +34,15 @@ const axios = require('axios');
 /*  MongoDB Connection  */
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/unlockit';
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+/*  Express Session  */
+const expressSession = require('express-session')({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+});
+
+app.use(expressSession);
 
 /*  Models  */
  const db = require('./models');

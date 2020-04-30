@@ -1,6 +1,6 @@
 {
   "short_name": "Lock It!",
-  "name": "Create React App Sample",
+  "name": "React MERN application",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
