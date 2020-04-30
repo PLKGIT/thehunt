@@ -6,16 +6,19 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <Navbar fixed="top"/>
+      <Wrapper>
       <div className="container">
-        <h1 class="text-center">Hello Group 2!</h1>
+        <h1 className="text-center">Hello Group 2!</h1>
       </div>
-      <Footer />
+      </Wrapper>
+      <Footer  fixed="bottom"/>
     </div>
   );
 }
