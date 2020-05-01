@@ -2,7 +2,7 @@
 import React from "react";
 
 /*  Login Page  */
-import Login from "./Login";
+// import Login from "./Login";
 // import StudentPlay from "./StudentPlay";
 // import StudentHistory from "./StudentHistory";
 
@@ -15,7 +15,7 @@ function Student() {
       <h4 className="text-secondary">
         NAVIGATION
       <ul>
-      <li><a href={Student}>Student Dashboard</a></li>
+      <li><a href={"/student"}>Student Dashboard</a></li>
           <li>Logout</li>
         </ul>
       </h4>
@@ -26,7 +26,7 @@ function Student() {
           <li>Hunts History</li>
         </ul>
       </h4>
-      <h3 className="text-center"><a href={Login}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
       <br />
     </div>
   );

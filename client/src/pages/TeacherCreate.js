@@ -14,7 +14,7 @@ function TeacherCreate() {
       <h4 className="text-secondary">
         NAVIGATION
         <ul>
-        <li><a href={Teacher}>Teacher</a> Dashboard</li>
+        <li><a href={"/teacher"}>Teacher Dashboard</a></li>
           <li>Logout</li>
         </ul>
       </h4>
@@ -26,7 +26,7 @@ function TeacherCreate() {
         </ul>
         FORM
       </h4>
-      <h3 className="text-center"><a href={Login}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
             <br />
         </div>
   );

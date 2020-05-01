@@ -16,19 +16,19 @@ function Teacher() {
       <h4 className="text-secondary">
         NAVIGATION
         <ul>
-          <li><a href={Teacher}>Teacher</a> Dashboard</li>
+        <li><a href={"/teacher"}>Teacher Dashboard</a></li>
           <li>Logout</li>
         </ul>
       </h4>
       <h4 className="text-info">
         ICON OPTIONS
             <ul>
-          <li><a href={TeacherCreate}>Create</a> Hunts</li>
-          <li><a href={TeacherManageHunts}>Manage</a> Hunts</li>
-          <li><a href={TeacherManageStudents}>Manage</a> Students</li>
+          <li><a href={"/teachercreate"}>Create</a> Hunts</li>
+          <li><a href={"/teachermanagehunts"}>Manage</a> Hunts</li>
+          <li><a href={"/teachermanagestudents"}>Manage</a> Students</li>
         </ul>
       </h4>
-      <h3 className="text-center"><a href={Login}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
       <br />
     </div>
   );
