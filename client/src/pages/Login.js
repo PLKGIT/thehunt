@@ -2,15 +2,15 @@
 import React from 'react';
 
 /*  Pages  */
-import Admin from "./pages/Admin";
-import Teacher from "./pages/Teacher";
-import TeacherCreate from "./pages/TeacherCreate";
-import TeacherManageHunts from "./pages/TeacherManageHunts";
-import TeacherManageStudents from "./pages/TeacherManageStudents";
-import Student from "./pages/Student";
-import StudentPlay from "./pages/StudentPlay";
-import StudentHistory from "./pages/StudentHistory";
-import NotFound from "./pages/NotFound";
+import Admin from "./Admin";
+import Teacher from "./Teacher";
+import TeacherCreate from "./TeacherCreate";
+import TeacherManageHunts from "./TeacherManageHunts";
+import TeacherManageStudents from "./TeacherManageStudents";
+import Student from "./Student";
+import StudentPlay from "./StudentPlay";
+import StudentHistory from "./StudentHistory";
+import NotFound from "./NotFound";
 
 /*  React Bootstrap Components  */
 import Row from 'react-bootstrap/Row';
@@ -93,19 +93,19 @@ function Login() {
                 <Col>
                     <h4 className="text-info">
                     <ul>
-                        <li><a href={"/admin"}>Admin</a> Dashboard</li>
-                        <li><a href={"/teacher"}>Teacher</a> Dashboard</li>
+                        <li><a href={Admin}>Admin</a> Dashboard</li>
+                        <li><a href={Teacher}>Teacher</a> Dashboard</li>
                         <ul>
-                        <li><a href={"/teachercreate"}>Create Hunts</a></li>
-                        <li><a href={"/teachermanagehunts"}>Manage Hunts</a></li>
-                        <li><a href={"/teachermanagestudents"}>Manage Students</a></li>
+                        <li><a href={TeacherCreate}>Create Hunts</a></li>
+                        <li><a href={TeacherManageHunts}>Manage Hunts</a></li>
+                        <li><a href={TeacherManageStudents}>Manage Students</a></li>
                         </ul>
-                        <li><a href={"/student"}>Student</a> Dashboard</li>
+                        <li><a href={Student}>Student</a> Dashboard</li>
                         <ul>
-                        <li><a href={"/studentplay"}>Play Hunts</a></li>
-                        <li><a href={"/studenthistory"}>Hunts History</a></li>
+                        <li><a href={StudentPlay}>Play Hunts</a></li>
+                        <li><a href={StudentHistory}>Hunts History</a></li>
                         </ul>
-                        <li><a href={"/junk"}>404 Error Page</a></li>
+                        <li><a href={Junk}>404 Error Page</a></li>
                     </ul>
                     </h4>
                 </Col>
