@@ -1,6 +1,10 @@
 /*  React  */
 import React from "react";
 
+/*  Pages  */
+import Login from "./Login";
+import Student from "./Student";
+
 /*  Create StudentPlay  */
 function StudentPlay() {
     return (
@@ -10,14 +14,14 @@ function StudentPlay() {
             <h4 className="text-secondary">
                 NAVIGATION
                 <ul>
-                    <li>Student Dashboard</li>
+                <li><a href={Student}>Student Dashboard</a></li>
                     <li>Logout</li>
                 </ul>
             </h4>
             <h4 className="text-info">
                 HUNTS HISTORY CONTENT
       </h4>
-            <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><a href={Login}>/Unlock It Home</a></h3>
             <br />
         </div>
     );

@@ -1,6 +1,10 @@
 /*  React  */
 import React from "react";
 
+/*  Pages  */
+import Login from "./Login";
+import Teacher from "./Teacher";
+
 /*  Create TeacherCreate  */
 function TeacherCreate() {
   return (
@@ -10,7 +14,7 @@ function TeacherCreate() {
       <h4 className="text-secondary">
         NAVIGATION
         <ul>
-          <li>Teacher Dashboard</li>
+        <li><a href={Teacher}>Teacher</a> Dashboard</li>
           <li>Logout</li>
         </ul>
       </h4>
@@ -22,7 +26,7 @@ function TeacherCreate() {
         </ul>
         FORM
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><a href={Login}>/Unlock It Home</a></h3>
             <br />
         </div>
   );

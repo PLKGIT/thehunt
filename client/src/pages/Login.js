@@ -105,7 +105,7 @@ function Login() {
                         <li><a href={StudentPlay}>Play Hunts</a></li>
                         <li><a href={StudentHistory}>Hunts History</a></li>
                         </ul>
-                        <li><a href={Junk}>404 Error Page</a></li>
+                        <li><a href={NotFound}>404 Error Page</a></li>
                     </ul>
                     </h4>
                 </Col>

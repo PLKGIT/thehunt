@@ -1,6 +1,9 @@
 /*  React  */
 import React from "react";
 
+/*  Login Page  */
+import Login from "./Login";
+
 /*  Create Admin  */
 function Admin() {
   return (
@@ -21,7 +24,7 @@ function Admin() {
           <li>Add/Edit a Student</li>
         </ul>
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><a href={Login}>/Unlock It Home</a></h3>
       <br />
     </div>
   );
