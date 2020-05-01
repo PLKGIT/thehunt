@@ -1,6 +1,17 @@
 /*  React  */
 import React from 'react';
 
+/*  Pages  */
+import Admin from "./pages/Admin";
+import Teacher from "./pages/Teacher";
+import TeacherCreate from "./pages/TeacherCreate";
+import TeacherManageHunts from "./pages/TeacherManageHunts";
+import TeacherManageStudents from "./pages/TeacherManageStudents";
+import Student from "./pages/Student";
+import StudentPlay from "./pages/StudentPlay";
+import StudentHistory from "./pages/StudentHistory";
+import NotFound from "./pages/NotFound";
+
 /*  React Bootstrap Components  */
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
