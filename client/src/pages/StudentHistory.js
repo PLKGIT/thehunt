@@ -14,7 +14,6 @@ function StudentHistory() {
                 NAVIGATION
                 <ul>
                 <li><Link to="/student">Student Dashboard</Link></li>
-                    <li>Logout</li>
                 </ul>
             </h4>
             <h4 className="text-info">

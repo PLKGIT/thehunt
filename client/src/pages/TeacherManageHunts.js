@@ -14,7 +14,6 @@ function TeacherManageHunts() {
         NAVIGATION
         <ul>
         <li><Link to="/teacher">Teacher Dashboard</Link></li>
-          <li>Logout</li>
         </ul>
       </h4>
       <h4 className="text-info">

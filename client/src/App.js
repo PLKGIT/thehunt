@@ -17,7 +17,7 @@ import StudentHistory from "./pages/StudentHistory";
 import NotFound from "./pages/NotFound";
 
 /*  Components  */
-import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
 /*  Create App  */
@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
     <div>
-      <Navbar fixed="top"/>
+      <Nav fixed="top"/>
       <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/admin" component={Admin} />

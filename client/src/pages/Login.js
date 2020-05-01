@@ -18,7 +18,7 @@ function Login() {
         <div className="container">
             <Row>
                 <Col>
-                    <h1 className="text-center text-secondary"><img src="./images/unlock.gif" alt="Key in lock gif" width="150px" />&emsp;Login to Unlock It!</h1>
+                    <h1 className="text-center text-secondary"><img src="./images/unlock.gif" alt="Key in lock gif" width="150px" />Login to Hunt!</h1>
                 </Col>
             </Row>
             <Row>

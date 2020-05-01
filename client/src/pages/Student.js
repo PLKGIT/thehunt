@@ -14,13 +14,6 @@ function Student() {
     <div className="container">
       <br />
       <h1 className="text-center text-secondary">STUDENT DASHBOARD</h1>
-      <h4 className="text-secondary">
-        NAVIGATION
-      <ul>
-      <li><Link to="/student">Student Dashboard</Link></li>
-          <li>Logout</li>
-        </ul>
-      </h4>
       <h4 className="text-info">
         CAROUSEL OPTIONS
         <ul>

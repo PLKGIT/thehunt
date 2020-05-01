@@ -14,8 +14,7 @@ function StudentPlay() {
                 NAVIGATION
         <ul>
         <li><Link to="/student">Student Dashboard</Link></li>
-                    <li>Logout</li>
-                </ul>
+        </ul>
             </h4>
             <h4 className="text-info">
                 HUNT CONTENT

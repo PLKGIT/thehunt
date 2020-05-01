@@ -13,12 +13,6 @@ function Admin() {
     <div className="container">
       <br />
       <h1 className="text-center text-secondary">ADMIN DASHBOARD</h1>
-      <h4 className="text-secondary">
-        NAVIGATION
-      <ul>
-          <li>Logout</li>
-        </ul>
-      </h4>
       <h4 className="text-info">
         TABBED OPTIONS
         <ul>
