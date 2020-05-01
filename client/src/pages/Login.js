@@ -2,8 +2,8 @@
 import React from 'react';
 
 /*  Pages  */
-import Admin from "./Admin";
-import Teacher from "./Teacher";
+// import Admin from "./Admin";
+// import Teacher from "./Teacher";
 import TeacherCreate from "./TeacherCreate";
 import TeacherManageHunts from "./TeacherManageHunts";
 import TeacherManageStudents from "./TeacherManageStudents";
@@ -93,8 +93,8 @@ function Login() {
                 <Col>
                     <h4 className="text-info">
                     <ul>
-                        <li><a href={Admin}>Admin</a> Dashboard</li>
-                        <li><a href={Teacher}>Teacher</a> Dashboard</li>
+                        <li><a href={"./Admin"}>Admin</a> Dashboard</li>
+                        <li><a href={"./Teacher"}>Teacher</a> Dashboard</li>
                         <ul>
                         <li><a href={TeacherCreate}>Create Hunts</a></li>
                         <li><a href={TeacherManageHunts}>Manage Hunts</a></li>
