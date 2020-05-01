@@ -89,7 +89,7 @@ function Login() {
                         <li><Link to="/admin">Admin</Link> Dashboard</li>
                         <li><Link to="/teacher">Teacher</Link> Dashboard</li>
                         <ul>
-                        <li><Link to="/teachercreatehunts">Create Hunts</Link></li>
+                        <li><Link to="/teachercreate">Create Hunts</Link></li>
                         <li><Link to="/teachermanagehunts">Manage Hunts</Link></li>
                         <li><Link to="/teachermanagestudents">Manage Students</Link></li>
                         </ul>
