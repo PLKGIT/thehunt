@@ -2,8 +2,8 @@
 import React from "react";
 
 /*  Pages  */
-import Login from "./Login";
-import Teacher from "./Teacher";
+// import Login from "./Login";
+// import Teacher from "./Teacher";
 
 
 /*  Create TeacherManageHunts  */

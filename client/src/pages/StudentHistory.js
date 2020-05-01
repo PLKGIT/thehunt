@@ -2,8 +2,8 @@
 import React from "react";
 
 /*  Pages  */
-import Login from "./Login";
-import Student from "./Student";
+// import Login from "./Login";
+// import Student from "./Student";
 
 /*  Create StudentPlay  */
 function StudentPlay() {

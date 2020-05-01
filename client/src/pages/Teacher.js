@@ -2,10 +2,10 @@
 import React from "react";
 
 /*  Pages  */
-import Login from "./Login";
-import TeacherCreate from "./TeacherCreate";
-import TeacherManageHunts from "./TeacherManageHunts";
-import TeacherManageStudents from "./TeacherManageStudents";
+// import Login from "./Login";
+// import TeacherCreate from "./TeacherCreate";
+// import TeacherManageHunts from "./TeacherManageHunts";
+// import TeacherManageStudents from "./TeacherManageStudents";
 
 /*  Create Teacher  */
 function Teacher() {
