@@ -13,7 +13,7 @@ function StudentPlay() {
             <h4 className="text-secondary">
                 NAVIGATION
                 <ul>
-                <li><a href={"/student"}>Student Dashboard</a></li>
+                <li><Link to="/student">Student Dashboard</Link></li>
                     <li>Logout</li>
                 </ul>
             </h4>

@@ -13,7 +13,7 @@ function TeacherCreate() {
       <h4 className="text-secondary">
         NAVIGATION
         <ul>
-        <li><a href={"/teacher"}>Teacher Dashboard</a></li>
+        <li><Link to="/teacher">Teacher Dashboard</Link></li>
           <li>Logout</li>
         </ul>
       </h4>
