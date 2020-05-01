@@ -1,16 +1,8 @@
 /*  React  */
 import React from 'react';
 
-/*  Pages  */
-// import Admin from "./Admin";
-// import Teacher from "./Teacher";
-// import TeacherCreate from "./TeacherCreate";
-// import TeacherManageHunts from "./TeacherManageHunts";
-// import TeacherManageStudents from "./TeacherManageStudents";
-// import Student from "./Student";
-// import StudentPlay from "./StudentPlay";
-// import StudentHistory from "./StudentHistory";
-// import NotFound from "./NotFound";
+/*  React Router  */
+import {Link} from "react-router-dom";
 
 /*  React Bootstrap Components  */
 import Row from 'react-bootstrap/Row';
@@ -93,19 +85,20 @@ function Login() {
                 <Col>
                     <h4 className="text-info">
                     <ul>
-                        <li><a href={"./admin"}>Admin</a> Dashboard</li>
-                        <li><a href={"./teacher"}>Teacher</a> Dashboard</li>
+
+                        <li><Link to="/admin">Admin</Link> Dashboard</li>
+                        <li><Link to="/teacher">Teacher</Link> Dashboard</li>
                         <ul>
-                        <li><a href={"./teachercreate"}>Create Hunts</a></li>
-                        <li><a href={"./teachermanagehunts"}>Manage Hunts</a></li>
-                        <li><a href={"./teachermanagestudents"}>Manage Students</a></li>
+                        <li><Link to="/teachercreatehunts">Create Hunts</Link></li>
+                        <li><Link to="/teachermanagehunts">Manage Hunts</Link></li>
+                        <li><Link to="/teachermanagestudents">Manage Students</Link></li>
                         </ul>
-                        <li><a href={"./student"}>Student</a> Dashboard</li>
+                        <li><Link to="/student">Student</Link> Dashboard</li>
                         <ul>
-                        <li><a href={"./studentplay"}>Play Hunts</a></li>
-                        <li><a href={"./studenthistory"}>Hunts History</a></li>
+                        <li><Link to="/studentplay">Play Hunts</Link></li>
+                        <li><Link to="/studenthistory">Hunts History</Link></li>
                         </ul>
-                        <li><a href={"./NotFound"}>404 Error Page</a></li>
+                        <li><Link to="/junk">404 Error Page</Link></li>
                     </ul>
                     </h4>
                 </Col>

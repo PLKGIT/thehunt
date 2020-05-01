@@ -1,8 +1,10 @@
 /*  React  */
 import React from "react";
 
+/*  React Router  */
+import {Link} from "react-router-dom";
+
 /*  Pages  */
-// import Login from "./Login";
 // import TeacherCreate from "./TeacherCreate";
 // import TeacherManageHunts from "./TeacherManageHunts";
 // import TeacherManageStudents from "./TeacherManageStudents";
@@ -28,7 +30,7 @@ function Teacher() {
           <li><a href={"/teachermanagestudents"}>Manage</a> Students</li>
         </ul>
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
       <br />
     </div>
   );

@@ -1,6 +1,9 @@
 /*  React  */
 import React from "react";
 
+/*  React Router  */
+import {Link} from "react-router-dom";
+
 /*  Login Page  */
 // import Login from "./Login";
 
@@ -24,7 +27,7 @@ function Admin() {
           <li>Add/Edit a Student</li>
         </ul>
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
       <br />
     </div>
   );

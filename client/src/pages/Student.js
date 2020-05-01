@@ -1,8 +1,10 @@
 /*  React  */
 import React from "react";
 
-/*  Login Page  */
-// import Login from "./Login";
+/*  React Router  */
+import {Link} from "react-router-dom";
+
+/*  Pages  */
 // import StudentPlay from "./StudentPlay";
 // import StudentHistory from "./StudentHistory";
 
@@ -26,7 +28,7 @@ function Student() {
           <li>Hunts History</li>
         </ul>
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
       <br />
     </div>
   );

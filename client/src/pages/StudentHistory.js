@@ -1,9 +1,8 @@
 /*  React  */
 import React from "react";
 
-/*  Pages  */
-// import Login from "./Login";
-// import Student from "./Student";
+/*  React Router  */
+import {Link} from "react-router-dom";
 
 /*  Create StudentPlay  */
 function StudentPlay() {
@@ -21,7 +20,7 @@ function StudentPlay() {
             <h4 className="text-info">
                 HUNTS HISTORY CONTENT
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
             <br />
         </div>
     );

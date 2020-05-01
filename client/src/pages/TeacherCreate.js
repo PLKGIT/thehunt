@@ -1,9 +1,8 @@
 /*  React  */
 import React from "react";
 
-/*  Pages  */
-// import Login from "./Login";
-// import Teacher from "./Teacher";
+/*  React Router  */
+import {Link} from "react-router-dom";
 
 /*  Create TeacherCreate  */
 function TeacherCreate() {
@@ -26,7 +25,7 @@ function TeacherCreate() {
         </ul>
         FORM
       </h4>
-      <h3 className="text-center"><a href={"/"}>/Unlock It Home</a></h3>
+      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
             <br />
         </div>
   );
