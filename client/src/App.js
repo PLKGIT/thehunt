@@ -1,28 +1,49 @@
+/*  React  */
 import React from 'react';
-import "./App.scss";
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert';
-import Form from 'react-bootstrap/Card';
-import Card from 'react-bootstrap/Card';
+
+/*  React Router  */
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+/*  Pages  */
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
+import Teacher from "./pages/Teacher";
+import TeacherCreate from "./pages/TeacherCreate";
+import TeacherManageHunts from "./pages/TeacherManageHunts";
+import TeacherManageStudents from "./pages/TeacherManageStudents";
+import Student from "./pages/Student";
+import StudentPlay from "./pages/StudentPlay";
+import StudentHistory from "./pages/StudentHistory";
+import NotFound from "./pages/NotFound";
+
+/*  Components  */
 import Navbar from "./components/Navbar";
-import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
+
+/*  Create App  */
 
 function App() {
   return (
+    <Router>
     <div>
-      <Navbar fixed="top" className='bg-info'/>
-      <Wrapper>
-      <div className="container">
-        <h2 className="text-center text-info"><img src="./images/unlock.gif" width="150px"/>&emsp;Register | Login</h2>
-      </div>
-      </Wrapper>
+      <Navbar fixed="top"/>
+      <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/admin" component={Admin} />
+          <Route exact path="/teacher" component={Teacher} />
+          <Route exact path="/teachercreate" component={TeacherCreate} />
+          <Route exact path="/teachermanagehunts" component={TeacherManageHunts} />
+          <Route exact path="/teachermanagestudents" component={TeacherManageStudents} />
+          <Route exact path="/student" component={Student} />
+          <Route exact path="/studentplay" component={StudentPlay} />
+          <Route exact path="/studenthistory" component={StudentHistory} />
+          <Route component={NotFound} />
+      </Switch>
       <Footer fixed="bottom"/>
     </div>
+    </Router>
   );
 }
 
+/*  Export App  */
 export default App;

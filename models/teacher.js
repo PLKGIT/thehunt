@@ -27,10 +27,6 @@ const teacher = new Schema({
         type: String,
         required:true
     },
-    org_id: {
-        type: String,
-        required: true
-    },
     group_id: {
         type: Array,
         required: true
