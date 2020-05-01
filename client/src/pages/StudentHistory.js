@@ -4,8 +4,8 @@ import React from "react";
 /*  React Router  */
 import {Link} from "react-router-dom";
 
-/*  Create StudentPlay  */
-function StudentPlay() {
+/*  Create StudentHistory  */
+function StudentHistory() {
     return (
         <div className="container">
             <br />
@@ -26,5 +26,5 @@ function StudentPlay() {
     );
 }
 
-/*  Export StudentPlay  */
-export default StudentPlay;
+/*  Export StudentHistory  */
+export default StudentHistory;
