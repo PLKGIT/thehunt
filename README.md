@@ -4,7 +4,7 @@
 TBD
 
 ### Project Images
-TBD
+![](https://res.cloudinary.com/damplk/image/upload/v1588292809/portal/unlock_lat1l9.gif)
 
 ### Proposed Future Developments
 TBD
@@ -44,47 +44,61 @@ UI/UX design and styling and frontend content
 * Application architecture
 
 #### React.js
-TBD
+* https://reactjs.org/
+* Interactive user interface.
 
 #### Node.js
-TBD
+* https://nodejs.org/en/
+* JavaScript runtime engine.
 
 #### Express.js
-TBD
+* https://expressjs.com/
+* Node.js web application framework.
 
-#### Express Session
-TBD
+#### Express Session NPM
+* https://www.npmjs.com/package/express-session
+* Express JS Session middleware.
 
-#### Axios
-TBD
+#### Axios NPM
+* https://www.npmjs.com/package/axios
+* Promise based HTTP client for the browser and node.js.
 
 #### MongoDB
-TBD
+* https://www.mongodb.com/
+* NoSQL document-based, distributed database.
 
-#### Mongoose
-TBD
+#### Mongoose NPM
+* https://mongoosejs.com/
+* MongoDB object modeling tool for node.js.
 
-#### Passportjs
-TBD
+#### Mongoose-Type-Email NPM
+* https://www.npmjs.com/package/mongoose-type-email
+* NPM that validates email input for Mongoose.
 
-#### Passport-local-mongoose
-TBD
+#### Passport JS NPM
+* http://www.passportjs.org/
+* Authentication middleware for Node.js.
+
+#### Passport-local-mongoose NPM
+* https://www.npmjs.com/package/passport-local-mongoose
+* Mongoose plugin that simplifies building username and password login.
 
 ### Other Tools
 
-#### DOTENV
-TBD
+#### DOTENV NPM
+* https://www.npmjs.com/package/dotenv
+* Loads environment variables from a .env file into process.env. 
 
 #### IF-ENV
-TBD
+* https://www.npmjs.com/package/if-env
+* Helps simplify npm scripts.
 
-#### SASS
-TBD
-
-#### React Materialize
-TBD
+#### React-Bootstrap
+* https://react-bootstrap.github.io/
+* Front-end framework for React.
 
 ### Backend MongoDB Database
+Database: heroku_px2kmps9
 
 #### Documents
 * Org
@@ -95,14 +109,13 @@ TBD
 * Hunt
 * Score
 
-#### Schema and Seed Files
+#### Schema
 TBD
-
 
 ### Project Assets
 
 **Application URL**
-TBD
+[https://unlock-it.herokuapp.com/](https://unlock-it.herokuapp.com/)
 
 **Application File Structure**
 
