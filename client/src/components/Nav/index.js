@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import "../../styles/App.scss";
 
 /*  React Bootstrap Components  */
-import Navbar from 'react-bootstrap/NavBar';
+import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 
 /*  Create Nav */
