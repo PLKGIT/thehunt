@@ -3,7 +3,7 @@ require('mongoose-type-email');
 
 const Schema = mongoose.Schema;
 
-const favorite = new Schema({
+const favoriteSchema = new Schema({
     favorite_id: {
         type: String
     },
@@ -29,6 +29,6 @@ const favorite = new Schema({
     }
 });
 
-const Favorite = mongoose.model("Favorite", favorite);
+const Favorite = mongoose.model("Favorite", favoriteSchema);
 
 module.exports = Favorite;

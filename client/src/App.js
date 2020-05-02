@@ -2,7 +2,7 @@
 import React from 'react';
 
 /*  React Router  */
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 /*  Pages  */
 import Login from "./pages/Login";
@@ -24,9 +24,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-    <div>
-      <Nav fixed="top"/>
-      <Switch>
+      <div>
+        <Nav />
+        <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/admin" component={Admin} />
           <Route exact path="/teacher" component={Teacher} />
@@ -37,9 +37,9 @@ function App() {
           <Route exact path="/studentplay" component={StudentPlay} />
           <Route exact path="/studenthistory" component={StudentHistory} />
           <Route component={NotFound} />
-      </Switch>
-      <Footer/>
-    </div>
+        </Switch>
+        <Footer />
+      </div>
     </Router>
   );
 }

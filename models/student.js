@@ -4,7 +4,7 @@ const email = require('mongoose-type-email');
 
 const Schema = mongoose.Schema;
 
-const student = new Schema({
+const studentSchema = new Schema({
     student_id: {
         type: String
     },
@@ -38,6 +38,6 @@ const student = new Schema({
     }
 });
 
-const Student = mongoose.model("Student", student);
+const Student = mongoose.model("Student", studentSchema);
 
 module.exports = Student;

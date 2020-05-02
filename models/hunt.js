@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const hunt = new Schema({
+const huntSchema = new Schema({
     hunt_id: {
         type: String
     },
@@ -49,6 +49,6 @@ const hunt = new Schema({
     }
 });
 
-const Hunt = mongoose.model("Hunt", hunt);
+const Hunt = mongoose.model("Hunt", huntSchema);
 
 module.exports = Hunt;

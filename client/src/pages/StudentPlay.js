@@ -21,7 +21,7 @@ class StudentPlay extends Component {
                 <h4 className="text-info">
                     HUNT CONTENT
       </h4>
-                <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
+      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
                 <br />
             </div>
         );

@@ -3,7 +3,7 @@ require('mongoose-type-email');
 
 const Schema = mongoose.Schema;
 
-const teacher = new Schema({
+const teacherSchema = new Schema({
     teacher_id: {
         type: String
     },
@@ -37,6 +37,6 @@ const teacher = new Schema({
     }
 });
 
-const Teacher = mongoose.model("Teacher", teacher);
+const Teacher = mongoose.model("Teacher", teacherSchema);
 
 module.exports = Teacher;
