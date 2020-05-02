@@ -41,8 +41,8 @@ const axios = require('axios');
 //  const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
 
 /*  Models  */
  const db = require('./models');
