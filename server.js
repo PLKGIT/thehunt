@@ -13,13 +13,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // /*  Express Session  */
-// const expressSession = require('express-session')({
-//   secret: process.env.SESSION_SECRET,
-//   resave: false,
-//   saveUninitialized: false
-// });
+const expressSession = require('express-session')({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+});
 
-// app.use(expressSession);
+app.use(expressSession);
 
 /*  Static Assets  */
 if (process.env.NODE_ENV === 'production') {
@@ -33,19 +33,19 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 
 /*  Passport  */
-//  const passport = require('passport');
-//  app.use(passport.initialize());
-//  app.use(passport.session());
+ const passport = require('passport');
+ app.use(passport.initialize());
+ app.use(passport.session());
 
 /*  Passport Local Mongoose  */
-//  const passportLocalMongoose = require('passport-local-mongoose');
+ const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
-// mongoose.connect(
-//   process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
 
 /*  Models  */
-//  const db = require('./models');
+ const db = require('./models');
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
