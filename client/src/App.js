@@ -38,7 +38,7 @@ function App() {
           <Route exact path="/studenthistory" component={StudentHistory} />
           <Route component={NotFound} />
       </Switch>
-      <Footer fixed="bottom"/>
+      <Footer/>
     </div>
     </Router>
   );
