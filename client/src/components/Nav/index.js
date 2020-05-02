@@ -17,7 +17,7 @@ class Nav extends Component {
     return (
       <div className="container">
         <Navbar bg="info">
-          <Navbar.Brand ><Link to="/"><h1 className="text-white display-1">Unlock It!</h1></Link>
+          <Navbar.Brand ><Link to="/"><h1 className="text-white display-2">Unlock It!</h1></Link>
           </Navbar.Brand>
           <Form className="inline ml-auto">
             <span className="text-white"><h6>Logout&emsp;</h6></span>
