@@ -19,13 +19,13 @@ class Carousel extends Component {
         return (
             <div className="carousel">
                 <figure>
-                    <img src="../images/animals.png" alt="" />
-                    <img src="../images/world.png" alt="" />
-                    <img src="../images/inventor.png" alt="" />
-                    <img src="../images/comingsoon.png" alt="" />
-                    <img src="../images/bulb.png" alt="" />
-                    <img src="../images/comingsoon2.png" alt="" />
-                    <img src="../images/geography.png" alt="" />
+                    <img src="../images/animals.png" alt="animals" />
+                    <img src="../images/world.png" alt="world" />
+                    <img src="../images/inventor.png" alt="inventor" />
+                    <img src="../images/comingsoon.png" alt="coming soon" />
+                    <img src="../images/bulb.png" alt="bulb" />
+                    <img src="../images/comingsoon2.png" alt="coming soon" />
+                    <img src="../images/geography.png" alt="geography" />
 
                 </figure>
                 <nav>

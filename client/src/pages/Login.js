@@ -17,6 +17,11 @@ class Login extends Component {
     render() {
         return (
             <div className="container">
+                 <Row>
+                    <Col>
+                        <br/>
+                    </Col>
+                </Row>
                 <Row>
                     <Col>
                         <h1 className="text-center text-secondary"><img src="./images/unlock.gif" alt="Key in lock gif" width="150px" />Login to Hunt!</h1>
