@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 /*  React Router  */
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 /*  React Bootstrap Components  */
 import Row from 'react-bootstrap/Row';
@@ -82,7 +82,7 @@ class Login extends Component {
                         <p><hr /></p>
                     </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                     <Col>
                         <h4 className="text-info">
                             <ul>
@@ -102,7 +102,7 @@ class Login extends Component {
                             </ul>
                         </h4>
                     </Col>
-                </Row>
+                </Row> */}
             </div>
         )
     }

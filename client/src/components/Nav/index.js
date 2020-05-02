@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 /*  React Router  */
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 /*  App SCSS  */
 import "../../styles/App.scss";
@@ -17,7 +17,7 @@ class Nav extends Component {
     return (
       <div className="container">
         <Navbar bg="info">
-          <Navbar.Brand ><Link to="/"><h1 className="text-white display-2">Unlock It!</h1></Link>
+          <Navbar.Brand ><h1 className="text-white display-3">Unlock It!</h1>
           </Navbar.Brand>
           <Form className="inline ml-auto">
             <span className="text-white"><h6>Logout&emsp;</h6></span>

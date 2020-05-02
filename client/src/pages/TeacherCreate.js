@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 /*  React Router  */
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 /*  Create TeacherCreate  */
 class TeacherCreate extends Component {
@@ -14,7 +14,7 @@ class TeacherCreate extends Component {
         <h4 className="text-secondary">
           NAVIGATION
         <ul>
-            <li><Link to="/teacher">Teacher Dashboard</Link></li>
+            {/* <li><Link to="/teacher">Teacher Dashboard</Link></li> */}
           </ul>
         </h4>
         <h4 className="text-info">
@@ -25,7 +25,7 @@ class TeacherCreate extends Component {
           </ul>
         FORM
       </h4>
-        <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
+        {/* <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3> */}
         <br />
       </div>
     );

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 /*  React Router  */
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 /*  Pages  */
 // import Login from "./Login";
@@ -22,7 +22,7 @@ class Admin extends Component {
             <li>Add/Edit a Student</li>
           </ul>
         </h4>
-        <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
+        {/* <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3> */}
         <br />
       </div>
     );
