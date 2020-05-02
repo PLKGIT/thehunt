@@ -1,12 +1,14 @@
 /*  React  */
-import React from "react";
+import React, { Component } from 'react';
 
 /*  React Router  */
 import {Link} from "react-router-dom";
 
 /*  Create StudentHistory  */
-function StudentHistory() {
-    return (
+class StudentHistory extends Component {
+  Render(){
+
+        return (
         <div className="container">
             <br />
             <h1 className="text-center text-secondary">HUNTS HISTORY</h1>
@@ -23,6 +25,8 @@ function StudentHistory() {
             <br />
         </div>
     );
+          
+  }
 }
 
 /*  Export StudentHistory  */

@@ -1,33 +1,36 @@
 /*  React  */
-import React from "react";
+import React, { Component } from 'react';
 
 /*  React Router  */
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 /*  Create TeacherManageHunts  */
-function TeacherManageHunts() {
-  return (
-    <div className="container">
-      <br />
-      <h1 className="text-center text-secondary">MANAGE HUNTS</h1>
-      <h4 className="text-secondary">
-        NAVIGATION
+class TeacherManageHunts extends Component {
+  render() {
+
+    return (
+      <div className="container">
+        <br />
+        <h1 className="text-center text-secondary">MANAGE HUNTS</h1>
+        <h4 className="text-secondary">
+          NAVIGATION
         <ul>
-        <li><Link to="/teacher">Teacher Dashboard</Link></li>
-        </ul>
-      </h4>
-      <h4 className="text-info">
-        LIST
+            <li><Link to="/teacher">Teacher Dashboard</Link></li>
+          </ul>
+        </h4>
+        <h4 className="text-info">
+          LIST
         <ul>
-          <li>All Created Hunts - sorted by pending, active, complete</li>
-          <li>Hunt Reports</li>
-        </ul>
+            <li>All Created Hunts - sorted by pending, active, complete</li>
+            <li>Hunt Reports</li>
+          </ul>
         FORM (EDITS)
       </h4>
-      <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
-            <br />
-        </div>
-  );
+        <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
+        <br />
+      </div>
+    );
+  }
 }
 
 /*  Export TeacherManageHunts  */
