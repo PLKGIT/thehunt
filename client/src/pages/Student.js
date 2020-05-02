@@ -2,11 +2,7 @@
 import React, { Component } from 'react';
 
 /*  React Router  */
-// import { Link } from "react-router-dom";
-
-/*  Pages  */
-// import StudentPlay from "./StudentPlay";
-// import StudentHistory from "./StudentHistory";
+import { Link } from "react-router-dom";
 
 /*  Create Student  */
 class Student extends Component {
@@ -22,7 +18,7 @@ class Student extends Component {
             <li>Hunts History</li>
           </ul>
         </h4>
-        {/* <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3> */}
+        <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
         <br />
       </div>
     );
