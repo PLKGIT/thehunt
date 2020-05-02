@@ -6,8 +6,7 @@ import {Link} from "react-router-dom";
 
 /*  Create StudentHistory  */
 class StudentHistory extends Component {
-  Render(){
-
+  render(){
         return (
         <div className="container">
             <br />
@@ -25,7 +24,6 @@ class StudentHistory extends Component {
             <br />
         </div>
     );
-          
   }
 }
 
