@@ -11,21 +11,23 @@ class Teacher extends Component {
       <div className="container">
         <br />
         <h1 className="text-center text-secondary">TEACHER DASHBOARD</h1>
-        <h4 className="text-secondary">
+        <h5 className="text-secondary">
           NAVIGATION
         <ul>
             <li><Link to="/teacher">Teacher Dashboard</Link></li>
           </ul>
-        </h4>
-        <h4 className="text-info">
+        </h5>
+        <h5 className="text-info">
           ICON OPTIONS
             <ul>
             <li><Link to="/teachercreate">Create</Link> Hunts</li>
             <li><Link to="/teachermanagehunts">Manage</Link> Hunts</li>
             <li><Link to="/teachermanagestudents">Manage</Link> Students</li>
           </ul>
-        </h4>
-        <h3 className="text-center"><Link to="/">/Unlock It Home</Link></h3>
+        </h5>
+        <h5 className="text-info text-center">
+      <Link to="/"><img src="./images/back.png" alt="Back icon" width="50px"/>Unlock It Home</Link>
+        </h5>
         <br />
       </div>
     );

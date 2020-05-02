@@ -15,15 +15,13 @@ import Form from 'react-bootstrap/Form';
 class Nav extends Component {
   render() {
     return (
-      <div className="container">
-        <Navbar bg="info">
+        <Navbar fixed="top" bg="info">
           <Navbar.Brand ><Link to="/" style={{ textDecoration: 'none' }}><h1 className="text-white display-3">Unlock It!</h1></Link>
           </Navbar.Brand>
           <Form className="inline ml-auto">
             <span className="text-white"><h6>Logout&emsp;</h6></span>
           </Form>
         </Navbar>
-      </div>
     );
   }
 }

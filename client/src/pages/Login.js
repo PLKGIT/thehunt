@@ -81,23 +81,25 @@ class Login extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <h4 className="text-info">
+                        <h5 className="text-info">
                             <ul>
                                 <li><Link to="/admin">Admin</Link> Dashboard</li>
                                 <li><Link to="/teacher">Teacher</Link> Dashboard</li>
                                 <ul>
-                                    <li><Link to="/teachercreate">Create Hunts</Link></li>
-                                    <li><Link to="/teachermanagehunts">Manage Hunts</Link></li>
-                                    <li><Link to="/teachermanagestudents">Manage Students</Link></li>
+                                    <li><Link to="/teachercreate">Create Hunts</Link> | <Link to="/teachermanagehunts">Manage Hunts</Link> | <Link to="/teachermanagestudents">Manage Students</Link></li>
                                 </ul>
                                 <li><Link to="/student">Student</Link> Dashboard</li>
                                 <ul>
-                                    <li><Link to="/studentplay">Play Hunts</Link></li>
-                                    <li><Link to="/studenthistory">Hunts History</Link></li>
+                                    <li><Link to="/studentplay">Play Hunts</Link> | <Link to="/studenthistory">Hunts History</Link></li>
                                 </ul>
                                 <li><Link to="/junk">404 Error Page</Link></li>
                             </ul>
-                        </h4>
+                        </h5>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <br />
                     </Col>
                 </Row>
             </div>
