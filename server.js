@@ -45,7 +45,7 @@ const expressSession = require('express-session')({
 app.use(expressSession);
 
 /*  Models  */
- const db = require('./models');
+//  const db = require('./models');
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
