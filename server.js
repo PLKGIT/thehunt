@@ -45,7 +45,7 @@ const axios = require('axios');
 //   process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
 
 /*  Models  */
- const db = require('./models');
+//  const db = require('./models');
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;

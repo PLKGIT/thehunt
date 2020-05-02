@@ -20,6 +20,10 @@
   "bugs": {
     "url": "https://github.com/PLKGIT/thehunt/issues"
   },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "connect-ensure-login": "^0.1.1",
@@ -31,9 +35,5 @@
     "mongoose-type-email": "^1.0.12",
     "passport": "^0.4.1",
     "passport-local-mongoose": "^6.0.1"
-  },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.3"
   }
 }
