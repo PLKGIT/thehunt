@@ -17,10 +17,10 @@ class Nav extends Component {
     return (
       <div className="container">
         <Navbar bg="info">
-          <Navbar.Brand ><h1 className="text-white display-3">Unlock It!</h1>
+          <Navbar.Brand ><Link to="/" style={{ textDecoration: 'none' }}><h1 className="text-white display-3">Unlock It!</h1></Link>
           </Navbar.Brand>
           <Form className="inline ml-auto">
-            <span className="text-white"><Link to="/"><h6>Logout&emsp;</h6></Link></span>
+            <span className="text-white"><h6>Logout&emsp;</h6></span>
           </Form>
         </Navbar>
       </div>
