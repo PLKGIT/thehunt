@@ -33,9 +33,7 @@ class Login extends Component {
                                             <Form.Group controlId="formTeacherEmail">
                                                 <Form.Label>Email Address</Form.Label>
                                                 <Form.Control type="email" placeholder="Enter email" />
-
                                             </Form.Group>
-
                                             <Form.Group controlId="formTeacherPassword">
                                                 <Form.Label>Password</Form.Label>
                                                 <Form.Control type="password" placeholder="Password" />
@@ -43,10 +41,10 @@ class Login extends Component {
                                                     Your password is case sensitive.
                                             </Form.Text>
                                             </Form.Group>
-                                            <center><Button variant="warning" id="teacherSubmit" type="submit" block>
+                                            <Button variant="warning" id="teacherSubmit" type="submit" block>
                                                 Login
                                         </Button>
-                                            </center>
+
                                         </Form>
                                     </Card.Text>
                                 </Card.Body>
@@ -67,10 +65,9 @@ class Login extends Component {
                                                 Your password is case sensitive.
                                             </Form.Text>
                                         </Form.Group>
-                                        <center><Button variant="warning" id="studentSubmit" type="submit" block>
+                                        <Button variant="warning" id="studentSubmit" type="submit" block>
                                             Login
                                         </Button>
-                                        </center>
                                     </Form>
                                 </Card.Body>
                             </Card>

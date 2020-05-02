@@ -23,7 +23,7 @@ app.use(expressSession);
 
 /*  Static Assets  */
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname,'client/build')));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 }
 
 /*  Mongoose  */
@@ -33,19 +33,21 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 
 /*  Passport  */
- const passport = require('passport');
- app.use(passport.initialize());
- app.use(passport.session());
+const passport = require('passport');
+app.use(passport.initialize());
+app.use(passport.session());
 
 /*  Passport Local Mongoose  */
- const passportLocalMongoose = require('passport-local-mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/unlockit",{ useNewUrlParser: true, useUnifiedTopology: true});
+  process.env.MONGODB_URI || "mongodb://localhost/unlockit", { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB successfully connected"))
+  .catch(err => console.log(err));
 
 /*  Models  */
- const db = require('./models');
+const db = require('./models');
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
