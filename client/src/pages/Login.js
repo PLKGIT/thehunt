@@ -85,7 +85,6 @@ function Login() {
                 <Col>
                     <h4 className="text-info">
                     <ul>
-
                         <li><Link to="/admin">Admin</Link> Dashboard</li>
                         <li><Link to="/teacher">Teacher</Link> Dashboard</li>
                         <ul>

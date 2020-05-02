@@ -9,7 +9,7 @@ function Footer() {
     return (
         <div className="container">
             <p className="bg-info text-center text-white py-1">&copy; Copyright 2020 All rights reserved.<br />
-            Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, Nida Memon</p>
+            Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, and Nida Memon</p>
         </div>
     )
 }

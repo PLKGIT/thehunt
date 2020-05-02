@@ -4,7 +4,7 @@ import React from "react";
 /*  React Router  */
 import {Link} from "react-router-dom";
 
-/*  Login Page  */
+/*  Pages  */
 // import Login from "./Login";
 
 /*  Create Admin  */
