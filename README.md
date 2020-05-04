@@ -75,6 +75,11 @@ UI/UX design and styling and frontend content
 * http://www.passportjs.org/
 * Authentication middleware for Node.js.
 
+#### JSONWEBTOKEN NPM
+* https://www.npmjs.com/package/jsonwebtoken
+
+* Node JS implementation of JSON Web Token (JWT) to safely transfer claims between two (2) parties.
+
 ### Other Tools
 
 #### DOTENV NPM
@@ -85,20 +90,31 @@ UI/UX design and styling and frontend content
 * https://www.npmjs.com/package/if-env
 * Helps simplify npm scripts.
 
+#### is-empty
+* https://www.npmjs.com/package/is-empty
+* Checks whether a value is empty.
+
 #### React-Bootstrap
 * https://react-bootstrap.github.io/
 * Front-end framework for React.
 
-### Backend MongoDB Database
-Database: heroku_px2kmps9
+#### Validator.JS
+* https://www.npmjs.com/package/validator
+* A library of string validators and sanitizers.
 
-#### Documents
+### Backend MongoDB Database
+
+#### Database Name
+* heroku_px2kmps9
+
+#### Collections
 * Org
+* Admin
 * Teacher
 * Group
-* Student
 * Favorite
 * Hunt
+* Student
 * Score
 
 #### Schema
@@ -106,15 +122,16 @@ TBD
 
 ### Project Assets
 
-**Application URL**
+#### Application URL
 [https://unlock-it.herokuapp.com/](https://unlock-it.herokuapp.com/)
 
-**Application File Structure**
+#### File Structure
+* TBD
 
 ## Development Details
 
 ### Requirements
-The project team must design and build a full-stack MERN application using the Model-View-Controller (MVC) paradigm.  The application must use Node, Express, React, and MongoDB and be deployed to Heroku.
+The project team must design and build a full-stack application using the Model-View-Controller (MVC) paradigm.  The application must use Node, Express, React, and a backend database and be deployed to Heroku.
 
 ### Development Team 
 1. Sonal Bhoraniya
