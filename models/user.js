@@ -1,38 +1,40 @@
-/*  Mongoose  */
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 /*  Schema  */
-const groupSchema = new Schema({
-    group_id: {
+const userSchema = new Schema({
+    user_id: {
         type: String
     },
-    name: {
+    first_name: {
         type: String,
         required: true
     },
-    grade_level: {
+    last_name: {
         type: String,
         required: true
     },
-    subject: {
+    email: {
         type: String,
-        required:true
+        allowBlank: false
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    role: {
+        type: String,
+        required: true
+    },
+    group_id: {
+        type: Array,
+        required: true
     },
     hunt_id: {
         type: Array,
         required: true
-    },
-    teacher_id: {
-        type: String,
-        required: true
-    },
-    student_id: {
-        type: Array,
-        required: true
     }
 });
+const User = mongoose.model('user', userSchema);
 
-const Group = mongoose.model("group", groupSchema);
-
-module.exports = Group;
+module.exports = User;

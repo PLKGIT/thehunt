@@ -1,13 +1,17 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
-require('mongoose-type-email');
-
 const Schema = mongoose.Schema;
 
+/*  Schema  */
 const favoriteSchema = new Schema({
     favorite_id: {
         type: String
     },
     title: {
+        type: String,
+        required: true
+    },
+    image: {
         type: String,
         required: true
     },
@@ -29,6 +33,6 @@ const favoriteSchema = new Schema({
     }
 });
 
-const Favorite = mongoose.model("Favorite", favoriteSchema);
+const Favorite = mongoose.model("favorite", favoriteSchema);
 
 module.exports = Favorite;

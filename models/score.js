@@ -1,6 +1,8 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+/*  Schema  */
 const scoreSchema = new Schema({
     score_id: {
         type: String
@@ -40,6 +42,6 @@ const scoreSchema = new Schema({
     }
 });
 
-const Score = mongoose.model("Score", scoreSchema);
+const Score = mongoose.model("score", scoreSchema);
 
 module.exports = Score;

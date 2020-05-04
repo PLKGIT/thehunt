@@ -1,7 +1,8 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
 
+/*  Schema  */
 const huntSchema = new Schema({
     hunt_id: {
         type: String
@@ -14,6 +15,10 @@ const huntSchema = new Schema({
         required: true
     },
     title: {
+        type: String,
+        required: true
+    },
+    image_url: {
         type: String,
         required: true
     },
@@ -49,6 +54,6 @@ const huntSchema = new Schema({
     }
 });
 
-const Hunt = mongoose.model("Hunt", huntSchema);
+const Hunt = mongoose.model("hunt", huntSchema);
 
 module.exports = Hunt;

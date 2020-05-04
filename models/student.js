@@ -1,31 +1,34 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
-const email = require('mongoose-type-email');
-
 const Schema = mongoose.Schema;
 
+/*  Schema  */
 const studentSchema = new Schema({
     student_id: {
         type: String
     },
     first_name: {
-        type: String,
-        required: true
+        type: String
+        // type: String,
+        // required: true
     },
     last_name: {
-        type: String,
-        required: true
+        type: String
+        // type: String,
+        // required: true
     },
     email: {
-        type: mongoose.SchemaTypes.Email,
+        type: String,
         allowBlank: false
     },
     password: {
         type: String,
-        required:true
+        required: true
     },
     role: {
         type: String,
-        required:true
+        required: true,
+        default:"Student"
     },
     group_id: {
         type: Array,
@@ -36,7 +39,6 @@ const studentSchema = new Schema({
         required: true
     }
 });
-
-const Student = mongoose.model("Student", studentSchema);
+const Student = mongoose.model('student', studentSchema);
 
 module.exports = Student;

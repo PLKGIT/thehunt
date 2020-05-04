@@ -1,6 +1,8 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+/*  Schema  */
 const orgSchema = new Schema({
     org_id: {
         type: String
@@ -19,6 +21,6 @@ const orgSchema = new Schema({
     }
 });
 
-const Org = mongoose.model("Org", orgSchema);
+const Org = mongoose.model("org", orgSchema);
 
 module.exports = Org;

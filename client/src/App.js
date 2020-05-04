@@ -44,5 +44,16 @@ function App() {
   );
 }
 
+/*  Create App  */
+// function App() {
+//   return (
+//     <div>
+//         <Nav />
+//         <Login />
+//         <Footer />
+//       </div>
+//   );
+// }
+
 /*  Export App  */
 export default App;

@@ -55,13 +55,13 @@ UI/UX design and styling and frontend content
 * https://expressjs.com/
 * Node.js web application framework.
 
-#### Express Session NPM
-* https://www.npmjs.com/package/express-session
-* Express JS Session middleware.
-
 #### Axios NPM
 * https://www.npmjs.com/package/axios
-* Promise based HTTP client for the browser and node.js.
+* Promise based HTTP client for the browser and Node JS.
+
+#### Bcryptjs NPM
+* https://www.npmjs.com/package/bcryptjs
+* Hashes password in Node JS.
 
 #### MongoDB
 * https://www.mongodb.com/
@@ -71,17 +71,9 @@ UI/UX design and styling and frontend content
 * https://mongoosejs.com/
 * MongoDB object modeling tool for node.js.
 
-#### Mongoose-Type-Email NPM
-* https://www.npmjs.com/package/mongoose-type-email
-* NPM that validates email input for Mongoose.
-
-#### Passport JS NPM
+#### Passport JWT NPM
 * http://www.passportjs.org/
 * Authentication middleware for Node.js.
-
-#### Passport-local-mongoose NPM
-* https://www.npmjs.com/package/passport-local-mongoose
-* Mongoose plugin that simplifies building username and password login.
 
 ### Other Tools
 

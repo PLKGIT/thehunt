@@ -1,9 +1,30 @@
-/*  Express  */
+/*  Express Require  */
 const express = require('express');
-const app = express();
 
-/*  Body Parser  */
+/*  Mongoose Require  */
+const mongoose = require('mongoose');
+
+/*  Body Parser Require  */
 const bodyParser = require('body-parser');
+
+/*  Passport Require  */
+const passport = require('passport');
+
+/*  Axios Require  */
+const axios = require('axios');
+
+/*  User Authentication Require */
+const user = require("./routes/api/user");
+// const teacher = require("./routes/api/teacher");
+// const student = require("./routes/api/student");
+
+/*  Mongo Config  */
+const db = require("./config/keys").mongoURI;
+
+// Passport Config
+require("./config/passport")(passport);
+// require("./config/passport")(passports);
+// require("./config/passport")(passportt);
 
 /*  Path  */
 const path = require('path');
@@ -11,37 +32,17 @@ const path = require('path');
 /*  Secure Variables  */
 require('dotenv').config();
 
+/*  Use Express  */
+const app = express();
+
 /*  Middleware  */
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// /*  Express Session  */
-const expressSession = require('express-session')({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false
-});
-
-app.use(expressSession);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 /*  Static Assets  */
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
-
-/*  Mongoose  */
-const mongoose = require('mongoose');
-
-/*  Axios  */
-const axios = require('axios');
-
-/*  Passport  */
-const passport = require('passport');
-app.use(passport.initialize());
-app.use(passport.session());
-
-/*  Passport Local Mongoose  */
-const passportLocalMongoose = require('passport-local-mongoose');
 
 /*  MongoDB Connection  */
 mongoose.connect(
@@ -49,8 +50,13 @@ mongoose.connect(
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
 
-/*  Models  */
-const db = require('./models');
+/*  Passport Middleware  */
+app.use(passport.initialize());
+
+/*  User Authentication Routes  */
+app.use("/api/user", user);
+// app.use("/api/teacherauth", teacher);
+// app.use("/api/studentauth", student);
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;

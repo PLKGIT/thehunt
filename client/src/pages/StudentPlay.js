@@ -22,7 +22,7 @@ class StudentPlay extends Component {
                     HUNT CONTENT
       </h5>
       <h5 className="text-info text-center">
-      <Link to="/"><img src="./images/back.png" alt="Back icon" width="50px"/>Unlock It Home</Link>
+      <Link to="/"><img src="./images/unlock.png" alt="Still Lock" width="75px"/>Unlock It Home</Link>
         </h5>
                 <br />
             </div>

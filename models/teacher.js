@@ -1,42 +1,45 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
-require('mongoose-type-email');
-
 const Schema = mongoose.Schema;
+
+/*  Schema  */
 
 const teacherSchema = new Schema({
     teacher_id: {
         type: String
     },
     first_name: {
-        type: String,
-        required: true
+        type: String
+        // type: String,
+        // required: true
     },
     last_name: {
-        type: String,
-        required: true
+        type: String
+        // type: String,
+        // required: true
     },
     email: {
-        type: mongoose.SchemaTypes.Email,
-        allowBlank: false
+        type: String,
+        required: true
     },
     password: {
         type: String,
         required: true
-    },  
+    },
     role: {
         type: String,
-        required:true
+        required: true,
+        default:"Teacher"
     },
     group_id: {
-        type: Array,
-        required: true
+        type: Array
+
     },
     hunt_id: {
-        type: Array,
-        required: true
+        type: Array
     }
 });
 
-const Teacher = mongoose.model("Teacher", teacherSchema);
+const Teacher = mongoose.model('teacher', teacherSchema);
 
 module.exports = Teacher;
