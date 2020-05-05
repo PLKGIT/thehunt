@@ -39,13 +39,21 @@ $apothem: 482.842712474619px;
       transform-style: preserve-3d;
       transition: transform 0.5s;
       transform-origin: 50% 50% (-$apothem);
-      
-      img {
-          width: 100%;
+
+      .link {
+        //   width: 100%;
           box-sizing: border-box;
           padding: 0 $item-separation / 2;
           height: 300px;
           opacity: 0.9;
+
+      
+          img{
+            height: 300px;
+            width: 100%;
+            padding: 5px
+        }
+
           
           &:not(:first-of-type) {
               position: absolute;
@@ -82,5 +90,18 @@ $apothem: 482.842712474619px;
   }
   
 }
-
-
+// Hunt Titles:
+h3 {
+    color: red;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    padding: 5px;
+    width: 97.5%;
+    line-height: 30px;
+    margin-bottom: 0;
+    margin-left: 1.25%;
+    font-weight: 300;
+    background-color: #F5E6CC;
+}
