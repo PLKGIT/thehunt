@@ -7,23 +7,14 @@ class Map extends Component {
         this.onScriptLoad = this.onScriptLoad.bind(this)
     }
     state = {
-        question: "",
-        answer: ""
-    }
+        clues: [],
+        clue: "",
+        answer: "",
+        location: "",
+        locationSearched: false
+    };
 
    
-
-    // infowindow = new window.google.maps.InfoWindow();
-  
-    //  map = new window.google.maps.Map(
-    //     document.getElementById('map'), {
-    //     zoom: 18,
-    //     mapTypeId: 'satellite',
-    //     heading: 90,
-    //     tilt: 45
-    // });
-
-    
     onScriptLoad() {
         console.log("hello")
         const map = new window.google.maps.Map(
@@ -32,27 +23,18 @@ class Map extends Component {
         // this.props.onMapLoad(map)
     }
 
-    // onPlaceSearch(results, status) {
-    //     console.log(results)
-    //     if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-    //         for (let i = 0; i < results.length; i++) {
-    //             let place = results[i]
-    //             const lat = place.geometry.location.lat()
-    //             const lng = place.geometry.location.lng()
-    //             this.setState({
-    //                 currentLocation: { lat: lat, lng: lng },
-    //             })
-    //         }
-    //     }
-    // }
-
-    handleFormSubmit = event => {
+    renderMap = event => {
         event.preventDefault();
-        console.log(this.state.answer)
+        console.log(this.state.location)
+        var query;
+        if (!this.state.location) {
+            query = this.state.answer
+        } else {
+            query = this.state.location
+        }
         var request = {
-            query: this.state.answer,
+            query: query,
             fields: ['name', 'geometry']
-         
         };
         var maps = document.getElementById('myMap')
 
@@ -103,22 +85,37 @@ class Map extends Component {
             }
         }
 
-        //service.findPlaceFromQuery (request, this.onPlaceSearch)
-        // service.findPlaceFromQuery(this.state.answer, function(results, status) {
-        //     if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-        //     //   for (var i = 0; i < results.length; i++) {
-        //     //     createMarker(results[i]);
-        //     //   }
-        //       this.map.setCenter(results[0].geometry.location);
-        //     }
-        //   });
+        
+        this.setState({locationSearched: true})
     }
 
+
     handleInputChange = event => {
+        const { name, value } = event.target;
         this.setState({
-            answer: event.target.value
+            [name]: value
         });
     };
+
+    handleQuestionSubmit = event => {
+        event.preventDefault();
+        if (this.state.clue && this.state.answer) {
+            console.log("clue: " + this.state.clue + "and answer: " + this.state.answer)
+            var obj = {clue: this.state.clue, answer: this.state.answer, location: this.state.location}
+            this.state.clues.push(obj)
+            console.log(this.state.clues)
+            this.setState({clue: "", answer: "", location: ""})
+        }
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        // modal saying "Hunt Added"
+        // redirect to 'Manage Hunts' page
+        var obj = {clue: this.state.clue, answer: this.state.answer, location: this.state.location}
+        this.state.clues.push(obj)
+        console.log(this.state.clues)
+    }
 
     componentDidMount() {
         console.log("hello")
@@ -141,11 +138,51 @@ class Map extends Component {
     render() {
         return (
             <>
+            <form>
+                    <Input
+                        id="clue"
+                        value={this.state.clue}
+                        onChange={this.handleInputChange}
+                        name="clue"
+                        placeholder="Clue (required)"
+                    />
+                    <Input
+                        value={this.state.answer}
+                        onChange={this.handleInputChange}
+                        name="answer"
+                        placeholder="Answer (required)"
+                    />
+                    <Input
+                        value={this.state.location}
+                        onChange={this.handleInputChange}
+                        name="location"
+                        placeholder="Location (Leave blank if same as answer)"
+                    />
+                    <FormBtn
+                        disabled={!(this.state.clue && this.state.answer && this.state.locationSearched)}
+                        onClick={this.handleQuestionSubmit}
+                    >
+                        Submit another question
+                </FormBtn>
+                    <FormBtn
+                        disabled={!(this.state.clues.length > 1)}
+                        onClick={this.handleFormSubmit}
+                    >
+                        Submit this hunt
+                </FormBtn>
+                <FormBtn
+                onClick={this.renderMap}
+                value={this.state.location}
+                disabled={!(this.state.answer || this.state.location)}
+                >
+                    Confirm location
+                </FormBtn>
+                </form>
                 <div style={{ width: 500, height: 500 }} id={this.props.id} />
                 <div className="form">
                     <form className="form">
-                        <p>Questions will appear here</p>
-                        <Input
+                        {/* <p>Questions will appear here</p> */}
+                        {/* <Input
                             value={this.state.answer}
                             onChange={this.handleInputChange}
                             name="answer"
@@ -157,7 +194,7 @@ class Map extends Component {
                             className="form"
                         >
                             Check your answer
-                        </FormBtn>
+                        </FormBtn> */}
                     </form>
                 </div>
             </>

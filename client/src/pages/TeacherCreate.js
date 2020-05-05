@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 /*  React Router  */
 import { Link } from "react-router-dom";
+import TeacherMap from '../components/TeacherMap/TeacherMap'
+
 
 /*  Create TeacherCreate  */
 class TeacherCreate extends Component {
@@ -24,6 +26,18 @@ class TeacherCreate extends Component {
             <li>Create from Scratch</li>
           </ul>
         FORM
+        
+
+        <TeacherMap 
+        id="myMap"
+        options={{
+          center: { lat: 0, lng: 0 },
+          zoom: 2,
+          mapTypeId: 'hybrid'
+        }}
+        />
+        
+
         </h5>
         <h5 className="text-info text-center">
       <Link to="/"><img src="./images/unlock.png" alt="Still Lock" width="75px"/>Unlock It Home</Link>
