@@ -1,35 +1,37 @@
-/*  React  */
 import React, { Component } from 'react';
+import { render } from 'react-dom';
+//import { Link } from "react-router-dom";
+import Map from "../components/Map/Map.js"
 
-/*  React Router  */
-import { Link } from "react-router-dom";
 
-/*  Create StudentPlay  */
 class StudentPlay extends Component {
+    // constructor() {
+    //   super();
+    // }
+  
     render() {
-
-        return (
-            <div className="container">
-                <br />
-                <h1 className="text-center text-secondary">HUNT BEING PLAYED</h1>
-                <h5 className="text-secondary">
-                    NAVIGATION
-        <ul>
-                        <li><Link to="/student">Student Dashboard</Link></li>
-                    </ul>
-                </h5>
-                <h5 className="text-info">
-                    HUNT CONTENT
-      </h5>
-      <h5 className="text-info text-center">
-      <Link to="/"><img src="./images/unlock.png" alt="Still Lock" width="75px"/>Unlock It Home</Link>
-        </h5>
-                <br />
-            </div>
-        );
-
+      return (
+        <Map
+          id="myMap"
+          options={{
+            center: { lat: 0, lng: 0 },
+            zoom: 2,
+            mapTypeId: 'hybrid'
+          }}
+          // onMapLoad={map => {
+          //   var marker = new window.google.maps.Marker({
+          //     position: { lat: 41.0082, lng: 28.9784 },
+          //     map: map,
+          //     title: 'Hello Istanbul!'
+          //   });
+          // }}
+        />
+      );
     }
-}
+  }
+  
+render(<StudentPlay />, document.getElementById('root'));
+
 
 /*  Export StudentPlay  */
 export default StudentPlay;
