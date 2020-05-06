@@ -26,32 +26,31 @@ const keys = require("../../config/keys");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
-/*  Teacher Model  */
+/*  User Model  */
 const User = require("../../models/user");
 
 /*  Routes  */
-
 router.get('/'), (req,res) => {
   res.send('Hello Lock It! Users')
 };
 
-// router.post('/getToken', (req, res) =>{
-//   if(!req.body.email || !req.body.password){
-//     return res.status(401).send('no fields');
-//   }
-//   User.forge({email: req.body.email}).fetch().then(result =>{
-//     if(!result){
-//       return res.status(400).send('user not found');
-//     }
-//     result.authenticate(req.body.password).then(user =>{
-//       const payload = {id:user.id};
-//       const token = jwt.sign(payload, process.env.secretOrKey);
-//       res.send(token);
-//     }).catch(err =>{
-//       return res.status(401).send({err});
-//     });
-//   });
-// });
+router.post('/getToken', (req, res) =>{
+  if(!req.body.email || !req.body.password){
+    return res.status(401).send('no fields');
+  }
+  User.findOne({email: req.body.email}).fetch().then(result =>{
+    if(!result){
+      return res.status(400).send('user not found');
+    }
+    result.authenticate(req.body.password).then(user =>{
+      const payload = {id:user.id};
+      const token = jwt.sign(payload, process.env.secretOrKey);
+      res.send(token);
+    }).catch(err =>{
+      return res.status(401).send({err});
+    });
+  });
+});
 
 
 router.get('/users', (req, res) => {
