@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 /*  React Router  */
 import { Link } from "react-router-dom";
+import ManageStudentTab from '../components/ManageStudentTab';
 
 /*  Create TeacherManageStudents  */
 class TeacherManageStudents extends Component {
@@ -17,14 +18,15 @@ class TeacherManageStudents extends Component {
             <li><Link to="/teacher">Teacher Dashboard</Link></li>
           </ul>
         </h5>
-        <h5 className="text-info">
+        <ManageStudentTab/>
+        {/* <h5 className="text-info">
           TABBED OPTIONS
         <ul>
             <li>Add/Edit Students</li>
             <li>Create Groups</li>
             <li>Student/Group Statistics</li>
           </ul>
-        </h5>
+        </h5> */}
         <h5 className="text-info text-center">
       <Link to="/"><img src="./images/unlock.png" alt="Still Lock" width="75px"/>Unlock It Home</Link>
         </h5>
