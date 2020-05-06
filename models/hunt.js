@@ -7,10 +7,14 @@ const huntSchema = new Schema({
     hunt_id: {
         type: String
     },
+    teacher_id: {
+        type: String,
+        required: true
+    },
     favorite_id: {
         type: String
     },
-    teacher_id: {
+    created_by: {
         type: String,
         required: true
     },
@@ -18,11 +22,12 @@ const huntSchema = new Schema({
         type: String,
         required: true
     },
-    image_url: {
+
+    category: {
         type: String,
         required: true
     },
-    category: {
+    image_url: {
         type: String,
         required: true
     },
@@ -35,14 +40,9 @@ const huntSchema = new Schema({
         required: true
     },
     status: {
-        type: Boolean,
-        required: true,
-        default: false
-    },
-    share: {
-        type: Boolean,
-        required: true,
-        default: false
+        type: String,
+        default: "Pending";
+        required: true
     },
     start_date: {
         type: Date,
@@ -51,6 +51,11 @@ const huntSchema = new Schema({
     end_date: {
         type: Date,
         required: false
+    },
+    share: {
+        type: Boolean,
+        default: 1,
+        required: true
     }
 });
 

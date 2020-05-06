@@ -8,14 +8,12 @@ const studentSchema = new Schema({
         type: String
     },
     first_name: {
-        type: String
-        // type: String,
-        // required: true
+        type: String,
+        required: false // for testing only
     },
     last_name: {
-        type: String
-        // type: String,
-        // required: true
+        type: String,
+        required: false // for testing only
     },
     email: {
         type: String,

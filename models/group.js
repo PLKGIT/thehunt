@@ -7,7 +7,11 @@ const groupSchema = new Schema({
     group_id: {
         type: String
     },
-    name: {
+    teacher_id: {
+        type: String,
+        required: true
+    },
+    group_name: {
         type: String,
         required: true
     },
@@ -21,10 +25,6 @@ const groupSchema = new Schema({
     },
     hunt_id: {
         type: Array,
-        required: true
-    },
-    teacher_id: {
-        type: String,
         required: true
     },
     student_id: {

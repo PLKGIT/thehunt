@@ -11,7 +11,7 @@ const favoriteSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
+    created_by: {
         type: String,
         required: true
     },
@@ -19,16 +19,25 @@ const favoriteSchema = new Schema({
         type: String,
         required: true
     },
+    image_url: {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
+        required: true
+    },
+    hunt_data: {
+        type: Map,
         required: true
     },
     rating: {
         type: Array,
         required: true
     },
-    hunt_data: {
-        type: Map,
+    share: {
+        type: Boolean,
+        default: 1,
         required: true
     }
 });

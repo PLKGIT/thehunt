@@ -12,13 +12,15 @@
     "cors": "^2.8.5",
     "jwt-decode": "^2.2.0",
     "node-sass": "^4.14.0",
+    "querystring": "^0.2.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-table": "^4.3.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-table": "^7.0.4"
+    "react-table": "^7.0.4",
+    "react-token-auth": "^1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -4,6 +4,7 @@ import React, { Component } from "react";
 /*  React Router  */
 import { Link } from "react-router-dom";
 
+
 /*  React Bootstrap Components  */
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,6 +12,10 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+
+
+/*  Axios Routes  */
+require("../utils/API");
 
 /*  Create Login  */
 class Login extends Component {

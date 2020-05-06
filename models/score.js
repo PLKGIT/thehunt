@@ -15,7 +15,7 @@ const scoreSchema = new Schema({
     },
     completed: {
         type: Boolean,
-        default: false,
+        default: 0,
         required:true
     },
     q_points: {

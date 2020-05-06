@@ -3,20 +3,21 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 /*  Schema  */
-const teacherSchema = new Schema({
-    teacher_id: {
+const adminSchema = new Schema({
+    admin_id: {
         type: String
     },
     first_name: {
         type: String,
-        required: false //for testing only
+        default:"Admin"
     },
     last_name: {
         type: String,
-        required: false //for testing only
+        default:"User"
     },
     email: {
         type: String,
+        default:"admin@unlockit.com",
         required: true
     },
     password: {
@@ -26,17 +27,13 @@ const teacherSchema = new Schema({
     role: {
         type: String,
         required: true,
-        default:"Teacher"
-    },
-    group_id: {
-        type: Array
-
+        default:"Admin"
     },
     hunt_id: {
         type: Array
     }
 });
 
-const Teacher = mongoose.model('teacher', teacherSchema);
+const Admin = mongoose.model('admin', adminSchema);
 
-module.exports = Teacher;
+module.exports = Admin;
