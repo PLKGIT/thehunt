@@ -17,6 +17,7 @@ import StudentHistory from "./pages/StudentHistory";
 import NotFound from "./pages/NotFound";
 
 /*  Components  */
+import AuthenticatedComponent from "./components/Auth/AuthenticatedComponent";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
@@ -28,6 +29,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Login} />
+          <AuthenticatedComponent>
           <Route exact path="/admin" component={Admin} />
           <Route exact path="/teacher" component={Teacher} />
           <Route exact path="/teachercreate" component={TeacherCreate} />
@@ -36,6 +38,7 @@ function App() {
           <Route exact path="/student" component={Student} />
           <Route exact path="/studentplay" component={StudentPlay} />
           <Route exact path="/studenthistory" component={StudentHistory} />
+          </AuthenticatedComponent>
           <Route component={NotFound} />
         </Switch>
         <Footer />

@@ -1,10 +1,19 @@
 /*  Express  */
 const express = require("express");
 
+/*  Use Express  */
+const app = express();
+
 /*  Express Router  */
 const router = express.Router();
 
-/*  Bcryot  */
+/*  Passport  */
+const passport = require("passport");
+
+/*  Passport Middleware  */
+app.use(passport.initialize());
+
+/*  Bcrypt  */
 const bcrypt = require("bcryptjs");
 
 /*  JWT  */
@@ -21,7 +30,36 @@ const validateLoginInput = require("../../validation/login");
 const User = require("../../models/user");
 
 /*  Routes  */
-router.post("/register", (req, res) => {
+
+router.get('/'), (req,res) => {
+  res.send('Hello Lock It! Users')
+};
+
+// router.post('/getToken', (req, res) =>{
+//   if(!req.body.email || !req.body.password){
+//     return res.status(401).send('no fields');
+//   }
+//   User.forge({email: req.body.email}).fetch().then(result =>{
+//     if(!result){
+//       return res.status(400).send('user not found');
+//     }
+//     result.authenticate(req.body.password).then(user =>{
+//       const payload = {id:user.id};
+//       const token = jwt.sign(payload, process.env.secretOrKey);
+//       res.send(token);
+//     }).catch(err =>{
+//       return res.status(401).send({err});
+//     });
+//   });
+// });
+
+
+router.get('/users', (req, res) => {
+  User.find({}).then(data => res.json(data))
+    .catch(err => console.log(err));
+});
+
+router.post('/register', (req, res) => {
 
   /*  Form Validation  */
   const { errors, isValid } = validateRegisterInput(req.body);
@@ -55,8 +93,9 @@ router.post("/register", (req, res) => {
   });
 });
 
-/*  Teacher Login  */
+/*  User Login  */
 router.post("/login", (req, res) => {
+  console.log("----------Login-----------")
   /*  Form Validation  */
   const { errors, isValid } = validateLoginInput(req.body);
   if (!isValid) {
@@ -101,6 +140,10 @@ router.post("/login", (req, res) => {
       }
     });
   });
+});
+
+router.get('/getUser', passport.authenticate('jwt',{session: false}), (req,res) =>{
+  res.send(req.user);
 });
 
 module.exports = router;

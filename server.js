@@ -10,21 +10,14 @@ const bodyParser = require('body-parser');
 /*  Passport Require  */
 const passport = require('passport');
 
-/*  Axios Require  */
-const axios = require('axios');
-
 /*  User Authentication Require */
 const user = require("./routes/api/user");
-// const teacher = require("./routes/api/teacher");
-// const student = require("./routes/api/student");
 
 /*  Mongo Config  */
 const db = require("./config/keys").mongoURI;
 
-// Passport Config
+/* Passport Configuration  */
 require("./config/passport")(passport);
-// require("./config/passport")(passports);
-// require("./config/passport")(passportt);
 
 /*  Path  */
 const path = require('path');
@@ -54,9 +47,7 @@ mongoose.connect(
 app.use(passport.initialize());
 
 /*  User Authentication Routes  */
-app.use("/api/user", user);
-// app.use("/api/teacherauth", teacher);
-// app.use("/api/studentauth", student);
+app.use("/api", user);
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
