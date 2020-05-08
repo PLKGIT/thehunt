@@ -15,7 +15,7 @@ import Form from 'react-bootstrap/Form';
 class Nav extends Component {
   render() {
     return (
-        <Navbar fixed="top" bg="info">
+        <Navbar fixed="top">
           <Navbar.Brand ><Link to="/" style={{ textDecoration: 'none' }}><h1 className="text-white display-3">Unlock It!</h1></Link>
           {/* <Navbar.Brand ><h1 className="text-white display-3">Unlock It!</h1> */}
           </Navbar.Brand>

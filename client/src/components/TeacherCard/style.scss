@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: Montserrat,sans-serif;
+    margin: 50px;
+    background-image: linear-gradient(90deg, #9274b7, #3b4a8d);
+    
+    >h1, >p{
+      text-align:center;
+    }
+    
+    >h1{
+      margin: 40px;
+      color: #ffffff;
+    }
+    
+    >p{
+      font-size:20px;
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+  }
+  
+  .card-container{
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    
+    .card{
+      margin: 20px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 252, 252, 0.09);
+      
+      .card-count-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        padding: 20px 0px;
+      }
+
+      .card-count{
+        font-weight: bold;
+        font-size: 50px;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        border-radius: 15%;
+        margin: auto;
+        margin-right: -50px;
+        padding-right: 250px;
+        padding-left: 20px;
+        overflow: hidden;
+        color: #ffffff;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .card-content{
+        padding: 20px;
+        padding-top: 0px;
+        width: 250px;
+        height: 100%;
+        
+        > h4 {
+          margin-top: 0px;
+          text-align: center;
+        }
+      }
+      
+      .card-footer{
+        padding: 20px;
+        color: #ffffff;
+      }
+      
+      &:nth-child(1){
+        .card-count, .card-footer{
+          background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+        }
+      }
+      
+      &:nth-child(2){
+        .card-count, .card-footer{
+          background-image: linear-gradient(90deg, #fec22f, #ea9826);
+        }
+      }
+      
+      &:nth-child(3){
+        .card-count, .card-footer{
+          background-image: linear-gradient(90deg, #6fc6a9, #058ba9);
+        }
+      }
+      
+      &:hover{
+        .card-count{
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+    
+    @media (max-width: 767px){
+      flex-wrap: wrap;
+    }
+  }

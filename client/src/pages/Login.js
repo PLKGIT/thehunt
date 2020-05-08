@@ -29,7 +29,7 @@ class Login extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <h1 className="text-center text-secondary"><img src="./images/unlock.gif" alt="Key in lock gif" width="150px" />Login to Hunt!</h1>
+                        <h1 className="text-center text-secondary"><img src="./images/transparentlock.gif" alt="Key in lock gif" width="150px" />Login to Hunt!</h1>
                     </Col>
                 </Row>
                 <Row>
