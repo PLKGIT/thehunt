@@ -1,6 +1,12 @@
+/*  React  */
 import React, { Component } from 'react';
-import "./style.scss";
+
+/*  React Router  */
 import { Link } from "react-router-dom";
+
+/* Styling */
+import "./style.scss";
+
 
 class Carousel extends Component {
     state = {
