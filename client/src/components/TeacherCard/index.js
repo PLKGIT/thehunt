@@ -18,7 +18,7 @@ class TeacherCard extends Component {
                     </div>
 
                     <div class="card-content">
-                        <h4>Click here to create hunt</h4>
+                    <Link to="/teachercreate"><h4>Click here to create hunt</h4></Link>
           </div>
 
                     <div class="card-footer">
@@ -31,7 +31,7 @@ class TeacherCard extends Component {
                         <div class="card-count">Manage Hunt</div>
                     </div>
                     <div class="card-content">
-                        <h4>Click here to manage hunt</h4>
+                    <Link to="/teachermanagehunts"> <h4>Click here to manage hunt</h4></Link>
             
           </div>
 
@@ -45,7 +45,7 @@ class TeacherCard extends Component {
                         <div class="card-count">Manage Students</div>
                     </div>
                     <div class="card-content">
-                        <h4>Click here to manage students</h4>
+                    <Link to="/teachermanagestudents"><h4>Click here to manage students</h4></Link>
           </div>
 
                     <div class="card-footer">

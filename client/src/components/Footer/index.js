@@ -8,7 +8,7 @@ import "../../styles/App.scss";
 function Footer() {
     return (
         <div className="footer">
-            <p className="text-center text-white py-1">&copy; Copyright 2020 All rights reserved.<br/>
+            <p className="text-center bg-info py-1">&copy; Copyright 2020 All rights reserved.<br/>
             Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, and Nida Memon</p>
         </div>
     )
