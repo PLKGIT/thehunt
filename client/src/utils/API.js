@@ -25,3 +25,4 @@ axios.post("/api/register", qs.stringify(requestBody), config)
     }).catch(err =>(console.log(err))
 
 );
+

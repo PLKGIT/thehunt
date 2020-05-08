@@ -8,6 +8,7 @@ class Map extends Component {
     }
     state = {
         clues: [],
+        id: 0,
         clue: "",
         answer: "",
         location: "",
@@ -100,8 +101,11 @@ class Map extends Component {
     handleQuestionSubmit = event => {
         event.preventDefault();
         if (this.state.clue && this.state.answer) {
+            var id = this.state.id
             console.log("clue: " + this.state.clue + "and answer: " + this.state.answer)
-            var obj = {clue: this.state.clue, answer: this.state.answer, location: this.state.location}
+            var obj = {id: id, clue: this.state.clue, answer: this.state.answer, location: this.state.location}
+            id++;
+            this.setState({id: id})
             this.state.clues.push(obj)
             console.log(this.state.clues)
             this.setState({clue: "", answer: "", location: ""})
@@ -112,9 +116,12 @@ class Map extends Component {
         event.preventDefault();
         // modal saying "Hunt Added"
         // redirect to 'Manage Hunts' page
-        var obj = {clue: this.state.clue, answer: this.state.answer, location: this.state.location}
+        var obj = {id: this.state.id, clue: this.state.clue, answer: this.state.answer, location: this.state.location}
         this.state.clues.push(obj)
+        const json = JSON.stringify(this.state.clues);
+        localStorage.setItem("clues", json)
         console.log(this.state.clues)
+        
     }
 
     componentDidMount() {
@@ -168,7 +175,7 @@ class Map extends Component {
                         disabled={!(this.state.clues.length > 1)}
                         onClick={this.handleFormSubmit}
                     >
-                        Submit this hunt
+                        Done
                 </FormBtn>
                 <FormBtn
                 onClick={this.renderMap}
