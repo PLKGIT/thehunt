@@ -119,7 +119,7 @@ class Map extends Component {
         const json = JSON.stringify(this.state.clues);
         localStorage.setItem("clues", json)
         console.log(this.state.clues)
-        Axios.post("/api/clues", this.state.clues)
+        Axios.post("/api/clues", {hunt_data: this.state.clues})
         console.log("axios.post function hit")
     }
     

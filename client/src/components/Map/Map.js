@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
 import { Input, FormBtn } from "../Form/Form.js"
+import Axios from "axios";
+
 
 class Map extends Component {
     constructor(props) {
         super(props);
         this.onScriptLoad = this.onScriptLoad.bind(this)
+        this.state = {
+            clues: [],
+            currentClue: "",
+            correctAnswer: "",
+            location: "",
+            studentAnswer: "",
+            question: 0,
+            mapSearched: false
+        }
     }
-    state = {
-        question: "",
-        answer: ""
-    }
+    // state = {
+    //     question: "",
+    //     answer: "",
+    //     clues: ""
+    // }
 
-   
+    // self = this;
+
 
     // infowindow = new window.google.maps.InfoWindow();
-  
+
     //  map = new window.google.maps.Map(
     //     document.getElementById('map'), {
     //     zoom: 18,
@@ -23,9 +36,9 @@ class Map extends Component {
     //     tilt: 45
     // });
 
-    
+
     onScriptLoad() {
-        console.log("hello")
+        console.log("hello from onscriptLoad")
         const map = new window.google.maps.Map(
             document.getElementById(this.props.id),
             this.props.options);
@@ -46,21 +59,32 @@ class Map extends Component {
     //     }
     // }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
+    correctMapSearch = () => {
+        // event.preventDefault();
         console.log(this.state.answer)
+        var query;
+        if (!this.state.location) {
+            query = this.state.correctAnswer;
+        } else {
+            query = this.state.location;
+        }
         var request = {
-            query: this.state.answer,
-            fields: ['name', 'geometry']
-         
+            query: query,
+            fields: ["name", "geometry"],
         };
+        // var request = {
+        //     query: this.state.correctAnswer,
+        //     fields: ['name', 'geometry']
+        // };
         var maps = document.getElementById('myMap')
 
         const map = new window.google.maps.Map(
             document.getElementById(this.props.id),
             // this.props.options.center,
-            {zoom: 18,
-            mapTypeId: 'satellite'});
+            {
+                zoom: 18,
+                mapTypeId: 'satellite'
+            });
         const service = new window.google.maps.places.PlacesService(map)
 
         console.log(this.props.id)
@@ -68,8 +92,8 @@ class Map extends Component {
         service.findPlaceFromQuery(request, function (results, status) {
             if (status === window.google.maps.places.PlacesServiceStatus.OK) {
                 for (var i = 0; i < results.length; i++) {
-                     createMarker(results[i]);
-                     autoRotate();
+                    createMarker(results[i]);
+                    autoRotate();
                     console.log(results[i])
                 }
                 console.log(results[0].name)
@@ -102,26 +126,18 @@ class Map extends Component {
                 window.setInterval(rotate90, 3000);
             }
         }
-
-        //service.findPlaceFromQuery (request, this.onPlaceSearch)
-        // service.findPlaceFromQuery(this.state.answer, function(results, status) {
-        //     if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-        //     //   for (var i = 0; i < results.length; i++) {
-        //     //     createMarker(results[i]);
-        //     //   }
-        //       this.map.setCenter(results[0].geometry.location);
-        //     }
-        //   });
+        this.setState({mapSearched: true})
     }
 
     handleInputChange = event => {
         this.setState({
-            answer: event.target.value
+            studentAnswer: event.target.value
         });
     };
 
-    componentDidMount() {
-        console.log("hello")
+    async componentDidMount() {
+        var self = this;
+        console.log("hello from componentDidMount")
         if (!window.google) {
             var s = document.createElement('script');
             s.type = 'text/javascript';
@@ -133,10 +149,103 @@ class Map extends Component {
             s.addEventListener('load', e => {
                 this.onScriptLoad()
             })
+        }
+        // else {
+        //     this.onScriptLoad()
+        // }
+        // this.huntData()
+        // console.log(" state is below")
+        // console.log(this.state)
+        await Axios.get("/api/clues")
+            .then(function (res) {
+                console.log("---------------------")
+                console.log(res.data[9].hunt_data)
+                console.log("---------------------")
+
+                // var info = res.data[9].hunt_data[0].clue
+                var info = res.data[9].hunt_data
+                console.log("info: " + info)
+                // var clue = this.state.clues.concat(res.data[9])
+                // self.setState({clues: info})
+
+
+                for (var i = 0; i < info.length; i++) {
+                    var arr = [];
+                    arr.push(info[i])
+                    self.setState({ clues: self.state.clues.concat(arr) })
+                }
+
+                console.log("clues state: " + self.state.clues)
+            })
+
+        console.log("clues state outside of axios call: ")
+        console.log(this.state.clues)
+
+        console.log("self state clues: ")
+        console.log(self.state.clues)
+
+        // this.displayClue();
+    }
+
+    displayClue = (event) => {
+        event.preventDefault();
+        this.setState({mapSearched: false})
+        var count = this.state.question
+        var obj = this.state.clues[count]
+        var thisObj = obj.clue
+        var thisAns = obj.answer
+        var thisLoc = obj.location
+        // this.setState({clue: this.state.clues[count].clue})
+        console.log("THIS IS WHAT WE'RE LOOKING FOR:")
+        console.log(count)
+        console.log(thisObj)
+        // this.setState({clue: thisObj})
+        this.setState({ currentClue: thisObj })
+        this.setState({ correctAnswer: thisAns })
+        this.setState({ location: thisLoc })
+        this.setState({ numClues: this.state.clues.length })
+           
+        if (count < this.state.numClues - 1) {
+            count++
+            this.setState({ question: count })
         } else {
-            this.onScriptLoad()
+            this.setState({endOfHunt: true})
+            console.log("END OF HUNT")
         }
     }
+
+    // increment = () => {
+    //     var count = this.state.question
+    //     count++
+    //     this.setState({ question: count })
+    // }
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        console.log(this.state.correctAnswer)
+        console.log(this.state.studentAnswer)
+        if (this.state.studentAnswer === this.state.correctAnswer) {
+            this.correctMapSearch();
+            console.log("CORRECT! modal will pop up now")
+        }
+        else {
+            console.log("WRONG! modal will pop up now")
+        }
+    }
+    // huntData = () => {
+
+    //     Axios.get("/api/clues")
+    //     .then(function(res) {
+    //         var info = res.data[9].hunt_data[0].clue
+    //         console.log("info: " + info)
+    //         // var clue = this.state.clues.concat(res.data[9])
+    //         self.setState({clues: info})
+    //         // console.log("clues state: " + this.state.clues)
+    //     })
+    //     console.log("self is below")
+    //     console.log(self)
+
+    // }
 
     render() {
         return (
@@ -144,7 +253,17 @@ class Map extends Component {
                 <div style={{ width: 500, height: 500 }} id={this.props.id} />
                 <div className="form">
                     <form className="form">
+                        <FormBtn
+                            onClick={this.displayClue}
+                        >
+                            Start Quiz
+                            </FormBtn>
                         <p>Questions will appear here</p>
+                        <p>{this.state.currentClue}</p>
+                        <p>{this.state.correctAnswer}</p>
+                        <p>{this.state.location}</p>
+                        <p>{this.state.numClues}</p>
+
                         <Input
                             value={this.state.answer}
                             onChange={this.handleInputChange}
@@ -157,6 +276,13 @@ class Map extends Component {
                             className="form"
                         >
                             Check your answer
+                        </FormBtn>
+
+                        <FormBtn
+                            onClick={this.displayClue}
+                            disabled={!this.state.mapSearched}
+                        >
+                            Next Question
                         </FormBtn>
                     </form>
                 </div>

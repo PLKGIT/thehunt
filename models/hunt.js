@@ -14,19 +14,19 @@ const huntSchema = new Schema({
     favorite_id: {
         type: String
     },
-    clue: {
-        type: String,
-        required: true
-    },
-    answer: {
-        type: String,
-        required: true
-    },
+    // clue: {
+    //     type: String,
+    //     required: true
+    // },
+    // answer: {
+    //     type: String,
+    //     required: true
+    // },
 
-    location: {
-        type: String,
-        // required: true
-    },
+    // location: {
+    //     type: String,
+    //     // required: true
+    // },
     image_url: {
         type: String
         // required: true
@@ -36,8 +36,8 @@ const huntSchema = new Schema({
         // required: true
     },
     hunt_data: {
-        type: Map
-        // required: true
+        type: Array,
+        required: true
     },
     status: {
         type: String,
