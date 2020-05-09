@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../Form/Form.js";
+import "../../styles/App.scss";
 
 class Map extends Component {
   constructor(props) {
@@ -149,7 +150,7 @@ class Map extends Component {
     } else {
       return (
         <>
-          <form>
+          <form className="mapForm">
             <Input
               id="clue"
               value={this.state.clue}

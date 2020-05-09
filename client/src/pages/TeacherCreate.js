@@ -44,7 +44,7 @@ class TeacherCreate extends Component {
         {/* </h5> */}
         <h5 className="text-info text-center">
           <Link to="/">
-            <img src="./images/unlock.png" alt="Still Lock" width="75px" />
+            <img src="./images/transparentlock.gif" alt="Still Lock" width="75px" />
             Unlock It Home
           </Link>
         </h5>

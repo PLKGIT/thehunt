@@ -17,12 +17,35 @@ h6 {
   text-shadow: 1.5px 1.5px 2px #ffffff;
 }
 
+
+.mapWrapper {
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  height: 75%;
+  width: 75%;
+}
+
+#myMap {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mapForm {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
 $footer-fixed: fixed;
 
-.footer {
-  position: $footer-fixed;
-  left: 0;
+#navbar {
+  // position: $footer-fixed;
+  // left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
