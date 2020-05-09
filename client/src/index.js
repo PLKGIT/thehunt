@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// Importing the Bootstrap CSS
+import { BrowserRouter as Router } from "react-router-dom";
+/*  Import the Bootstrap CSS  */
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Importing the APP SCSS
+/*  Import the App SCSS  */
 import './styles/App.scss';
-// Importing the APP JS
-import App from './App';
+/*  Import the App JS  */
+// import App from './App';
+import AppAuth from './AppAuth';
 import * as serviceWorker from './serviceWorker';
 
+// ReactDOM.render(
+//   <Router>
+//     <App />
+//   </Router>,
+//   document.getElementById('root')
+// );
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <AppAuth />
+  </Router>,
   document.getElementById('root')
 );
 
