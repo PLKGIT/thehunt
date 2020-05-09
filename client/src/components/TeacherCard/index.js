@@ -13,44 +13,46 @@ class TeacherCard extends Component {
         return (
             <div class="card-container">
                 <div class="card">
-                    <div class="card-count-container">
-                        <div class="card-count">Create Hunt</div>
-                    </div>
+                <Link to="/teachercreate" style={{ textDecoration: 'none' }}> <div class="card-count-container">
+                <Link to="/teachercreate" style={{ textDecoration: 'none' }}> <div class="card-count">Create Hunt</div></Link>
+                    </div></Link>
 
                     <div class="card-content">
-                    <Link to="/teachercreate"><h4>Click here to create hunt</h4></Link>
+                    <Link to="/teachercreate" style={{ textDecoration: 'none' }}> <i class="fas fa-tools"></i></Link>
+                    
           </div>
 
-                    <div class="card-footer">
-                        Lorem ipsum dolor sit amet.
-          </div>
-                </div>
+          <Link to="/teachercreate" style={{ textDecoration: 'none' }}><div class="card-footer">
+          Design your own hunt from scratch or editing an existing one!
+                    </div></Link>
+                </div> 
+               
 
                 <div class="card">
-                    <div class="card-count-container">
-                        <div class="card-count">Manage Hunt</div>
-                    </div>
+                <Link to="/teachermanagehunts"style={{ textDecoration: 'none' }}> <div class="card-count-container">
+                    <Link to="/teachermanagehunts"style={{ textDecoration: 'none' }}> <div class="card-count">Manage Hunt</div></Link>
+                    </div></Link>
                     <div class="card-content">
-                    <Link to="/teachermanagehunts"> <h4>Click here to manage hunt</h4></Link>
+                    <Link to="/teachermanagehunts"style={{ textDecoration: 'none' }}> <i class="fas fa-search"></i></Link>
             
           </div>
 
-                    <div class="card-footer">
-                        Lorem ipsum dolor sit amet.
-          </div>
+          <Link to="/teachermanagehunts"style={{ textDecoration: 'none' ,lineHeight:'3em'}}><div class="card-footer">
+                   View and manage your hunts.
+          </div></Link>
                 </div>
 
                 <div class="card">
-                    <div class="card-count-container">
-                        <div class="card-count">Manage Students</div>
-                    </div>
+                <Link to="/teachermanagestudents" style={{ textDecoration: 'none' }}>  <div class="card-count-container">
+                    <Link to="/teachermanagestudents" style={{ textDecoration: 'none' }}><div class="card-count">Manage Students</div></Link>
+                    </div></Link>
                     <div class="card-content">
-                    <Link to="/teachermanagestudents"><h4>Click here to manage students</h4></Link>
+                    <Link to="/teachermanagestudents" style={{ textDecoration: 'none' }}>  <i class="fas fa-user-friends"></i></Link>
           </div>
 
-                    <div class="card-footer">
-                        Lorem ipsum dolor sit amet.
-          </div>
+          <Link to="/teachermanagestudents" style={{ textDecoration: 'none', lineHeight:'3em'}}>  <div class="card-footer">
+                        View and manage student progress.
+          </div></Link>
                 </div>
             </div>
         )

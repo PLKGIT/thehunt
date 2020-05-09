@@ -27,8 +27,13 @@
     display: flex;
     height: 400px;
     justify-content: center;
+
+    a{
+      color: black;
+    }
     
     .card{
+      width:300px;
       margin: 20px;
       border-radius: 10px;
       background-color: #ffffff;
@@ -77,7 +82,7 @@
       }
       
       .card-footer{
-        padding: 20px;
+        padding: 10px;
         color: #ffffff;
       }
       
@@ -110,4 +115,9 @@
     @media (max-width: 767px){
       flex-wrap: wrap;
     }
+  }
+  i{
+    
+    font-size: 2.5em;
+    margin-left:50%
   }
