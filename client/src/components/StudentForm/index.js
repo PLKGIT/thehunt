@@ -73,7 +73,7 @@ class StudentForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <h3>Add/Edit Students</h3>
+          {/* <h3>Add/Edit Students</h3> */}
           <label>
             FirstName:
             <input

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../Form/Form.js";
 import Axios from "axios";
+import "../../styles/App.scss";
 
 class Map extends Component {
   constructor(props) {
