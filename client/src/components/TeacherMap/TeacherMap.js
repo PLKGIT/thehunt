@@ -32,14 +32,7 @@ class Map extends Component {
     } else {
       query = this.state.location;
     }
-    state = {
-        clues: [],
-        id: 0,
-        clue: "",
-        answer: "",
-        location: "",
-        locationSearched: false
-    }
+    
     var request = {
       query: query,
       fields: ["name", "geometry"],
