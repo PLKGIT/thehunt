@@ -47,5 +47,15 @@ $footer-fixed: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+.huntDataToEdit {
+  border: black solid 3px;
+  width: 50%;
+  margin: 10px
+}
+
+.hiddenForm {
+  display: none;
   justify-content: center;
 }

@@ -8,40 +8,40 @@ const huntSchema = new Schema({
         type: String
     },
     teacher_id: {
-        type: String,
-        required: true
+        type: String
+        // required: true
     },
     favorite_id: {
         type: String
     },
-    created_by: {
+    clue: {
         type: String,
         required: true
     },
-    title: {
+    answer: {
         type: String,
         required: true
     },
 
-    category: {
+    location: {
         type: String,
-        required: true
+        // required: true
     },
     image_url: {
-        type: String,
-        required: true
+        type: String
+        // required: true
     },
     description: {
-        type: String,
-        required: true
+        type: String
+        // required: true
     },
     hunt_data: {
-        type: Map,
-        required: true
+        type: Map
+        // required: true
     },
     status: {
         type: String,
-        default: "Pending";
+        default: "Pending",
         required: true
     },
     start_date: {

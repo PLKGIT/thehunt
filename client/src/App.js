@@ -14,6 +14,7 @@ import TeacherManageStudents from "./pages/TeacherManageStudents";
 import Student from "./pages/Student";
 import StudentPlay from "./pages/StudentPlay";
 import StudentHistory from "./pages/StudentHistory";
+import EditHunt from "./pages/EditHunt"
 import CreateYourHunt from "./pages/CreateYourHunt";
 import NotFound from "./pages/NotFound";
 
@@ -39,6 +40,7 @@ function App() {
             <Route exact path="/student" component={Student} />
             <Route exact path="/studentplay" component={StudentPlay} />
             <Route exact path="/studenthistory" component={StudentHistory} />
+            <Route exact path="/edithunt" component={EditHunt} />
             <Route exact path="/createyourhunt" component={CreateYourHunt} />
             <Route component={NotFound} />
           </Switch>

@@ -98,6 +98,7 @@ class Login extends Component {
                                 <ul>
                                     <li><Link to="/studentplay">Play Hunts</Link> | <Link to="/studenthistory">Hunts History</Link></li>
                                 </ul>
+                                <li><Link to="/edithunt">EditHunt</Link></li>
                                 <li><Link to="/junk">404 Error Page</Link></li>
                             </ul>
                         </h5>
