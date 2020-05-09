@@ -13,10 +13,6 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-
-/*  Axios Routes  */
-require("../utils/API");
-
 /*  Create Login  */
 class Login extends Component {
     render() {
@@ -29,7 +25,7 @@ class Login extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <h1 className="text-center text-secondary"><img src="./images/unlock.gif" alt="Key in lock gif" width="150px" />Login to Hunt!</h1>
+                        <h1 className="text-center text-secondary"><img src="./images/transparentlock.gif" alt="Key in lock gif" width="150px" />Login to Hunt!</h1>
                     </Col>
                 </Row>
                 <Row>

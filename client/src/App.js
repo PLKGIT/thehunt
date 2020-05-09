@@ -4,15 +4,6 @@ import React from 'react';
 /*  React Router  */
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-/* JWT  */
-// import jwt_decode from "jwt-decode";
-// import setAuthToken from "./utils/setAuthToken";
-// import { setCurrentUser, logoutUser } from "./actions/authActions";
-
-/*  Redux  */
-// import { Provider } from "react-redux";
-// import store from "./store";
-
 /*  Pages  */
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
@@ -26,36 +17,9 @@ import StudentHistory from "./pages/StudentHistory";
 import EditHunt from "./pages/EditHunt"
 import NotFound from "./pages/NotFound";
 
-/*  Auth Pages and Components  */
-// import Login from "./components/Auth/Login";
-// import Register from "./components/Auth/Register";
-// import Dashboard from "./components/Dashboard/index";
-
 /*  Components  */
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-
-/*  Route  */
-// import PrivateRoute from "./components/private-route/PrivateRoute";
-
-// Check for token to keep user logged in
-// if (localStorage.jwtToken) {
-//   // Set auth token header auth
-//   const token = localStorage.jwtToken;
-//   setAuthToken(token);
-//   // Decode token and get user info and exp
-//   const decoded = jwt_decode(token);
-//   // Set user and isAuthenticated
-//   store.dispatch(setCurrentUser(decoded));
-//   // Check for expired token
-//   const currentTime = Date.now() / 1000; // to get in milliseconds
-//   if (decoded.exp < currentTime) {
-//     // Logout user
-//     store.dispatch(logoutUser());
-//     // Redirect to login
-//     window.location.href = "./login";
-//   }
-// }
 
 /*  Create App  */
 function App() {

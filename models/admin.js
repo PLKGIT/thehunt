@@ -24,10 +24,9 @@ const adminSchema = new Schema({
         type: String,
         required: true
     },
-    role: {
+    roles: {
         type: String,
-        required: true,
-        default:"Admin"
+        required: true
     },
     hunt_id: {
         type: Array

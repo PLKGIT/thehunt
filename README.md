@@ -71,10 +71,6 @@ UI/UX design and styling and frontend content
 * https://mongoosejs.com/
 * MongoDB object modeling tool for node.js.
 
-#### Passport JWT NPM
-* http://www.passportjs.org/
-* Authentication middleware for Node.js.
-
 #### JSONWEBTOKEN NPM
 * https://www.npmjs.com/package/jsonwebtoken
 

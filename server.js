@@ -1,23 +1,14 @@
+/*  Body Parser Require  */
+const bodyParser = require('body-parser');
+
 /*  Express Require  */
 const express = require('express');
 
 /*  Mongoose Require  */
 const mongoose = require('mongoose');
 
-/*  Body Parser Require  */
-const bodyParser = require('body-parser');
-
-/*  Passport Require  */
-const passport = require('passport');
-
-/*  User Authentication Require */
-const user = require("./routes/api/user");
-
 /*  Mongo Config  */
 const db = require("./config/keys").mongoURI;
-
-/* Passport Configuration  */
-require("./config/passport")(passport);
 
 /*  Path  */
 const path = require('path');
@@ -29,7 +20,9 @@ require('dotenv').config();
 const app = express();
 
 /*  Middleware  */
+/*  Parse requests application/json content type  */
 app.use(bodyParser.urlencoded({ extended: true }));
+/*  Parse requests application/x-www-form-urlencoded content type  */
 app.use(bodyParser.json());
 
 /*  Static Assets  */
@@ -37,17 +30,14 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
 
+/*  Include Bcrypt JS  */
+var bcrypt = require("bcryptjs");
+
 /*  MongoDB Connection  */
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/unlockit", { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
-
-/*  Passport Middleware  */
-app.use(passport.initialize());
-
-/*  User Authentication Routes  */
-app.use("/api", user);
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
