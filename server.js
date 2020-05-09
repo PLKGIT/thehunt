@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 /*  Express Require  */
 const express = require('express');
-
+const routes = require("./routes/api/apiRoutes");
 /*  Mongoose Require  */
 const mongoose = require('mongoose');
 
@@ -29,7 +29,8 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
-
+app.use(routes)
+// routes(app)
 /*  Include Bcrypt JS  */
 var bcrypt = require("bcryptjs");
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Input, FormBtn } from "../Form/Form.js";
+import Axios from "axios";
 
 class Map extends Component {
   constructor(props) {
@@ -117,6 +118,8 @@ class Map extends Component {
         const json = JSON.stringify(this.state.clues);
         localStorage.setItem("clues", json)
         console.log(this.state.clues)
+        Axios.post("/api/clues", this.state.clues)
+        console.log("axios.post function hit")
     }
     
 

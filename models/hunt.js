@@ -25,7 +25,7 @@ const huntSchema = new Schema({
 
     location: {
         type: String,
-        required: true
+        // required: true
     },
     image_url: {
         type: String
