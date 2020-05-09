@@ -41,7 +41,7 @@ const huntSchema = new Schema({
     },
     status: {
         type: String,
-        default: "Pending";
+        default: "Pending",
         required: true
     },
     start_date: {
