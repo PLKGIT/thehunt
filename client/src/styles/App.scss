@@ -2,8 +2,10 @@
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 
+// $backgroundimage1: linear-gradient(90deg, #9274b7, #3b4a8d);
 body {
   font-family: "Roboto", sans-serif;
+  // background-image:$backgroundimage1
 }
 
 h1 {
