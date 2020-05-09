@@ -21,7 +21,7 @@ const app = express();
 
 /*  CORS Options  */
 var corsOptions = {
-  origin: "https://unlock-it.herokuapp.com/"
+  origin: "https://unlock-it.herokuapp.com"
 };
 
 /*  Use CORS  */

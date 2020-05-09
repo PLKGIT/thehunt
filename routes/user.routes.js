@@ -11,19 +11,19 @@ module.exports = function(app) {
   });
 
   app.get( 
-    "/api/app/all", controller.allAccess);
+    "/api/land/all", controller.allAccess);
 
   app.get(
-     "/api/app/user", 
+     "/api/land/user", 
     [authJwt.verifyToken], controller.userBoard);
 
   app.get(
-    "/api/app/teacher",
+    "/api/land/teacher",
     [authJwt.verifyToken, authJwt.isTeacher], controller.teacherBoard
   );
 
   app.get(
-    "/api/app/admin",
+    "/api/land/admin",
     [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard
   );
 };

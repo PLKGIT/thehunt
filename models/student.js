@@ -23,11 +23,6 @@ const studentSchema = new Schema({
         type: String,
         required: true
     },
-    role: {
-        type: String,
-        required: true,
-        default:"Student"
-    },
     group_id: {
         type: Array,
         required: true
