@@ -14,9 +14,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import AuthService from "../../services/auth.service";
 
 /*  Pages from Authentication  */
-import Login from "./pages/login.component";
-import Home from "./pages/home.component";
-import Profile from "./pages/profile.component";
+import Login from "../../pages/login.component";
+import Home from "../../pages/home.component";
+import Profile from "../../pages/profile.component";
+
+/*  Pages  */
+// Admin
+import BoardAdmin from "../../pages/board-admin.component";
+// Teacher
+import BoardTeacher from "../../pages/board-teacher.component";
+// Student
+import BoardUser from "../../pages/board-user.component";
 
 /*  Create Nav */
 class Nav extends Component {
