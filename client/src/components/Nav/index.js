@@ -13,7 +13,6 @@ import Navbar from 'react-bootstrap/Navbar';
 /*  Auth Components  */
 import AuthService from "../../services/auth.service";
 
-
 /*  Create Nav */
 class Nav extends Component {
 
@@ -54,18 +53,18 @@ class Nav extends Component {
         <div>
           <Navbar fixed="top" >
 
-          <Navbar.Brand ><Link to={"/"} style={{ textDecoration: 'none' }}><h1 className="text-white display-3">Unlock It!</h1></Link>
+          <Navbar.Brand ><Link to="/" style={{ textDecoration: 'none' }}><h1 className="text-white display-3">Unlock It!</h1></Link>
           </Navbar.Brand>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to={"/home"} className="nav-link">
+                <Link to="/home" className="nav-link">
                 <span className="text-white"><h6>Home&emsp;</h6></span>
                 </Link>
               </li>
 
               {showTeacherBoard && (
                 <li className="nav-item">
-                  <Link to={"/teacher"} className="nav-link">
+                  <Link to="/teacher" className="nav-link">
                   <span className="text-white"><h6>Teacher&emsp;</h6></span>
                   </Link>
                 </li>
@@ -73,7 +72,7 @@ class Nav extends Component {
 
               {showAdminBoard && (
                 <li className="nav-item">
-                  <Link to={"/admin"} className="nav-link">
+                  <Link to="/admin" className="nav-link">
                   <span className="text-white"><h6>Admin&emsp;</h6></span>
                   </Link>
                 </li>
@@ -81,7 +80,7 @@ class Nav extends Component {
 
               {currentUser && (
                 <li className="nav-item">
-                  <Link to={"/user"} className="nav-link">
+                  <Link to="/user" className="nav-link">
                   <span className="text-white"><h6>Student&emsp;</h6></span>
                   </Link>
                 </li>
@@ -91,7 +90,7 @@ class Nav extends Component {
             {currentUser ? (
               <div className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <Link to={"/profile"} className="nav-link">
+                  <Link to="/profile" className="nav-link">
                   <span className="text-white"><h6>{currentUser.email}&emsp;</h6></span>
                   </Link>
 
@@ -105,23 +104,13 @@ class Nav extends Component {
             ) : (
                 <div className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <Link to={"/login"} className="nav-link">
+                    <Link to="/login" className="nav-link">
                     <span className="text-white"><h6>Login&emsp;</h6></span>
                   </Link>
                   </li>
                 </div>
               )}
           </Navbar>
-          {/* <div className="container mt-3">
-            <Switch>
-              <Route exact path={["/", "/home"]} component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/profile" component={Profile} />
-              <Route path="/user" component={BoardUser} />
-              <Route path="/teacher" component={BoardTeacher} />
-              <Route path="/admin" component={BoardAdmin} />
-            </Switch>
-          </div> */}
         </div>
       </Router>
     )
