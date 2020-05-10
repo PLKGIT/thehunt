@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 import UserService from "../services/user.service";
+import AdminComponents from "../components/AdminTab";
 
 export default class BoardAdmin extends Component {
   constructor(props) {
