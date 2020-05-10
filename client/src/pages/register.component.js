@@ -26,16 +26,6 @@ const email = value => {
   }
 };
 
-const vusername = value => {
-  if (value.length < 3 || value.length > 20) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        The username must be between 3 and 20 characters.
-      </div>
-    );
-  }
-};
-
 const vfirst = value => {
   if (value.length < 3 || value.length > 20) {
     return (
@@ -70,7 +60,6 @@ export default class Register extends Component {
   constructor(props) {
     super(props);
     this.handleRegister = this.handleRegister.bind(this);
-    this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeFirst = this.onChangeFirst.bind(this);
     this.onChangeLast = this.onChangeLast.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
@@ -78,35 +67,32 @@ export default class Register extends Component {
 
     this.state = {
       username: "",
-      first: "",
-      last: "",
+      first_name: "",
+      last_name: "",
       email: "",
       password: "",
+      status: "Active",
       successful: false,
       message: ""
     };
   }
 
-  onChangeUsername(e) {
-    this.setState({
-      username: e.target.value
-    });
-  }
   onChangeFirst(e) {
     this.setState({
-      first: e.target.value
+      first_name: e.target.value
     });
   }
 
   onChangeLast(e) {
     this.setState({
-      last: e.target.value
+      last_name: e.target.value
     });
   }
 
   onChangeEmail(e) {
     this.setState({
-      email: e.target.value
+      email: e.target.value,
+      username: e.target.value
     });
   }
 
@@ -129,10 +115,11 @@ export default class Register extends Component {
     if (this.checkBtn.context._errors.length === 0) {
       AuthService.register(
         this.state.username,
-        this.state.first,
-        this.state.last,
+        this.state.first_name,
+        this.state.last_name,
         this.state.email,
-        this.state.password
+        this.state.password,
+        this.state.status
       ).then(
         response => {
           this.setState({
@@ -158,6 +145,8 @@ export default class Register extends Component {
   }
 
   render() {
+
+
     return (
       <div className="col-md-12">
         <div className="card card-container">
@@ -176,24 +165,12 @@ export default class Register extends Component {
             {!this.state.successful && (
               <div>
                 <div className="form-group">
-                  <label htmlFor="username">Username</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="username"
-                    value={this.state.username}
-                    onChange={this.onChangeUsername}
-                    validations={[required, vusername]}
-                  />
-                </div>
-
-                <div className="form-group">
                   <label htmlFor="first">First</label>
                   <Input
                     type="text"
                     className="form-control"
                     name="first"
-                    value={this.state.first}
+                    value={this.state.first_name}
                     onChange={this.onChangeFirst}
                     validations={[required, vfirst]}
                   />
@@ -205,7 +182,7 @@ export default class Register extends Component {
                     type="text"
                     className="form-control"
                     name="last"
-                    value={this.state.last}
+                    value={this.state.last_name}
                     onChange={this.onChangeLast}
                     validations={[required, vlast]}
                   />
@@ -234,7 +211,16 @@ export default class Register extends Component {
                     validations={[required, vpassword]}
                   />
                 </div>
-
+                <div className="form-group">
+                  <label htmlFor="email">Status</label>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    name="status"
+                    value="Active"
+                    readOnly
+                  />
+                </div>
                 <div className="form-group">
                   <button className="btn btn-primary btn-block">Register</button>
                 </div>
