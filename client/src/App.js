@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 /*  React Router  */
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 /*  Authorization Service  */
 import AuthService from "./services/auth.service";
@@ -28,6 +28,9 @@ import NotFound from "./pages/NotFound";
 /*  Components  */
 // import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+
+/*  React Bootstrap Components  */
+import Nav from 'react-bootstrap/Nav';
 
 /*  Create App  */
 class App extends Component {
