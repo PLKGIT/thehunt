@@ -37,17 +37,17 @@ function App() {
         <Nav />
         <div className="container mt-3">
           <Switch>
-            <Route exact path={["/", "/home"]} component={Home} />
+            {/* <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/profile" component={Profile} />
-            <Route path="/admin" component={BoardAdmin} />
-            <Route path="/teacher" component={BoardTeacher} />
+            <Route exact path="/profile" component={Profile} /> */}
+            {/* <Route path="/admin" component={BoardAdmin} />
+            <Route path="/teacher" component={BoardTeacher} /> */}
             <Route exact path="/teachercreate" component={TeacherCreate} />
             <Route exact path="/teachermanagehunts" component={TeacherManageHunts} />
             <Route exact path="/teachermanagestudents" component={TeacherManageStudents} />
             <Route exact path="/edithunt" component={EditHunt} />
             <Route exact path="/createyourhunt" component={CreateYourHunt} />
-            <Route path="/user" component={BoardUser} />
+            {/* <Route path="/user" component={BoardUser} /> */}
             <Route exact path="/studentplay" component={StudentPlay} />
             <Route exact path="/studenthistory" component={StudentHistory} />
           </Switch>

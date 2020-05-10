@@ -13,6 +13,11 @@ import Navbar from 'react-bootstrap/Navbar';
 /*  Auth Components  */
 import AuthService from "../../services/auth.service";
 
+/*  Pages from Authentication  */
+import Login from "./pages/login.component";
+import Home from "./pages/home.component";
+import Profile from "./pages/profile.component";
+
 /*  Create Nav */
 class Nav extends Component {
 
@@ -111,6 +116,16 @@ class Nav extends Component {
                 </div>
               )}
           </Navbar>
+          <div className="container mt-3">
+            <Switch>
+              <Route exact path={["/", "/home"]} component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/profile" component={Profile} />
+              <Route path="/user" component={BoardUser} />
+              <Route path="/teacher" component={BoardTeacher} />
+              <Route path="/admin" component={BoardAdmin} />
+            </Switch>
+          </div>
         </div>
       </Router>
     )
