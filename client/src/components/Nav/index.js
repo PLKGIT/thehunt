@@ -13,15 +13,6 @@ import Navbar from 'react-bootstrap/Navbar';
 /*  Auth Components  */
 import AuthService from "../../services/auth.service";
 
-/*  Pages from Authentication  */
-import Login from "../../pages/login.component";
-import Register from "../../pages/register.component";
-import Home from "../../pages/home.component";
-import Profile from "../../pages/profile.component";
-import BoardUser from "../../pages/board-user.component";
-import BoardTeacher from "../../pages/board-teacher.component";
-import BoardAdmin from "../../pages/board-admin.component";
-
 
 /*  Create Nav */
 class Nav extends Component {
@@ -101,8 +92,9 @@ class Nav extends Component {
               <div className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link to={"/profile"} className="nav-link">
-                    {currentUser.email}
+                  <span className="text-white"><h6>{currentUser.email}&emsp;</h6></span>
                   </Link>
+
                 </li>
                 <li className="nav-item">
                   <a href="/login" className="nav-link" onClick={this.logOut}>
@@ -120,17 +112,16 @@ class Nav extends Component {
                 </div>
               )}
           </Navbar>
-          <div className="container mt-3">
+          {/* <div className="container mt-3">
             <Switch>
               <Route exact path={["/", "/home"]} component={Home} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
               <Route exact path="/profile" component={Profile} />
               <Route path="/user" component={BoardUser} />
               <Route path="/teacher" component={BoardTeacher} />
               <Route path="/admin" component={BoardAdmin} />
             </Switch>
-          </div>
+          </div> */}
         </div>
       </Router>
     )
