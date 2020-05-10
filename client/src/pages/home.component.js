@@ -1,41 +1,22 @@
 import React, { Component } from "react";
+import "../styles/home.component.scss"
 
 import UserService from "../services/user.service";
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      content: ""
-    };
-  }
 
   componentDidMount() {
-    UserService.getPublicContent().then(
-      response => {
-        this.setState({
-          content: response.data
-        });
-      },
-      error => {
-        this.setState({
-          content:
-            (error.response && error.response.data) ||
-            error.message ||
-            error.toString()
-        });
-      }
-    );
+    UserService.getPublicContent();
   }
-
   render() {
     return (
-      <div className="container">
-        <header className="jumbotron">
-          <h3>{this.state.content}</h3>
-        </header>
-      </div>
+        <div id="banner">
+          <div id="cloud-scroll">
+          <div className="container">
+            <h1 className="text-center">Welcome to Unlock It!  The Hunt is on!</h1>
+            </div>
+          </div>
+        </div>
     );
   }
 }

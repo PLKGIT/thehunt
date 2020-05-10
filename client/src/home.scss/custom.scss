@@ -1,0 +1,8 @@
+/* Make the customizations here */
+$theme-colors: (
+    "info":#ac4ac9,
+    "secondary": white
+    );
+/* ------------------------ */
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
