@@ -14,7 +14,23 @@ export default class BoardAdmin extends Component {
   }
 
   componentDidMount() {
-    UserService.getAdminBoard()
+    UserService.getAdminBoard().then(
+      response => {
+        this.setState({
+          content: response.data
+        });
+      },
+      error => {
+        this.setState({
+          content:
+            (error.response &&
+              error.response.data &&
+              error.response.data.message) ||
+            error.message ||
+            error.toString()
+        });
+      }
+    );
   }
 
   render() {
