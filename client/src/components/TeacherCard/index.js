@@ -54,6 +54,19 @@ class TeacherCard extends Component {
                         View and manage student progress.
           </div></Link>
                 </div>
+
+                <div class="card">
+                <Link to="/teachercreategroup" style={{ textDecoration: 'none' }}>  <div class="card-count-container">
+                    <Link to="/teachercreategroup" style={{ textDecoration: 'none' }}><div class="card-count">Create Groups</div></Link>
+                    </div></Link>
+                    <div class="card-content">
+                    <Link to="/teachercreategroup" style={{ textDecoration: 'none' }}>  <i class="fas fa-user-friends"></i></Link>
+          </div>
+
+          <Link to="/teachercreategroup" style={{ textDecoration: 'none', lineHeight:'3em'}}>  <div class="card-footer">
+                        Create a group for students.
+          </div></Link>
+                </div>
             </div>
         )
     }
