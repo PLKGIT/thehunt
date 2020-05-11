@@ -4,6 +4,10 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 
+/*  React Bootstrap Components  */
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import AuthService from "../services/auth.service";
 
 const required = value => {
@@ -145,111 +149,116 @@ export default class Register extends Component {
   }
 
   render() {
-
-
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          />
+      <div className="container">
+        <Form onSubmit={this.handleRegister}
+          ref={c => {
+            this.form = c;
+          }}>
+          {!this.state.successful && (
+            <div>
+              <Row>
+                <Col>
+                  <div className="form-group">
+                    <label htmlFor="first">First</label>
+                    <Input
+                      type="text"
+                      className="form-control"
+                      name="first"
+                      value={this.state.first_name}
+                      onChange={this.onChangeFirst}
+                      validations={[required, vfirst]}
+                    />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="form-group">
+                    <label htmlFor="last">Last</label>
+                    <Input
+                      type="text"
+                      className="form-control"
+                      name="last"
+                      value={this.state.last_name}
+                      onChange={this.onChangeLast}
+                      validations={[required, vlast]}
+                    />
+                  </div>
+                </Col>
+              </Row>
 
-          <Form
-            onSubmit={this.handleRegister}
-            ref={c => {
-              this.form = c;
-            }}
-          >
-            {!this.state.successful && (
-              <div>
-                <div className="form-group">
-                  <label htmlFor="first">First</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="first"
-                    value={this.state.first_name}
-                    onChange={this.onChangeFirst}
-                    validations={[required, vfirst]}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="last">Last</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="last"
-                    value={this.state.last_name}
-                    onChange={this.onChangeLast}
-                    validations={[required, vlast]}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChangeEmail}
-                    validations={[required, email]}
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="password">Password</label>
-                  <Input
-                    type="password"
-                    className="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.onChangePassword}
-                    validations={[required, vpassword]}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Status</label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    name="status"
-                    value="Active"
-                    readOnly
-                  />
-                </div>
-                <div className="form-group">
-                  <button className="btn btn-primary btn-block">Register</button>
-                </div>
-              </div>
-            )}
-
-            {this.state.message && (
+              <Row>
+                <Col>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <Input
+                      type="text"
+                      className="form-control"
+                      name="email"
+                      value={this.state.email}
+                      onChange={this.onChangeEmail}
+                      validations={[required, email]}
+                    />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <Input
+                      type="password"
+                      className="form-control"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.onChangePassword}
+                      validations={[required, vpassword]}
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <div className="form-group">
+                    <label htmlFor="email">Status</label>
+                    <Input
+                      type="text"
+                      className="form-control"
+                      name="status"
+                      value="Active"
+                      readOnly
+                    />
+                  </div>
+                </Col>
+                <Col>
+              
+                </Col>
+              </Row>
+            <Row>
+              <Col>
               <div className="form-group">
-                <div
-                  className={
-                    this.state.successful
-                      ? "alert alert-success"
-                      : "alert alert-danger"
-                  }
-                  role="alert"
-                >
-                  {this.state.message}
-                </div>
+                <button className="btn btn-primary btn-block">Register</button>
               </div>
-            )}
-            <CheckButton
-              style={{ display: "none" }}
-              ref={c => {
-                this.checkBtn = c;
-              }}
-            />
-          </Form>
-        </div>
-      </div>
+              </Col>
+            </Row>
+              
+            </div>)}
+          {this.state.message && (
+            <div className="form-group">
+              <div
+                className={
+                  this.state.successful
+                    ? "alert alert-success"
+                    : "alert alert-danger"
+                }
+                role="alert">
+                {this.state.message}
+              </div>
+            </div>)}
+          <CheckButton
+            style={{ display: "none" }}
+            ref={c => {
+              this.checkBtn = c;
+            }} />
+        </Form>
+      </div >
     );
   }
 }
