@@ -10,19 +10,14 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div>
-{/* <Navbar bg="light" fixed="top">
-    <Navbar.Brand href="#home">Brand link</Navbar.Brand>
-  </Navbar> */}
-   <h1 className="text-center">Welcome to Unlock It!  The Hunt is on!</h1>
-           
-     <div id="banner">
-       <div id ="cloud-scroll">
-        
-       </div>
-            </div>
-     </div>
-        
+      <div className="container">
+        <div id="banner">
+          <div id="cloud-scroll">
+            <h1 className="text-center">Welcome to Unlock It!</h1>
+            <h2 className="text-center">The Hunt is on!</h2>
+          </div>
+        </div>
+      </div>
     );
   }
 }

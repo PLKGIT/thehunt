@@ -17,7 +17,7 @@ export default class Profile extends Component {
       <div className="container">
         <header className="jumbotron">
           <h3>
-            <strong>{currentUser.first} {" "} {currentUser.last}</strong>'s  Profile
+            <strong>{currentUser.first_name} {" "} {currentUser.last_name}{"'s"}</strong>  Profile
           </h3>
         </header>
         <p>
@@ -32,6 +32,10 @@ export default class Profile extends Component {
         <p>
           <strong>Email:</strong>{" "}
           {currentUser.email}
+        </p>
+        <p>
+          <strong>Status:</strong>{" "}
+          {currentUser.status}
         </p>
         <strong>Authorities:</strong>
         <ul>

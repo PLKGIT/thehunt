@@ -9,11 +9,12 @@ var bcrypt = require("bcryptjs");
 exports.signup = (req, res) => {
   const user = new User({
     username: req.body.username,
-    first: req.body.first,
-    last: req.body.last,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
     email: req.body.email,
     roles:["5eb70cc6008153002af8c262"],
-    password: bcrypt.hashSync(req.body.password, 8)
+    password: bcrypt.hashSync(req.body.password, 8),
+    status:"Active"
   });
 
   user.save((err, user) => {
@@ -104,9 +105,10 @@ exports.signin = (req, res) => {
       res.status(200).send({
         id: user._id,
         username: user.username,
-        first: user.first,
-        last: user.last,
+        first_name: user.first_name,
+        last_name: user.last_name,
         email: user.email,
+        status: user.status,
         roles: authorities,
         accessToken: token
       });

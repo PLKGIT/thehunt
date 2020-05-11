@@ -22,13 +22,14 @@ class AuthService {
     localStorage.removeItem('user');
   }
 
-  register(username, first, last, email, password) {
-    return axios.post(API_URL + 'signup', {
+  register(username, first_name, last_name, email, password, status) {
+    return axios.post(API_URL + "signup", {
       username, 
-      first, 
-      last, 
+      first_name, 
+      last_name, 
       email, 
-      password
+      password,
+      status
     });
   }
 

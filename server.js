@@ -108,10 +108,11 @@ function initialusers() {
     if (!err && count === 0) {
       new User ({
         username: "admin@unlockit.com",
-        first: "Admin",
-        last: "User",
+        first_name: "Admin",
+        last_name: "User",
         email: "admin@unlockit.com",
         password: bcrypt.hashSync("p@ssw0rd", 8),
+        status:"Active",
         roles: ["5eb70cc6008153002af8c264"]
       }).save(err => {
         if (err) {

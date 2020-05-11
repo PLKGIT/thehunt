@@ -1,28 +1,37 @@
-import React from 'react'
+/*  React  */
+import React from "react";
 
-import Accordion from 'react-bootstrap/Accordion';
-import { Button, Card } from 'react-bootstrap';
+/*  Authorization Service  */
+import AuthService from "../../services/auth.service";
+
+/*  Register Component  */
+import Register from "../../pages/register.component";
+
+/*  Tabs  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import TabContainer from 'react-bootstrap/TabContainer';
+
+class AdminComponents extends React.Component {
+  render() {
 
 
-
-function AdminComponents() {
-  return (
-    <div id="tabWrapper">
-      <Tabs eventKey="profile" id="uncontrolled-tab-example">
-        <Tab eventKey="home" title="Add/Edit Org">
-        </Tab>
-        <Tab eventKey="profile" title="Add/Edit Teacher">
-          <h6>Creating group...</h6>
-
-        </Tab>
-        <Tab eventKey="contact" title="Add/Edit Students">
-          <h6>Status...</h6>
-        </Tab>
-      </Tabs>
-    </div>
-  )
+    return (
+      <div id="tabWrapper">
+        <Tabs eventKey="home" id="admintabbed">
+          <Tab eventKey="home" title="Register Users">
+            <Register />
+          </Tab>
+          <Tab eventKey="profile" title="Edit Users">
+            <h6>Edit Users</h6>
+          </Tab>
+          <Tab eventKey="contact" title="Edit Org">
+            <h6>Edit Organization</h6>
+          </Tab>
+        </Tabs>
+      </div>
+    )
+  }
 }
 
 export default AdminComponents;
