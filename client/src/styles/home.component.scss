@@ -8,11 +8,12 @@
   #cloud-scroll {
     background: url("/images/homeworld.png") repeat-x;
     top: 0;
-    left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
-    position: absolute;
+    position: relative;
     -webkit-animation: 900000s backgroundScroll infinite linear;
     -moz-animation: 900000s backgroundScroll infinite linear;
     -o-animation: 900000s backgroundScroll infinite linear;
