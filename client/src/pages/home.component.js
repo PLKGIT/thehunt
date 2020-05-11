@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../styles/home.component.scss"
 
 import UserService from "../services/user.service";
-
+import Navbar from 'react-bootstrap/Navbar'
 export default class Home extends Component {
 
   componentDidMount() {

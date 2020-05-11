@@ -8,6 +8,10 @@ body {
   // background-image:$backgroundimage1
 }
 
+// .navbar{
+//  background-color: rgb(193, 190, 196);
+// }
+
 h1 {
   font-family: "Bangers", cursive;
   // text-shadow: 1.5px 1.5px 2px #ffffff;
@@ -43,14 +47,25 @@ h6 {
   width: 75%;
 }
 
-$footer-fixed: fixed;
+$footer-fixed: relative;
 
-#navbar {
+footer {
   // position: $footer-fixed;
-  // left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+  // // left: 0;
+  // bottom: 0;
+  // width: 100%;
+  // text-align: center;
+  
+    position: $footer-fixed;
+    bottom: 0;
+    left:0;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    padding-top:10px;
+    text-align: center;
+    margin-top:-10px;
+    clear: both;
 }
 
 .huntDataToEdit {
@@ -63,3 +78,9 @@ $footer-fixed: fixed;
   display: none;
   justify-content: center;
 }
+
+.col-md-6{
+  margin-left: auto;
+  margin-right: auto;
+}
+
