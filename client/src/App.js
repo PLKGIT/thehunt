@@ -19,6 +19,7 @@ import BoardAdmin from "./pages/board-admin.component";
 import TeacherCreate from "./pages/TeacherCreate";
 import TeacherManageHunts from "./pages/TeacherManageHunts";
 import TeacherManageStudents from "./pages/TeacherManageStudents";
+import TeacherCreareGroup from "./pages/TeacherCreateGroup";
 import EditHunt from "./pages/EditHunt"
 import CreateYourHunt from "./pages/CreateYourHunt";
 import StudentPlay from "./pages/StudentPlay";
@@ -141,6 +142,7 @@ class App extends Component {
               <Route exact path="/teachercreate" component={TeacherCreate} />
               <Route exact path="/teachermanagehunts" component={TeacherManageHunts} />
               <Route exact path="/teachermanagestudents" component={TeacherManageStudents} />
+              <Route exact path="/teachercreategroup" component={TeacherCreareGroup}/>
               <Route exact path="/edithunt" component={EditHunt} />
               <Route exact path="/createyourhunt" component={CreateYourHunt} />
               <Route exact path="/admin" component={BoardAdmin} />
