@@ -14,26 +14,26 @@ const huntSchema = new Schema({
     favorite_id: {
         type: String
     },
-    // clue: {
-    //     type: String,
-    //     required: true
-    // },
-    // answer: {
-    //     type: String,
-    //     required: true
-    // },
-
-    // location: {
-    //     type: String,
-    //     // required: true
-    // },
-    image_url: {
-        type: String
+    created_by: {
+        type: String,
         // required: true
     },
+    title: {
+        type: String,
+        required: true
+    },
+
+    category: {
+        type: String,
+        required: true
+    },
+    image_url: {
+        type: String,
+        required: true
+    },
     description: {
-        type: String
-        // required: true
+        type: String,
+        required: true
     },
     hunt_data: {
         type: Array,

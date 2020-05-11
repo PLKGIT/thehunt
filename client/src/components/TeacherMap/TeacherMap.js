@@ -10,10 +10,15 @@ class Map extends Component {
   }
   state = {
     clues: [],
+    title: "",
+    category: "",
+    imageUrl: "",
+    description: "",
     clue: "",
     answer: "",
     location: "",
     locationSearched: false,
+    id: 0
   };
 
   onScriptLoad() {
@@ -34,7 +39,7 @@ class Map extends Component {
     } else {
       query = this.state.location;
     }
-    
+
     var request = {
       query: query,
       fields: ["name", "geometry"],
@@ -76,102 +81,135 @@ class Map extends Component {
     }
 
     function rotate90() {
-        var heading = map.getHeading() || 0;
-        map.setHeading(heading + 90);
+      var heading = map.getHeading() || 0;
+      map.setHeading(heading + 90);
+    }
+
+    function autoRotate() {
+      // Determine if we're showing aerial imagery.
+      if (map.getTilt() !== 0) {
+        window.setInterval(rotate90, 3000);
       }
-  
-      function autoRotate() {
-        // Determine if we're showing aerial imagery.
-        if (map.getTilt() !== 0) {
-          window.setInterval(rotate90, 3000);
-        }
-      }
-      this.setState({ locationSearched: true });
+    }
+    this.setState({ locationSearched: true });
   }
 
-    handleInputChange = event => {
-        const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
-    };
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
-    handleQuestionSubmit = event => {
-        event.preventDefault();
-        if (this.state.clue && this.state.answer) {
-            var id = this.state.id
-            console.log("clue: " + this.state.clue + "and answer: " + this.state.answer)
-            var obj = {id: id, clue: this.state.clue, answer: this.state.answer, location: this.state.location}
-            id++;
-            this.setState({id: id})
-            this.state.clues.push(obj)
-            console.log(this.state.clues)
-            this.setState({clue: "", answer: "", location: ""})
-        }
-    };
-
-    handleFormSubmit = event => {
-        event.preventDefault();
-        // modal saying "Hunt Added"
-        // redirect to 'Manage Hunts' page
-        var obj = {id: this.state.id, clue: this.state.clue, answer: this.state.answer, location: this.state.location}
-        this.state.clues.push(obj)
-        const json = JSON.stringify(this.state.clues);
-        localStorage.setItem("clues", json)
-        console.log(this.state.clues)
-        Axios.post("/api/clues", {hunt_data: this.state.clues})
-        console.log("axios.post function hit")
+  handleQuestionSubmit = event => {
+    event.preventDefault();
+    this.setState({ locationSearched: false })
+    if (this.state.clue && this.state.answer) {
+      var id = this.state.id
+      console.log("clue: " + this.state.clue + "and answer: " + this.state.answer)
+      var obj = { id: id, clue: this.state.clue, answer: this.state.answer, location: this.state.location }
+      id++;
+      this.setState({ id: id })
+      this.state.clues.push(obj)
+      console.log(this.state.clues)
+      this.setState({ clue: "", answer: "", location: "" })
     }
-    
+  };
 
-    render() {
-        return (
-            <>
-            <form>
-                    <Input
-                        id="clue"
-                        value={this.state.clue}
-                        onChange={this.handleInputChange}
-                        name="clue"
-                        placeholder="Clue (required)"
-                    />
-                    <Input
-                        value={this.state.answer}
-                        onChange={this.handleInputChange}
-                        name="answer"
-                        placeholder="Answer (required)"
-                    />
-                    <Input
-                        value={this.state.location}
-                        onChange={this.handleInputChange}
-                        name="location"
-                        placeholder="Location (Leave blank if same as answer)"
-                    />
-                    <FormBtn
-                        disabled={!(this.state.clue && this.state.answer && this.state.locationSearched)}
-                        onClick={this.handleQuestionSubmit}
-                    >
-                        Submit another question
+  handleFormSubmit = event => {
+    event.preventDefault();
+    // modal saying "Hunt Added"
+    // redirect to 'Manage Hunts' page
+    var obj = { id: this.state.id, clue: this.state.clue, answer: this.state.answer, location: this.state.location }
+    this.state.clues.push(obj)
+    // const json = JSON.stringify(this.state.clues);
+    // localStorage.setItem("clues", json)
+    console.log(this.state.clues)
+    Axios.post("/api/clues", { 
+      title: this.state.title,
+      category: this.state.category,
+      image_url: this.state.imageUrl,
+      description: this.state.description,
+      hunt_data: this.state.clues
+     })
+    console.log("axios.post function hit")
+    window.location.href = "/teachermanagehunts"
+  }
+
+
+  render() {
+    return (
+      <>
+        <form>
+          <Input
+          value={this.state.title}
+          onChange={this.handleInputChange}
+          name="title"
+          placeholder="Title (required)"
+          />
+          <Input
+          value={this.state.category}
+          onChange={this.handleInputChange}
+          name="category"
+          placeholder="Category/Subject (required)"
+          />
+          <Input
+          // value={state}
+          name="imageUrl"
+          onChange={this.handleInputChange}
+          placeholder="Image to be displayed (URL required)"
+          />
+          <Input
+          placeholder="Description"
+          name="description"
+          onChange={this.handleInputChange}
+          />
+          <Input
+            id="clue"
+            value={this.state.clue}
+            onChange={this.handleInputChange}
+            name="clue"
+            placeholder="Clue (required)"
+          />
+          <Input
+            value={this.state.answer}
+            onChange={this.handleInputChange}
+            name="answer"
+            placeholder="Answer (required)"
+          />
+          <Input
+            value={this.state.location}
+            onChange={this.handleInputChange}
+            name="location"
+            placeholder="Location (Leave blank if same as answer)"
+          />
+
+          <FormBtn
+            onClick={this.renderMap}
+            value={this.state.location}
+            disabled={!(this.state.answer || this.state.location)}
+          >
+            Confirm location
                 </FormBtn>
-                    <FormBtn
-                        disabled={!(this.state.clues.length > 1)}
-                        onClick={this.handleFormSubmit}
-                    >
-                        Done
+          <FormBtn
+            disabled={!(this.state.clue && this.state.answer && this.state.locationSearched)}
+            onClick={this.handleQuestionSubmit}
+          >
+            Submit this question
                 </FormBtn>
-                <FormBtn
-                onClick={this.renderMap}
-                value={this.state.location}
-                disabled={!(this.state.answer || this.state.location)}
-                >
-                    Confirm location
+          <FormBtn
+            disabled={!(this.state.clues.length > 1) || !(this.state.answer || this.state.location)}
+            onClick={this.handleFormSubmit}
+          >
+            Submit this question and complete hunt
                 </FormBtn>
-                </form>
-                <div style={{ width: 500, height: 500 }} id={this.props.id} />
-                <div className="form">
-                    <form className="form">
-                        {/* <p>Questions will appear here</p> */}
-                        {/* <Input
+
+        </form>
+        <div style={{ width: 500, height: 500 }} id={this.props.id} />
+        <div className="form">
+          <form className="form">
+            {/* <p>Questions will appear here</p> */}
+            {/* <Input
                             value={this.state.answer}
                             onChange={this.handleInputChange}
                             name="answer"
@@ -184,12 +222,12 @@ class Map extends Component {
                         >
                             Check your answer
                         </FormBtn> */}
-                    </form>
-                </div>
-            </>
-        );
-    }
+          </form>
+        </div>
+      </>
+    );
   }
+}
 
 
 export default Map;
