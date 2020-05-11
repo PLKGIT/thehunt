@@ -4,9 +4,6 @@ const Schema = mongoose.Schema;
 
 /*  Schema  */
 const orgSchema = new Schema({
-    org_id: {
-        type: String
-    },
     org_name: {
         type: String,
         required: true

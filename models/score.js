@@ -4,9 +4,6 @@ const Schema = mongoose.Schema;
 
 /*  Schema  */
 const scoreSchema = new Schema({
-    score_id: {
-        type: String
-    },
     started: {
         type: Date
     },

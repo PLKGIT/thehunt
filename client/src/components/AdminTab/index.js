@@ -1,21 +1,21 @@
 /*  React  */
 import React from "react";
 
-/*  Authorization Service  */
-import AuthService from "../../services/auth.service";
-
 /*  Register Component  */
 import Register from "../../pages/register.component";
+
+/*  Org Component  */
+import Org from "../../pages/org.component";
+import OrgProfile from "../../pages/org.profile.component";
 
 /*  Tabs  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import TabContainer from 'react-bootstrap/TabContainer';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 class AdminComponents extends React.Component {
   render() {
-
-
     return (
       <div id="tabWrapper">
         <Tabs eventKey="home" id="admintabbed">
@@ -26,7 +26,14 @@ class AdminComponents extends React.Component {
             <h6>Edit Users</h6>
           </Tab>
           <Tab eventKey="contact" title="Edit Org">
-            <h6>Edit Organization</h6>
+            <Row>
+              <Col>
+              <OrgProfile />
+              </Col>
+              <Col>
+              <Org />
+              </Col>
+            </Row>
           </Tab>
         </Tabs>
       </div>

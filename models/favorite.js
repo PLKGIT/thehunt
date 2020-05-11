@@ -4,9 +4,6 @@ const Schema = mongoose.Schema;
 
 /*  Schema  */
 const favoriteSchema = new Schema({
-    favorite_id: {
-        type: String
-    },
     title: {
         type: String,
         required: true

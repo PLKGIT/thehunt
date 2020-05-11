@@ -4,9 +4,6 @@ const Schema = mongoose.Schema;
 
 /*  Schema  */
 const groupSchema = new Schema({
-    group_id: {
-        type: String
-    },
     teacher_id: {
         type: String,
         required: true

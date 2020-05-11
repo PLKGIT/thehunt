@@ -4,28 +4,12 @@ const Schema = mongoose.Schema;
 
 /*  Schema  */
 const huntSchema = new Schema({
-    hunt_id: {
-        type: String
-    },
     teacher_id: {
         type: String
         // required: true
     },
     favorite_id: {
         type: String
-    },
-    clue: {
-        type: String,
-        required: true
-    },
-    answer: {
-        type: String,
-        required: true
-    },
-
-    location: {
-        type: String,
-        // required: true
     },
     image_url: {
         type: String
