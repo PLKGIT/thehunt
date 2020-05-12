@@ -3,6 +3,8 @@ import { Input, FormBtn } from "../Form/Form.js"
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
+/* Styling */
+import "../../styles/studentPlay.scss"
 
 class Map extends Component {
     constructor(props) {
@@ -32,7 +34,7 @@ class Map extends Component {
             this.props.options);
     }
 
-   
+
 
     correctMapSearch = () => {
         // event.preventDefault();
@@ -206,7 +208,7 @@ class Map extends Component {
         var $str2 = this.state.correctAnswer;
 
         var perc = Math.round(similarity($str1, $str2) * 10000) / 100;
-        this.setState({similarity: perc})
+        this.setState({ similarity: perc })
         console.log(this.state.similarity)
         console.log("INSIDE THE CHECK SIMILARITY FUNCITON")
     }
@@ -249,8 +251,8 @@ class Map extends Component {
         event.preventDefault();
         var score = this.state.score
         if (this.state.similarity > 40) {
-            this.setState({ score: score + 10 })            
-            this.setState({ tryAgain: false})
+            this.setState({ score: score + 10 })
+            this.setState({ tryAgain: false })
             this.correctMapSearch();
             this.setState({ status: "correct" })
             this.setState({ displayText: "Congrats! That's correct" })
@@ -259,9 +261,9 @@ class Map extends Component {
         else {
             this.setState({ status: "incorrect" })
             if (!this.state.tryAgain) {
-                this.setState({score: score - 5})
+                this.setState({ score: score - 5 })
             }
-            this.setState({tryAgain: true})
+            this.setState({ tryAgain: true })
             this.setState({ status: "incorrect", displayText: "Wrong!" })
             console.log("WRONG! modal will pop up now")
         }
@@ -325,57 +327,104 @@ class Map extends Component {
     render() {
         return (
             <>
-                <div style={{ width: 500, height: 500 }} id={this.props.id} />
-                <div className="form">
-                    <form className="form playForm">
-                        <FormBtn
-                            onClick={this.displayClue}
-                        >
-                            Start Quiz
+                <div className="wrapper">
+                    <h1 className="text-center">PLAY HUNT</h1>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <form className="form playForm">
+                                <FormBtn className="nav btn startQuiz"
+                                    onClick={this.displayClue}
+                                >
+                                    Start Quiz
                             </FormBtn>
+                            </form>
 
-                        <p
-                            className={this.state.status === "correct" ? "playPageCorrect" : "playPageIncorrect"}
-                        >
-                            {this.state.displayText}
-                        </p>
-                        <p>{this.state.score}</p>
-                        <p>{this.state.currentClue}</p>
-                        {/* <p>{this.state.correctAnswer}</p>
-                        <p>{this.state.location}</p>
-                        <p>{this.state.numClues}</p> */}
+                        </div>
+                    </div>
+                    <div className="row content">
+                        <div className="col-m-4">
+                            <div className="row">
 
-                        <Input
-                            value={this.state.answer}
-                            onChange={this.handleInputChange}
-                            name="answer"
-                            placeholder="Type your answer here"
-                        >
-                        </Input>
-                        <FormBtn
-                            onClick={this.handleFormSubmit}
-                            disabled={this.state.mapSearched}
-                            className="form"
-                        >
-                            Check your answer
-                        </FormBtn>
 
-                        <FormBtn
-                            onClick={this.displayClue}
-                            disabled={!this.state.mapSearched}
-                        >
-                            Next Question
-                        </FormBtn>
-                        <FormBtn
-                            onClick={ (event) => {
-                                event.preventDefault()
-                                window.location.href = "/studenthistory"
-                            }}
-                        >Complete Hunt
-                        </FormBtn>
-                        {/* <Link to="/studenthistory">
-                            Complete Hunt</Link> */}
-                    </form>
+                                <div className="form">
+                                    <form className="form playForm">
+                                        {/* <FormBtn
+                                        onClick={this.displayClue}
+                                        >
+                                        Start Quiz
+                                        </FormBtn> */}
+
+                                        <p
+                                            className={this.state.status === "correct" ? "playPageCorrect" : "playPageIncorrect"}
+                                        >
+                                            {this.state.displayText}
+                                        </p>
+                                        <p>Score: {this.state.score}</p>
+                                    </form>
+                                </div>
+                                </div>
+                                <div className="row">
+                                    <form className="form playForm">
+                                        <p>Clue{this.state.currentClue}</p>
+                                        {/* <p>{this.state.correctAnswer}</p>
+                                        <p>{this.state.location}</p>
+                                        <p>{this.state.numClues}</p> */}
+                                    </form>
+                                </div>
+                                <div className="row">
+                                    <form className="form playForm">
+                                        <Input
+                                            value={this.state.answer}
+                                            onChange={this.handleInputChange}
+                                            name="answer"
+                                            placeholder="Type your answer here"
+                                        >
+                                        </Input>
+                                    </form>
+                                </div>
+                                <div className="row">
+                                    <form className="form playForm">
+                                        <FormBtn
+                                            onClick={this.handleFormSubmit}
+                                            disabled={this.state.mapSearched}
+                                            className="form"
+                                        >
+                                            Check your answer
+                                        </FormBtn>
+                                    </form>
+                                </div>
+                                <div className="row lastRow">
+                                    <div className="col-m-6">
+                                <form className="form playForm">
+                                    <FormBtn
+                                        onClick={this.displayClue}
+                                        disabled={!this.state.mapSearched}
+                                    >
+                                        Next Question
+                                    </FormBtn>
+                                    </form>
+                                    </div>
+                                    <div className="col-m-6 completeHunt">
+                                <form className="form playForm">
+                                    <FormBtn
+                                        onClick={(event) => {
+                                            event.preventDefault()
+                                            window.location.href = "/studenthistory"
+                                        }}
+                                    >Complete Hunt
+                                    </FormBtn>
+                                    {/* <Link to="/studenthistory">
+                                    Complete Hunt</Link> */}
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-m-8 mapDisplay">
+                            <div style={{ width: 500, height: 500 }} id={this.props.id} />
+                        </div>
+                        
+                    </div>
                 </div>
             </>
         );
