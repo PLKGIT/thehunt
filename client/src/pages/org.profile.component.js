@@ -8,11 +8,26 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
 export default class OrgProfile extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            orgDetails: ""
-        };
+
+    state = {
+        org_name: "",
+        org_city: "",
+        org_state: ""
+    };
+
+    componentDidMount(){
+        DataService.getOrgDetails()
+        .then((data)=> {
+            console.log(data[0]._id)
+            console.log(data[0].org_name)
+            console.log(data[0].org_city)
+            console.log(data[0].org_state)
+            this.setState({
+                org_name: data[0].org_name,
+                org_city: data[0].org_city,
+                org_state: data[0].org_state
+            })
+        })
     }
 
     render() {
@@ -26,15 +41,15 @@ export default class OrgProfile extends Component {
                                 <Card.Text>
                                     <p>
                                         <strong>Organization:</strong>{" "}
-                                        {/* {orgDetails.org_name} */}
+                                        {this.state.org_name}
                                     </p>
                                     <p>
                                         <strong>City:</strong>{" "}
-                                        {/* {orgDetails.org_city} */}
+                                        {this.state.org_city}
                                     </p>
                                     <p>
                                         <strong>State</strong>{" "}
-                                        {/* {orgDetails.org_state} */}
+                                        {this.state.org_state}
                                     </p>
                                 </Card.Text>
                             </Card.Body>
