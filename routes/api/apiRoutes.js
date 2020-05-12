@@ -32,6 +32,42 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/userget", function (req, res) {
+    User.find({}, function (err, found) {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      }
+      else {
+        res.send(data);
+      }
+    });
+  });
+
+  app.post("/api/userremove", function (req, res) {
+    User.remove({ _id: req.body.id }, function (err, found) {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      }
+      else {
+        res.send({data: "Record has been Deleted!"});
+      }
+    });
+  });
+
+  app.post("/api/userupdate", function (req, res) {
+    User.findByIdAndUpdate(req.body.id, { username: item.username, first_name: item.first_name, last_name: item.last_name, email: item.email, status: item.status, roles: item.roles }, function (err, found) {
+      if (err) {
+        console.log(err);
+        res.send(err);
+      }
+      else {
+        res.send({data: "Record has been Updated!"});
+      }
+    });
+  });
+
   app.get("/dborg", function (req, res) {
     Org.find({}, function (err, found) {
       if (err) {
@@ -71,8 +107,23 @@ module.exports = function (app) {
     });
   });
 
+  // router.route("/api/clues")
+  // .get(function(req, res) {
+  //   console.log("router.get function hit")
+  //   db.Hunt.find({})
+  //   .then(dbModel => res.json(dbModel))
+  //   // .then(dbModel => console.log(dbModel))
+  //   .catch(err => res.status(422).json(err));
+  // })
+
   app.post(
     "/api/createhunt", controller.createHunt);
+
+    // router.route("/api/clues")
+    // .post(function(req, res) {
+    //   console.log("router.post function hit")
+    //   db.Hunt.create(req.body)
+    // });
 
 
   app.get("/dbfavorite", function (req, res) {
@@ -85,7 +136,7 @@ module.exports = function (app) {
       }
     });
   });
-  
+
   app.post(
     "/api/createfavorite", controller.createFavorite);
 

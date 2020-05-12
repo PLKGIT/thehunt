@@ -42,6 +42,7 @@ if (process.env.NODE_ENV === 'production') {
 const db = require("./models");
 const Role = db.role;
 const User = db.user;
+const Org = db.org;
 
 /*  Auth and User Routes  */
 require('./routes/auth.routes')(app);
@@ -116,7 +117,9 @@ function initialusers() {
         email: "admin@unlockit.com",
         password: bcrypt.hashSync("p@ssw0rd", 8),
         status:"Active",
-        roles: ["5eb70cc6008153002af8c264"]
+        roles: ["5eb70cc6008153002af8c264"],
+        group_id:[],
+        hunt_id:[]
       }).save(err => {
         if (err) {
           console.log("error", err);
@@ -124,9 +127,27 @@ function initialusers() {
         console.log("added 'admin user' to user collection");
       });
     };
+    initialorg();
   });
 }
 
+/*  Create Organization */
+function initialorg() {
+  Org.estimatedDocumentCount((err, count) => {
+    if (!err && count === 0) {
+      new Org ({
+        org_name: "Anytown Elementary",
+        org_city: "Anytown",
+        org_state: "Any State"
+      }).save(err => {
+        if (err) {
+          console.log("error", err);
+        }
+        console.log("added an 'organization' to Org collection");
+      });
+    };
+  });
+}
 
 /*  Simple Route */
 app.get("/", (req, res) => {

@@ -14,7 +14,9 @@ exports.signup = (req, res) => {
     email: req.body.email,
     roles:["5eb70cc6008153002af8c262"],
     password: bcrypt.hashSync(req.body.password, 8),
-    status:"Active"
+    status:"Active",
+    group_id:[],
+    hunt_id:[]
   });
 
   user.save((err, user) => {
