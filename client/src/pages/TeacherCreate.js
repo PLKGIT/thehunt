@@ -17,12 +17,12 @@ class TeacherCreate extends Component {
       <div className="container">
         <br />
         <h1 className="text-center">CREATE HUNTS</h1>
-        <h5 className="text-secondary">
-          {/* NAVIGATION */}
+        <h5 className="text-secondary" style={{marginRight:'90%'}}>
+         
           
-              <Link className="backTab" to="/teacher"style={{ textDecoration: 'none' }}>Back</Link>
-           
-        </h5>
+         <Link className="backTab" to="/teacher"style={{ textDecoration: 'none'}}><i className="fas fa-arrow-left" style={{fontSize: '16px'}}></i>Back</Link>
+      
+   </h5>
         {/* <h5 className="text-info">
           CAROUSEL
         <ul>

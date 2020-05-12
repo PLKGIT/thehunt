@@ -11,13 +11,14 @@ class TeacherManageHunts extends Component {
     return (
       <div className="container">
         <br />
-        <h1 className="text-center text-secondary">MANAGE HUNTS</h1>
-        <h5 className="text-secondary">
-          NAVIGATION
-        <ul>
-            <li><Link to="/teacher">Teacher Dashboard</Link></li>
-          </ul>
+        <h1 className="text-center">MANAGE HUNTS</h1>
+        <h5 className="text-secondary" style={{marginRight:'90%'}}>
+         
+          
+              <Link className="backTab" to="/teacher"style={{ textDecoration: 'none'}}><i className="fas fa-arrow-left" style={{fontSize: '16px'}}></i>Back</Link>
+           
         </h5>
+        
         <h5 className="text-info">
           LIST
         <ul>
@@ -27,7 +28,7 @@ class TeacherManageHunts extends Component {
         FORM (EDITS)
         </h5>
         <h5 className="text-info text-center">
-      <Link to="/"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px"/>Unlock It Home</Link>
+      <Link to="/" className="link"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px"/>Unlock It Home</Link>
         </h5>
         <br />
       </div>
