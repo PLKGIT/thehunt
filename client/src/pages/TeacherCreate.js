@@ -7,6 +7,9 @@ import TeacherMap from "../components/TeacherMap/TeacherMap";
 
 import CreateHuntCard from "../components/CreateHuntCard";
 
+/*  Styling  */
+import "../styles/gradient.scss";
+
 /*  Create TeacherCreate  */
 class TeacherCreate extends Component {
   render() {

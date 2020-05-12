@@ -1,7 +1,7 @@
 body {
-	background: linear-gradient(-45deg, #91C4FF 0%, #F0F7FF 87%);
+	background: linear-gradient(-45deg,#ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 3s ease infinite;
+	animation: gradient 30s ease infinite;
 }
 
 @keyframes gradient {
@@ -14,4 +14,26 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.link {
+	color: black;
+}
+
+.back {
+	margin-top: 90px;
+}
+
+.homeText {
+	margin-top: 100px;
+}
+
+.homeText img {
+	height: 90px;
+	margin-right: 30px;
+	margin-left: -25px;
+}
+
+.welcome {
+	margin-left: 120px;
 }

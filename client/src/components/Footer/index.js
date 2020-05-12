@@ -10,10 +10,10 @@ import Navbar from 'react-bootstrap/Navbar'
 function Footer() {
     return (
         <div class ="footer">
-        <Navbar sticky="bottom" >
+        {/* <Navbar sticky="bottom" > */}
             <p className="text-center py-1">&copy; Copyright 2020 All rights reserved.<br/>
-            Sonal Bhoraniya, Jyoschsna Gongal, Pam Kelly, Hebah Memon, and Nida Memon</p>
-        </Navbar>
+            Sonal Bhoraniya, Jyochsna Gongal, Pam Kelly, Hebah Memon, and Nida Memon</p>
+        {/* </Navbar> */}
         </div>
     )
 }
