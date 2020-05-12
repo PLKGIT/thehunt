@@ -75,6 +75,10 @@ $apothem: 482.842712474619px;
       justify-content: center;
       margin: 20px 0 0;
       
+      .nav {
+        background-color: black;
+      }
+
       button {
           flex: 0 0 auto;
           margin: 0 5px;
@@ -82,7 +86,7 @@ $apothem: 482.842712474619px;
           cursor: pointer;
           
           color: white;
-          background: indigo;
+          background-color: black;
           border: 1px solid;
           letter-spacing: 1px;
           padding: 5px 10px;
