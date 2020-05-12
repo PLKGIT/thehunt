@@ -7,6 +7,7 @@ import Register from "../../pages/register.component";
 /*  Org Component  */
 import Org from "../../pages/org.component";
 import OrgProfile from "../../pages/org.profile.component";
+import Users from "../../pages/users.edit.component";
 
 /*  Tabs  */
 import Tab from 'react-bootstrap/Tab';
@@ -23,9 +24,10 @@ class AdminComponents extends React.Component {
             <Register />
           </Tab>
           <Tab eventKey="profile" title="Edit Users">
-            <h6>Edit Users</h6>
+            <Users/>
           </Tab>
           <Tab eventKey="contact" title="Edit Org">
+            <Row></Row>
             <Row>
               <Col>
               <OrgProfile />
