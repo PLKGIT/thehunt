@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/";
+const API_URL = "https://unlock-it.herokuapp.com/api/auth/";
 
 class DataService {
     createOrg(org_name, org_city, org_state) {
