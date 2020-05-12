@@ -4,6 +4,12 @@ import React, { Component } from 'react';
 import UserService from "../services/user.service";
 import AdminComponents from "../components/AdminTab";
 
+/*  React Router  */
+import { Link } from "react-router-dom";
+
+/* Styling */
+import "../styles/App.scss";
+
 export default class BoardAdmin extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +42,13 @@ export default class BoardAdmin extends Component {
   render() {
     return (
       <div className="container">
-        <AdminComponents/>
+        <h1 className="text-center admin">ADMIN</h1>
+        <AdminComponents />
+        <br />
+        <h5 className="text-info text-center">
+          <Link to="/" className="link"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px" />Unlock It Home</Link>
+        </h5>
+
       </div>
     );
   }

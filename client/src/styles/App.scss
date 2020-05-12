@@ -8,23 +8,24 @@ body {
   // background-image:$backgroundimage1
 }
 
-// .navbar{
-//  background-color: rgb(193, 190, 196);
-// }
-
 h1 {
   font-family: "Bangers", cursive;
   // text-shadow: 1.5px 1.5px 2px #ffffff;
-  text-shadow: 1.5px 1.5px 2px #000000;
+  color: #000000;
+}
+
+h2 {
+  font-family: "Bangers", cursive;
+  color: #000000;
+  text-align: center;
 }
 
 h6 {
-  font-family: "Bangers", cursive;
+  font-family: "Bangers";
   font-size: xx-large;
   // text-shadow: 1.5px 1.5px 2px #ffffff;
-  text-shadow: 1.5px 1.5px 2px #000000;
+  color: #000000;
 }
-
 
 .mapWrapper {
   margin-top: 20%;
@@ -47,25 +48,14 @@ h6 {
   width: 75%;
 }
 
-$footer-fixed: relative;
+$footer-fixed: fixed;
 
-footer {
+#navbar {
   // position: $footer-fixed;
-  // // left: 0;
-  // bottom: 0;
-  // width: 100%;
-  // text-align: center;
-  
-    position: $footer-fixed;
-    bottom: 0;
-    left:0;
-    height: 45px;
-    text-align: center;
-    width: 100%;
-    padding-top:10px;
-    text-align: center;
-    margin-top:-10px;
-    clear: both;
+  // left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .huntDataToEdit {
@@ -84,3 +74,69 @@ footer {
   margin-right: auto;
 }
 
+.user-container {
+  margin-top: 60px;
+}
+
+.admin {
+  margin-top: -200px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 45px;
+  text-align: center;
+  width: 100%;
+  // padding-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.form1 {
+  margin-top: -90px;
+}
+
+.firstRow {
+  margin-bottom: 15px;
+}
+
+.secondRow {
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+
+.thirdRow {
+  margin-right: 90px;
+}
+
+.btn {
+  background-color: black;
+  padding: 5px;
+  color: white;
+}
+
+.custom {
+  width: 150px;
+  height: 85px;
+}
+
+.custom2 {
+  width: 150px;
+  margin-left: 75px;
+}
+
+.custom3 {
+  margin-right: 30px;
+  margin-left: 10px;
+}
+
+.map {
+  margin-left: 55px;
+}
+
+.location, .answer {
+  width: 300px;
+}

@@ -113,7 +113,7 @@ class Carousel extends Component {
                     <Link className="link" to="/studentplay"><img src="/images/geography.png" alt="geography" /><h3>Geography</h3></Link>
                 </figure>
                 <nav>
-                    <button className="nav prev">&#60; Prev</button>
+                    <button className="nav prev btn-dark">&#60; Prev</button>
                     <button className="nav next">Next &#62;</button>
                 </nav>
             </div>
