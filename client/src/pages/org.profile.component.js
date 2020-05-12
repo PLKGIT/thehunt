@@ -3,10 +3,9 @@ import React, { Component } from "react";
 import DataService from "../utils/data.service"
 
 /*  React Bootstrap Components  */
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 
+/*  Create and Export OrgProfile  */
 export default class OrgProfile extends Component {
 
     state = {
@@ -15,52 +14,36 @@ export default class OrgProfile extends Component {
         org_state: ""
     };
 
-    componentDidMount(){
+    componentDidMount() {
         DataService.getOrgDetails()
-        .then((data)=> {
-            console.log(data[0]._id)
-            console.log(data[0].org_name)
-            console.log(data[0].org_city)
-            console.log(data[0].org_state)
-            this.setState({
-                org_name: data[0].org_name,
-                org_city: data[0].org_city,
-                org_state: data[0].org_state
+            .then((data) => {
+                console.log(data[0]._id)
+                console.log(data[0].org_name)
+                console.log(data[0].org_city)
+                console.log(data[0].org_state)
+                this.setState({
+                    id: data[0]._id,
+                    org_name: data[0].org_name,
+                    org_city: data[0].org_city,
+                    org_state: data[0].org_state
+                })
             })
-        })
     }
 
     render() {
 
         return (
             <div className="container">
-                <Row>
-                    <Col>
-                        <Card>
-                            <Card.Body>
-                                <Card.Text>
-                                    <p>
-                                        <strong>Organization:</strong>{" "}
-                                        {this.state.org_name}
-                                    </p>
-                                    <p>
-                                        <strong>City:</strong>{" "}
-                                        {this.state.org_city}
-                                    </p>
-                                    <p>
-                                        <strong>State</strong>{" "}
-                                        {this.state.org_state}
-                                    </p>
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-
-
-                    </Col>
-                </Row>
-
+                <Card>
+                    <Card.Body>
+                    <h4>
+                        <strong>{this.state.org_name}</strong>
+                    </h4>
+                    <h5>
+                        {this.state.org_city}{", "}{this.state.org_state}
+                    </h5>
+                    </Card.Body>
+                </Card>
 
             </div>
         );

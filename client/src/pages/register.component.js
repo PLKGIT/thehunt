@@ -160,7 +160,7 @@ export default class Register extends Component {
               <Row>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="first">First</label>
+                    <label  className="text-white" htmlFor="first">First</label>
                     <Input
                       type="text"
                       className="form-control"
@@ -173,7 +173,7 @@ export default class Register extends Component {
                 </Col>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="last">Last</label>
+                    <label className="text-white" htmlFor="last">Last</label>
                     <Input
                       type="text"
                       className="form-control"
@@ -189,7 +189,7 @@ export default class Register extends Component {
               <Row>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="email">Email</label>
+                    <label className="text-white" htmlFor="email">Email</label>
                     <Input
                       type="text"
                       className="form-control"
@@ -202,7 +202,7 @@ export default class Register extends Component {
                 </Col>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="password">Password</label>
+                    <label className="text-white" htmlFor="password">Password</label>
                     <Input
                       type="password"
                       className="form-control"
@@ -217,7 +217,7 @@ export default class Register extends Component {
               <Row>
                 <Col>
                   <div className="form-group">
-                    <label htmlFor="email">Status</label>
+                    <label className="text-white" htmlFor="email">Status</label>
                     <Input
                       type="text"
                       className="form-control"
