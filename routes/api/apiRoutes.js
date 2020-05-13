@@ -81,6 +81,16 @@ module.exports = function (app) {
   app.post(
     "/api/createorg", controller.createOrg);
 
+  app.put("/api/updateorg/:id", function (req, res) {
+    console.log(req.params.id)
+    console.log("++++++++++")
+    console.log(req.body)
+    console.log("++++++++++")
+    const result = controller.updateOrg(req.params.id, req.body)
+    res.send(result)
+  })
+
+
   // Hunts
   app.post(
     "/api/createhunt", function (req, res) {
@@ -153,8 +163,8 @@ module.exports = function (app) {
   app.post(
     "/api/createfavorite", controller.createFavorite);
 
-  
-// Score
+
+  // Score
   app.get("/dbscore", function (req, res) {
     Score.find({}, function (err, found) {
       if (err) {

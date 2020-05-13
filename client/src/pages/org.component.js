@@ -69,6 +69,7 @@ export default class Org extends Component {
             this.state.org_city,
             this.state.org_state
         )
+        window.location.href = "/admin"
     }
 
     handleRemove(e) {
@@ -125,7 +126,7 @@ export default class Org extends Component {
                         />
                     </Form.Group>
                     <div className="form-group">
-                        <button className="btn btn-info btn-block">Update Org</button>
+                        <button className="btn btn-primary btn-block">Update Org</button>
                     </div>
                     {/* <div className="form-group">
                         <button className="btn btn-primary btn-block">Remove Org</button>

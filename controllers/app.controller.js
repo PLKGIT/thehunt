@@ -94,6 +94,19 @@ exports.createOrg = (req, res) => {
     });
 };
 
+exports.updateOrg = (schoolid, newData) => {
+    console.log("--Inside updateOrg---")
+
+    Org.findByIdAndUpdate({ _id: schoolid }, newData, function (err) {
+        if (err) {
+            response.status(500).send({ message: err });
+            return;
+        }
+       return "success";
+    });
+};
+
+
 /*  Create and Export CreateScore  */
 exports.createScore = (req, res) => {
     const score = new Score({
