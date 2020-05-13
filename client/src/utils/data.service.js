@@ -4,7 +4,7 @@ const API_URL = "https://unlock-it.herokuapp.com/";
 
 class DataService {
     createHunt(teacher_id, title, category,image_url,description,hunt_data) {
-        return axios.post(API_URL + "/api/createhunt", {
+        return axios.post(API_URL + "api/createhunt", {
             teacher_id,
             title,
             category,

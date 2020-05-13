@@ -66,7 +66,18 @@ module.exports = function (app) {
       }
     });
   });
-
+  app.post(
+    "/api/createhunt", controller.createHunt);
+    app.get("/dbhunt", function (req, res) {
+      Hunt.find({}, function (err, found) {
+        if (err) {
+          console.log(err);
+        }
+        else {
+          res.json(found);
+        }
+      });
+    });
   app.post(
     "/api/createorg", controller.createOrg);
 
@@ -81,35 +92,29 @@ module.exports = function (app) {
     });
   });
 
+  
   app.post(
     "/api/creategroup", controller.createGroup);
 
-  // app.get("/dbhunt", function (req, res) {
-  //   Hunt.find({}, function (err, found) {
-  //     if (err) {
-  //       console.log(err);
-  //     }
-  //     else {
-  //       res.json(found);
-  //     }
-  //   });
-  // });
+  
 
-    app.post(
-      "/api/createhunt", function (req, res) {
-        console.log("app.post function hit")
-        db.hunt.create(req.body)
-      });
+    // app.post(
+    //   "/api/createhunt", function (req, res) {
+    //     console.log("app.post function hit")
+    //     db.hunt.create(req.body)
+    //   });
 
-    app.get("/api/createhunt", function (req, res) {
-      db.hunt.find({}, function (err, found) {
-        if (err) {
-          console.log(err)
-        } else {
-          res.json(found)
-        }
-      })
-    })
+
+
+    // app.get("/api/createhunt", function (req, res) {
+    //   db.hunt.find({}, function (err, found) {
+    //     if (err) {
+    //       console.log(err)
+    //     } else {
+    //       res.json(found)
+    //     }
+    //   })
+    // })
 
 
   app.get("/dbfavorite", function (req, res) {

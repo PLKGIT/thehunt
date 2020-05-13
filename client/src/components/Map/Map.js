@@ -136,7 +136,8 @@ class Map extends Component {
         // this.huntData()
         // console.log(" state is below")
         // console.log(this.state)
-        await Axios.get("/api/createhunt")
+        // await Axios.get("/api/createhunt")
+        await Axios.get("/dbhunt")
             .then(function (res) {
                 console.log("---------------------")
                 console.log(res.data)
