@@ -41,11 +41,11 @@ export default class BoardAdmin extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1 className="text-center admin">ADMIN</h1>
+      <div className="container" >
+        <h1 className="text-center admin" style={{marginTop:"40px"}}>ADMIN</h1>
         <AdminComponents />
         <br />
-        <h5 className="text-info text-center">
+        <h5 className="text-info text-center" style={{marginBottom:"60px"}}>
           <Link to="/" className="link"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px" />Unlock It Home</Link>
         </h5>
 

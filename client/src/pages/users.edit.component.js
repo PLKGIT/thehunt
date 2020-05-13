@@ -85,7 +85,7 @@ class UserAll extends Component {
 
     render() {
         return (
-            <div className="container" style={{ marginTop: '50px' }}>
+            <div className="container" style={{ marginBottom: '50px' }}>
                 <p className="text-center" style={{ fontSize: '25px' }}><b>Edit Users</b></p>
                 <form>
                     <div className="col-sm-12 col-md-12" style={{ marginLeft: '400px' }}>

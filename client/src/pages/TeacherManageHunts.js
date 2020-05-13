@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 /*  React Router  */
 import { Link } from "react-router-dom";
 
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
 /*  Create TeacherManageHunts  */
 class TeacherManageHunts extends Component {
   render() {
@@ -18,15 +21,23 @@ class TeacherManageHunts extends Component {
               <Link className="backTab" to="/teacher"style={{ textDecoration: 'none'}}><i className="fas fa-arrow-left" style={{fontSize: '16px'}}></i>Back</Link>
            
         </h5>
-        
-        <h5 className="text-info">
+        <div id="tabWrapper">
+        <Tabs eventKey="home" id="admintabbed">
+          <Tab eventKey="home" title="Hunts History">
+            <p>hello Hunts history please</p>
+          </Tab>
+          
+         
+        </Tabs>
+      </div>
+        {/* <h5 className="text-info">
           LIST
         <ul>
             <li>All Created Hunts - sorted by pending, active, complete</li>
             <li>Hunt Reports</li>
           </ul>
         FORM (EDITS)
-        </h5>
+        </h5> */}
         <h5 className="text-info text-center">
       <Link to="/" className="link"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px"/>Unlock It Home</Link>
         </h5>
