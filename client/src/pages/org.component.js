@@ -126,7 +126,7 @@ export default class Org extends Component {
                     </Form.Group>
                     <div className="form-group">
                         <button className="btn btn-info btn-block">Update Org</button>
-                    // </div>
+                    </div>
                     {/* <div className="form-group">
                         <button className="btn btn-primary btn-block">Remove Org</button>
                     </div> */}
