@@ -1,7 +1,7 @@
 # Unlock It! (Group Project)
 ## The Educational Scavenger Hunt
 
-![](https://res.cloudinary.com/damplk/image/upload/v1588292809/portal/unlock_lat1l9.gif | width=100)
+<img src="https://res.cloudinary.com/damplk/image/upload/v1588292809/portal/unlock_lat1l9.gif" alt="Home Page" width="200" height="200">
 
 ## Overview
 Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis, remote education is the new normal. The Unlock It! MERN application provides a creative way for educators to engage students while still teaching them useful information. 
