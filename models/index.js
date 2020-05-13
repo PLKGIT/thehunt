@@ -5,10 +5,10 @@ const db = {};
 
 db.mongoose = mongoose;
 
-db.Group = require("./group"),
-db.Score = require("./score"),
-db.Favorite = require("./favorite"),
-db.Hunt = require("./hunt"),
+db.group = require("./group"),
+db.score = require("./score"),
+db.favorite = require("./favorite"),
+db.hunt = require("./hunt"),
 db.user = require("./user.model");
 db.role = require("./role.model");
 db.org = require("./org");
