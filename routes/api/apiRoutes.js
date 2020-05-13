@@ -95,23 +95,20 @@ module.exports = function (app) {
     });
   });
 
-  // router.route("/api/clues")
-  // .get(function(req, res) {
-  //   console.log("router.get function hit")
-  //   db.Hunt.find({})
-  //   .then(dbModel => res.json(dbModel))
-  //   // .then(dbModel => console.log(dbModel))
-  //   .catch(err => res.status(422).json(err));
-  // })
-
-  app.post(
-    "/api/createhunt", controller.createHunt);
-
-    // router.route("/api/clues")
-    // .post(function(req, res) {
-    //   console.log("router.post function hit")
-    //   db.Hunt.create(req.body)
-    // });
+    app.post(
+      "/api/createhunt", function (req, res) {
+        console.log("app.post function hit")
+        db.Hunt.create(req.body)
+      });
+    app.get("/api/createhunt", function (req, res) {
+      db.Hunt.find({}, function (err, found) {
+        if (err) {
+          console.log(err)
+        } else {
+          res.json(found)
+        }
+      })
+    })
 
 
   app.get("/dbfavorite", function (req, res) {

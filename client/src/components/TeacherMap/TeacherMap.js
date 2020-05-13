@@ -18,8 +18,17 @@ class Map extends Component {
     answer: "",
     location: "",
     locationSearched: false,
-    id: 0
+    id: 0,
+    teacherId: "" 
   };
+
+  componentDidMount() {
+    const ls = localStorage.getItem("user")
+    console.log("local storage teacher info")
+    const teachID = JSON.parse(ls).id
+    console.log(teachID)
+    this.setState({teacherId: teachID})
+  }
 
   onScriptLoad() {
     console.log("hello");
@@ -125,7 +134,8 @@ class Map extends Component {
     // const json = JSON.stringify(this.state.clues);
     // localStorage.setItem("clues", json)
     console.log(this.state.clues)
-    Axios.post("/api/clues", {
+    Axios.post("/api/createhunt", {
+      teacher_id: this.state.teacherId,
       title: this.state.title,
       category: this.state.category,
       image_url: this.state.imageUrl,

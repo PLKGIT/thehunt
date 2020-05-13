@@ -34,8 +34,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 /*  Static Assets  */
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, 'client/build')));
+// }
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
 }
 
 /*  Include Role and User Models  */
@@ -150,10 +155,16 @@ function initialorg() {
 }
 
 /*  Simple Route */
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Unlock It!." });
-});
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to Unlock It!." });
+// });
 
+// Define API routes here
+// Send every other request to the React app
+// Define any API routes before this runs
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 /*  Server Port Configuration */
 const PORT = process.env.PORT || 3001;
