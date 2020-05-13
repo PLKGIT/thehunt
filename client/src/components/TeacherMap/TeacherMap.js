@@ -143,7 +143,7 @@ class Map extends Component {
       hunt_data: this.state.clues
     })
     console.log("axios.post function hit")
-    window.location.href = "/teachermanagehunts"
+    // window.location.href = "/teachermanagehunts"
   }
 
 
