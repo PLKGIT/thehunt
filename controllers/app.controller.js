@@ -3,33 +3,33 @@ const Org = db.org;
 const Favorite = db.favorite;
 const Hunt = db.hunt;
 
-exports.createHunt = (req, res) => {
-    const hunt = new Hunt({
-        teacher_id:req.body.teacherId,
-        title: req.body.title,
-        category: req.body.category,
-        image_url:req.body.imageUrl,
-        description:req.body.description,
-        hunt_data: req.body.clues
-    });
+// exports.createHunt = (req, res) => {
+//     const hunt = new Hunt({
+//         teacher_id:req.body.teacherId,
+//         title: req.body.title,
+//         category: req.body.category,
+//         image_url:req.body.imageUrl,
+//         description:req.body.description,
+//         hunt_data: req.body.clues
+//     });
 
-    hunt.save((err, hunt) => {
-        if (err) {
-            res.status(500).send({ message: err });
-            return;
-        } else {
-            res.status(200).send({
-                id: hunt._id,
-                teacher_id:hunt.teacherId,
-                title: hunt.title,
-                category: hunt.category,
-                image_url:hunt.imageUrl,
-                description:hunt.description,
-                hunt_data: hunt.clues
-            });
-        }
-    });
-};
+//     hunt.save((err, hunt) => {
+//         if (err) {
+//             res.status(500).send({ message: err });
+//             return;
+//         } else {
+//             res.status(200).send({
+//                 id: hunt._id,
+//                 teacher_id:hunt.teacherId,
+//                 title: hunt.title,
+//                 category: hunt.category,
+//                 image_url:hunt.imageUrl,
+//                 description:hunt.description,
+//                 hunt_data: hunt.clues
+//             });
+//         }
+//     });
+// };
 
 
 exports.createOrg = (req, res) => {

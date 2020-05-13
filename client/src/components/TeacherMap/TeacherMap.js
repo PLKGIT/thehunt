@@ -3,7 +3,7 @@ import { Input, FormBtn } from "../Form/Form.js";
 import Axios from "axios";
 import "../../styles/App.scss";
 
-import DataService from "../../utils/data.service";
+// import DataService from "../../utils/data.service";
 
 class Map extends Component {
   constructor(props) {
