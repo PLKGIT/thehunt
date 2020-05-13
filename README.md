@@ -12,16 +12,17 @@ Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis,
 * Allow students to explore the world from their very own homes
 
 ### Project Images
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589403043/unlockit/00_home_o6q0zr.png" alt="Home Page" width="200">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589403042/unlockit/00_login_sxtx7b.png" alt="Login" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589403220/unlockit/07_unlockit_adminprofile_jkjfga.png" alt="Admin Profile" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589402946/unlockit/01_unlockit_admin_jgchwf.png" alt="Admin Dashboard" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589402945/unlockit/02_unlockit_admin_qt651g.png" alt="Org Info" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589403218/unlockit/08_unlockit_teacherprofile_uyu7dz.png" alt="Teacher Profile" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589402945/unlockit/03_unlockit_teacher_m9fepc.png" alt="Teacher Dashboard" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589402946/unlockit/04_unlockit_teacher_icfmkm.png" alt="Create Hunts" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589403219/unlockit/06_unlockit_studentprofile_jvpkci.png" alt="Student Profile" width="500">
-<img src="https://res.cloudinary.com/damplk/image/upload/v1589402946/unlockit/05_unlockit_student_czsz3b.png" alt="Student Dashboard" width="500">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589403043/unlockit/00_home_o6q0zr.png" alt="Home Page Logged Out" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589403042/unlockit/00_login_sxtx7b.png" alt="Login" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589401280/unlockit/sm_unlockit_pbefho.png" alt="Home Page Logged In" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589403220/unlockit/07_unlockit_adminprofile_jkjfga.png" alt="Admin Profile" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589402946/unlockit/01_unlockit_admin_jgchwf.png" alt="Admin Dashboard" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589402945/unlockit/02_unlockit_admin_qt651g.png" alt="Org Info" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589403218/unlockit/08_unlockit_teacherprofile_uyu7dz.png" alt="Teacher Profile" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589402945/unlockit/03_unlockit_teacher_m9fepc.png" alt="Teacher Dashboard" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589402946/unlockit/04_unlockit_teacher_icfmkm.png" alt="Create Hunts" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589403219/unlockit/06_unlockit_studentprofile_jvpkci.png" alt="Student Profile" width="750">
+<img src="https://res.cloudinary.com/damplk/image/upload/v1589402946/unlockit/05_unlockit_student_czsz3b.png" alt="Student Dashboard" width="750">
 
 ## Technology Details
 
