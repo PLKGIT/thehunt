@@ -55,7 +55,7 @@ exports.createOrg = (req, res) => {
 };
 
 exports.createFavorite = (req, res) => {
-    const Favorite = new Favorite({
+    const favorite = new Favorite({
         title: req.body.title,
         created_by: req.body.created_by,
         category: req.body.category,
@@ -66,7 +66,7 @@ exports.createFavorite = (req, res) => {
         share: req.body.share
     });
 
-    Favorite.save((err, favorite) => {
+    favorite.save((err, favorite) => {
         if (err) {
             res.status(500).send({ message: err });
             return;
@@ -87,7 +87,7 @@ exports.createFavorite = (req, res) => {
 };
 
 exports.createGroup = (req, res) => {
-    const Group = new Group({
+    const group = new Group({
         group_name: req.body.group_name,
         grade_level: req.body.grade_level,
         subject: req.body.subject,
@@ -96,7 +96,7 @@ exports.createGroup = (req, res) => {
         student_id: req.body. student_id
     });
 
-    Group.save((err, group) => {
+    group.save((err, group) => {
         if (err) {
             res.status(500).send({ message: err });
             return;
@@ -155,7 +155,7 @@ exports.createGroup = (req, res) => {
 // };
 
 exports.createScore = (req, res) => {
-    const Score = new Score({
+    const score = new Score({
         teacher_id: req.body.teacher_id,
         hunt_id: req.body.hunt_id,
         student_id: req.body.student_id,
@@ -167,7 +167,7 @@ exports.createScore = (req, res) => {
         total: req.body.total
     });
 
-    Score.save((err, score) => {
+    score.save((err, score) => {
         if (err) {
             res.status(500).send({ message: err });
             return;
