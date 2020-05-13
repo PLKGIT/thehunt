@@ -3,7 +3,6 @@ const db = require("../models");
 const Favorite = db.favorite;
 const Group = db.group;
 // const Hunt = db.hunt;
-const Favorite = db.favorite;
 const Org = db.org;
 const Score = db.score;
 
