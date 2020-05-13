@@ -22,19 +22,19 @@ const scoreSchema = new Schema({
         type: Number
     },
     hunt_id: {
-        type: String,
+        type: mongoose.Types.ObjectId,
         required: true
     },
     group_id: {
-        type: String,
+        type: mongoose.Types.ObjectId,
         required: true
     },
     teacher_id: {
-        type: String,
+        type: mongoose.Types.ObjectId,
         required: true
     },
     student_id: {
-        type: String,
+        type: mongoose.Types.ObjectId,
         required: true
     }
 });
