@@ -116,35 +116,7 @@ UI/UX design and styling and frontend content
 [https://unlock-it.herokuapp.com/](https://unlock-it.herokuapp.com/)
 
 #### File Structure
-├───client
-│   ├───node_modules
-│   ├───public
-│   │   └───images
-│   └───src
-│       ├───components
-│       │   ├───AdminTab
-│       │   ├───Carousel
-│       │   ├───CreateHuntCard
-│       │   ├───EditNewHunt
-│       │   ├───Footer
-│       │   ├───Form
-│       │   ├───ManageStudentTab
-│       │   ├───Map
-│       │   ├───Nav
-│       │   ├───StudentForm
-│       │   ├───TeacherCard
-│       │   └───TeacherMap
-│       ├───pages
-│       ├───services
-│       ├───styles
-│       └───utils
-├───config
-├───controllers
-├───middleware
-├───models
-├───node_modules
-└───routes
-    └───api
+![](https://res.cloudinary.com/damplk/image/upload/v1589377975/unlockit/app_file_structure_ay5my6.png)
 
 ## Development Details
 
