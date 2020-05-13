@@ -1,31 +1,11 @@
+/*  Axios  */
 import axios from "axios";
 
+/*  APP URL  */
 const API_URL = "https://unlock-it.herokuapp.com/";
 
+/*  Create DataService  */
 class DataService {
-    // createHunt(teacher_id, title, category,image_url,description,hunt_data) {
-    //     console.log("----Prior to Axios----")
-    //     console.log(teacher_id)
-    //     console.log(title)
-    //     console.log(category)
-    //     console.log(image_url)
-    //     console.log(description)
-    //     console.log(hunt_data)
-
-    //     return axios.post(API_URL + "api/createhunt", {
-    //         teacher_id,
-    //         title,
-    //         category,
-    //         image_url,
-    //         description,
-    //         hunt_data
-    //     }).then(res => {
-    //         console.log("----Create Hunt----")
-    //         console.log(res.data);
-    //         return res.data;
-    //     });
-    // }
-
     createOrg(org_name, org_city, org_state) {
         return axios.post(API_URL + "/api/createorg", {
             org_name,
@@ -92,4 +72,5 @@ class DataService {
     }
 
 }
+/*  Export DataService  */
 export default new DataService();

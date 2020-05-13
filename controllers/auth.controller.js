@@ -1,11 +1,16 @@
+/*  Auth Configuration  */
 const config = require("../config/auth.config");
+
+/*  Models  */
 const db = require("../models");
 const User = db.user;
 const Role = db.role;
 
+/*  JWT and Password Security */
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
+/*  Default User Setup  */
 exports.signup = (req, res) => {
   const user = new User({
     username: req.body.username,
@@ -68,6 +73,7 @@ exports.signup = (req, res) => {
   });
 };
 
+/*  Sign In Setup  */
 exports.signin = (req, res) => {
   User.findOne({
     email: req.body.email

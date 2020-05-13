@@ -23,14 +23,6 @@ class Teacher extends Component {
             <li><Link to="/teacher">Teacher Dashboard</Link></li>
           </ul>
         </h5>
-        {/* <h5 className="text-info">
-          ICON OPTIONS
-            <ul>
-            <li><Link to="/teachercreate">Create</Link> Hunts</li>
-            <li><Link to="/teachermanagehunts">Manage</Link> Hunts</li>
-            <li><Link to="/teachermanagestudents">Manage</Link> Students</li>
-          </ul>
-        </h5> */}
 
         <TeacherCard />
         <h5 className="text-info text-center">

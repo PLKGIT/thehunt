@@ -4,18 +4,20 @@ import React from "react";
 /*  Register Component  */
 import Register from "../../pages/register.component";
 
-/*  Org Component  */
+/*  Org Components  */
 import Org from "../../pages/org.component";
 import OrgProfile from "../../pages/org.profile.component";
+
+/*  User Components  */
 import Users from "../../pages/users.edit.component";
 
-/*  Tabs  */
+/*  React Bootstrap  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-
+/*  Create AdminComponents  */
 class AdminComponents extends React.Component {
   render() {
     return (
@@ -44,4 +46,5 @@ class AdminComponents extends React.Component {
   }
 }
 
+/*  Export AdminComponents  */
 export default AdminComponents;

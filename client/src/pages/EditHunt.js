@@ -1,6 +1,10 @@
+/*  React  */
 import React, { Component } from 'react';
+
+/* EditNewHunt Component  */
 import EditNewHunt from "../components/EditNewHunt/index"
 
+/*  Create EditHunt  */
 class EditHunt extends Component {
     render() {
         return (
@@ -9,4 +13,5 @@ class EditHunt extends Component {
     }
 }
 
+/*  Export EditHunt  */
 export default EditHunt;

@@ -1,8 +1,13 @@
+/*  React  */
 import React, { Component } from "react";
+
+/*  Styling  */
 import "../styles/home.component.scss"
 
+/*  User Auth  */
 import UserService from "../services/user.service";
 
+/*  Create and Export Home  */
 export default class Home extends Component {
 
   componentDidMount() {

@@ -1,12 +1,16 @@
+/*  React */
 import React, { Component } from 'react';
+
+/*  Import Input and FormBtn  */
 import { Input, FormBtn } from "../Form/Form.js"
+
+/*  Axios  */
 import Axios from "axios";
-import { Link } from "react-router-dom";
 
-
-/* Styling */
+/*  Styling  */
 import "../../styles/studentPlay.scss"
 
+/*  Create Map  */
 class Map extends Component {
     constructor(props) {
         super(props);
@@ -435,4 +439,5 @@ class Map extends Component {
     }
 }
 
+/*  Export Map  */
 export default Map

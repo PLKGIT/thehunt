@@ -1,3 +1,5 @@
+/*  User Landing Page Setup  */
+
 exports.allAccess = (req, res) => {
   res.status(200).send("Lock It! Landing Page");
 };

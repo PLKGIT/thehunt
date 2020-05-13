@@ -1,10 +1,16 @@
+/*  React  */
 import React, { Component } from "react";
-import { Input, FormBtn } from "../Form/Form.js";
+
+/*  Import Input and FormBtn  */
+import { Input, FormBtn } from "../Form/Form.js"
+
+/*  Axios  */
 import Axios from "axios";
+
+/*  Styling  */
 import "../../styles/App.scss";
 
-// import DataService from "../../utils/data.service";
-
+/*  Create Map  */
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -302,5 +308,5 @@ class Map extends Component {
   }
 }
 
-
+/*  Export Map  */
 export default Map;

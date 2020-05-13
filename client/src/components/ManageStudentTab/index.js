@@ -1,13 +1,15 @@
+/*  React  */
 import React, { Component } from 'react';
+
+/*  React Bootstrap  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+
+/*  Import StudentForm  */
 import StudentForm from '../StudentForm';
 
-
-
+/*  Create ManageStudentTab  */
 class ManageStudentTab extends Component {
-
-
     render() {
         return (
             <div id="tabWrapper">
@@ -28,4 +30,5 @@ class ManageStudentTab extends Component {
     }
 }
 
+/*  Export ManageStudentTab  */
 export default ManageStudentTab;

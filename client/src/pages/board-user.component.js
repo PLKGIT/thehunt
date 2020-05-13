@@ -10,8 +10,10 @@ import Carousel from "../components/Carousel";
 /*  Styling  */
 import "../styles/gradient.scss";
 
+/*  User Auth  */
 import UserService from "../services/user.service";
 
+/*  Create and Export BoardUser  */
 export default class BoardUser extends Component {
   constructor(props) {
     super(props);

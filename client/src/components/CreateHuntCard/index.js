@@ -4,10 +4,10 @@ import React, { Component } from 'react';
 /*  React Router  */
 import { Link } from "react-router-dom";
 
-/* Styling */
+/* Styling  */
 import "./style.scss";
 
-
+/*  Create Carousel for Hunt Card  */
 class Carousel extends Component {
   state = {
 
@@ -121,6 +121,8 @@ class Carousel extends Component {
   }
 
 }
+
+/*  Export Carousel  */
 export default Carousel;
 
 

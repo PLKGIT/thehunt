@@ -1,13 +1,15 @@
 # Unlock It! (Group Project)
 
 ## Overview
-TBD
+Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis, remote education is the new normal. The Unlock It! MERN application provides a creative way for educators to engage students while still teaching them useful information. 
+
+### Goals
+* Provide teachers with a platform to share resources
+* Design a method of creating and playing a virtual scavenger hunt
+* Allow students to explore the world from their very own homes
 
 ### Project Images
 ![](https://res.cloudinary.com/damplk/image/upload/v1588292809/portal/unlock_lat1l9.gif)
-
-### Proposed Future Developments
-TBD
 
 ## Technology Details
 
@@ -15,15 +17,12 @@ TBD
 
 #### Google Maps Platform
 * https://developers.google.com/maps/documentation
-* TBD
 
 #### Open Trivia Database
-* www.opentdb.com
-* Trivia question database
+* https://www.opentdb.com
 
 #### Emoji
-TBD
-
+* 
 
 ### Technologies, Libraries, and Tools Used**
 
@@ -36,7 +35,7 @@ UI/UX design and styling and frontend content
 
 #### Google Fonts
 * https://fonts.googleapis.com/
-* Font Families: TBD
+* Font Families: Banger and Roboto
 
 ### Frameworks and Libraries
 
@@ -105,16 +104,11 @@ UI/UX design and styling and frontend content
 
 #### Collections
 * Org
-* Admin
-* Teacher
+* User
 * Group
 * Favorite
 * Hunt
-* Student
 * Score
-
-#### Schema
-TBD
 
 ### Project Assets
 
@@ -122,12 +116,40 @@ TBD
 [https://unlock-it.herokuapp.com/](https://unlock-it.herokuapp.com/)
 
 #### File Structure
-* TBD
+├───client
+│   ├───node_modules
+│   ├───public
+│   │   └───images
+│   └───src
+│       ├───components
+│       │   ├───AdminTab
+│       │   ├───Carousel
+│       │   ├───CreateHuntCard
+│       │   ├───EditNewHunt
+│       │   ├───Footer
+│       │   ├───Form
+│       │   ├───ManageStudentTab
+│       │   ├───Map
+│       │   ├───Nav
+│       │   ├───StudentForm
+│       │   ├───TeacherCard
+│       │   └───TeacherMap
+│       ├───pages
+│       ├───services
+│       ├───styles
+│       └───utils
+├───config
+├───controllers
+├───middleware
+├───models
+├───node_modules
+└───routes
+    └───api
 
 ## Development Details
 
 ### Requirements
-The project team must design and build a full-stack application using the Model-View-Controller (MVC) paradigm.  The application must use Node, Express, React, and a backend database and be deployed to Heroku.
+Design and build a full-stack application using the Model-View-Controller (MVC) paradigm.  The application must use Node, Express, React, and a backend database and be deployed to Heroku.
 
 ### Development Team 
 1. Sonal Bhoraniya

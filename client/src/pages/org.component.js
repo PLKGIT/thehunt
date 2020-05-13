@@ -1,7 +1,10 @@
+/*  React  */
 import React, { Component } from "react";
+
+/*  Axios Calls  */
 import DataService from "../utils/data.service";
 
-/*  React Bootstrap Components  */
+/*  React Bootstrap  */
 import Form from 'react-bootstrap/Form';
 
 /*  Create and Export Org  */
@@ -121,14 +124,14 @@ export default class Org extends Component {
                             onChange={this.onChangeState}
                         />
                     </Form.Group>
-                    {/* <div className="form-group">
-                        <button className="btn btn-primary btn-block" onSubmit={this.handleUpdate}>Update Org</button>
-                    </div> */}
+                    <div className="form-group">
+                        <button className="btn btn-info btn-block">Update Org</button>
+                    // </div>
                     {/* <div className="form-group">
                         <button className="btn btn-primary btn-block">Remove Org</button>
                     </div> */}
                     {/* <div className="form-group">
-                        <button className="btn btn-primary btn-block" onSubmit={this.handleCreate}>Create Org</button>
+                        <button className="btn btn-primary btn-block">Create Org</button>
                     </div> */}
                 </Form >
             </div >

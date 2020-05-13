@@ -37,13 +37,9 @@ app.use(bodyParser.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
 }
-
-// Serve up static assets (usually on heroku)
-// if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
-// }
 
-/*  Include Role and User Models  */
+/*  Include Role, User, and Org Models  */
 const db = require("./models");
 const Role = db.role;
 const User = db.user;
@@ -56,8 +52,7 @@ require('./routes/user.routes')(app);
 /*  App Routes  */
 require('./routes/api/apiRoutes')(app);
 
-
-/*  Connect to MongoDB */
+/*  MongoDB Connection */
 db.mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/unlockit", { 
     useNewUrlParser: true, 
@@ -72,8 +67,7 @@ db.mongoose.connect(
     process.exit();
   });
 
-  /*  User Roles  */
-
+  /*  Create User Roles  */
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
     if (!err && count === 0) {
@@ -136,7 +130,7 @@ function initialusers() {
   });
 }
 
-/*  Create Organization */
+/*  Create Default Organization */
 function initialorg() {
   Org.estimatedDocumentCount((err, count) => {
     if (!err && count === 0) {
@@ -159,9 +153,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Unlock It!." });
 });
 
-// Define API routes here
 // Send every other request to the React app
-// Define any API routes before this runs
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });

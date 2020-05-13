@@ -41,4 +41,5 @@ const scoreSchema = new Schema({
 
 const Score = mongoose.model("score", scoreSchema);
 
+/*  Exporting Schema  */
 module.exports = Score;

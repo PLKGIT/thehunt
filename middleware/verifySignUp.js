@@ -1,7 +1,9 @@
+/*  Models  */
 const db = require("../models");
 const ROLES = db.ROLES;
 const User = db.user;
 
+/*  Registration Validations  */
 checkDuplicateUsernameOrEmail = (req, res, next) => {
   // Username
   User.findOne({
@@ -51,9 +53,10 @@ checkRolesExisted = (req, res, next) => {
   next();
 };
 
+/*  Creating verifySignUp  */
 const verifySignUp = {
   checkDuplicateUsernameOrEmail,
   checkRolesExisted
 };
-
+/*  Exporting verifySignUp  */
 module.exports = verifySignUp;

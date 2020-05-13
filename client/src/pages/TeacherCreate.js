@@ -3,8 +3,9 @@ import React, { Component } from "react";
 
 /*  React Router  */
 import { Link } from "react-router-dom";
-import TeacherMap from "../components/TeacherMap/TeacherMap";
+// import TeacherMap from "../components/TeacherMap/TeacherMap";
 
+/*  CreateHuntCard Component  */
 import CreateHuntCard from "../components/CreateHuntCard";
 
 /*  Styling  */
@@ -23,26 +24,8 @@ class TeacherCreate extends Component {
          <Link className="backTab" to="/teacher"style={{ textDecoration: 'none'}}><i className="fas fa-arrow-left" style={{fontSize: '16px'}}></i>Back</Link>
       
    </h5>
-        {/* <h5 className="text-info">
-          CAROUSEL
-        <ul>
-            <li>Favorite Hunts</li>
-            <li>Create from Scratch</li>
-          </ul>
-        FORM */}
        <CreateHuntCard/>
 
-        {/* <TeacherMap
-          id="myMap"
-          isActive={false}
-          options={{
-            center: { lat: 0, lng: 0 },
-            zoom: 2,
-            mapTypeId: "hybrid",
-          }}
-        /> */}
-
-        {/* </h5> */}
         <h5 className="text-info text-center">
           <Link to="/"className="link">
             <img src="./images/transparentlock.gif" alt="Still Lock" width="75px" />

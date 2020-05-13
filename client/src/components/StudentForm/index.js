@@ -3,10 +3,6 @@ import {BootstrapTable,
     TableHeaderColumn} from 'react-bootstrap-table';
 import '../../../node_modules/react-bootstrap-table/css/react-bootstrap-table.css'
 
-// import "react-table/react-table.css";
-// Import Hamoni Sync
-// import Hamoni from "hamoni-sync";
-
 // TODO: move this to a different file and export as a separate component
 class Table1 extends Component {
     render() {

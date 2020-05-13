@@ -1,6 +1,11 @@
-const db = require("../../models");
-const controller = require("../../controllers/app.controller");
+/*  Path  */
 const path = require("path");
+
+/*  App Controllers  */
+const controller = require("../../controllers/app.controller");
+
+/*  Models  */
+const db = require("../../models");
 const User = db.user;
 const Role = db.role;
 const Org = db.org;
@@ -9,6 +14,9 @@ const Hunt = db.hunt;
 const Favorite = db.favorite
 const Score = db.score
 
+/*  App Routes  */
+
+// Roles
 module.exports = function (app) {
   app.get("/dbroles", function (req, res) {
     Role.find({}, function (err, found) {
@@ -21,6 +29,7 @@ module.exports = function (app) {
     });
   });
 
+  // Users
   app.get("/dbusers", function (req, res) {
     User.find({}, function (err, found) {
       if (err) {
@@ -56,6 +65,8 @@ module.exports = function (app) {
     });
   });
 
+
+  // Org
   app.get("/dborg", function (req, res) {
     Org.find({}, function (err, found) {
       if (err) {
@@ -66,9 +77,11 @@ module.exports = function (app) {
       }
     });
   });
-  // app.post(
-  //   "/api/createhunt", controller.createHunt);
 
+  app.post(
+    "/api/createorg", controller.createOrg);
+
+  // Hunts
   app.post(
     "/api/createhunt", function (req, res) {
       console.log("app.post function hit")
@@ -85,9 +98,11 @@ module.exports = function (app) {
       }
     });
   });
-  app.post(
-    "/api/createorg", controller.createOrg);
 
+  // app.post(
+  //   "/api/createhunt", controller.createHunt);
+
+  // Group
   app.get("/dbgroup", function (req, res) {
     Group.find({}, function (err, found) {
       if (err) {
@@ -123,7 +138,7 @@ module.exports = function (app) {
   //   })
   // })
 
-
+  // Favorite
   app.get("/dbfavorite", function (req, res) {
     Favorite.find({}, function (err, found) {
       if (err) {
@@ -138,7 +153,8 @@ module.exports = function (app) {
   app.post(
     "/api/createfavorite", controller.createFavorite);
 
-
+  
+// Score
   app.get("/dbscore", function (req, res) {
     Score.find({}, function (err, found) {
       if (err) {

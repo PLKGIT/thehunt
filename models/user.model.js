@@ -1,5 +1,7 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
 
+/*  Schema  */
 const User = mongoose.model(
   "User",
   new mongoose.Schema({
@@ -23,4 +25,5 @@ const User = mongoose.model(
   })
 );
 
+/*  Exporting Schema  */
 module.exports = User;

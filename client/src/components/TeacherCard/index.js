@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 /* Styling */
 import "./style.scss";
 
-
+/*  Create TeacherCard  */
 class TeacherCard extends Component {
     render() {
         return (
@@ -71,5 +71,5 @@ class TeacherCard extends Component {
         )
     }
 }
-
+/*  Export TeacherCard  */
 export default TeacherCard;

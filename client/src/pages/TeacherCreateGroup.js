@@ -4,7 +4,7 @@ import React, { Component } from "react";
 /*  React Router  */
 import { Link } from "react-router-dom";
 
-/*Table */
+/*  Table  */
 import Table from 'react-bootstrap/Table'
 
 function CreateGroup(){

@@ -1,15 +1,22 @@
+/*  React  */
 import React, { Component } from "react";
+
+/*  React Validation  */
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+
+/*  Email Validation  */
 import { isEmail } from "validator";
 
-/*  React Bootstrap Components  */
+/*  React Bootstrap  */
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+/*  Auth Service  */
 import AuthService from "../services/auth.service";
 
+/*  Registration Validation  */
 const required = value => {
   if (!value) {
     return (
@@ -60,6 +67,7 @@ const vpassword = value => {
   }
 };
 
+/*  Create and Export Register  */
 export default class Register extends Component {
   constructor(props) {
     super(props);

@@ -1,7 +1,10 @@
+/*  React  */
 import React, { Component } from "react";
 
+/*  User Auth  */
 import UserService from "../services/user.service";
 
+/*  Create and Export GetUsers  */
 export default class GetUsers extends Component {
   constructor(props) {
     super(props);

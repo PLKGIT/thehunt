@@ -1,59 +1,15 @@
+/*  Collection Models  */
 const db = require("../models");
-const Org = db.org;
 const Favorite = db.favorite;
-const Hunt = db.hunt;
-
-// exports.createHunt = (req, res) => {
-//     const hunt = new Hunt({
-//         teacher_id:req.body.teacherId,
-//         title: req.body.title,
-//         category: req.body.category,
-//         image_url:req.body.imageUrl,
-//         description:req.body.description,
-//         hunt_data: req.body.clues
-//     });
-
-//     hunt.save((err, hunt) => {
-//         if (err) {
-//             res.status(500).send({ message: err });
-//             return;
-//         } else {
-//             res.status(200).send({
-//                 id: hunt._id,
-//                 teacher_id:hunt.teacherId,
-//                 title: hunt.title,
-//                 category: hunt.category,
-//                 image_url:hunt.imageUrl,
-//                 description:hunt.description,
-//                 hunt_data: hunt.clues
-//             });
-//         }
-//     });
-// };
+const Group = db.group;
+// const Hunt = db.hunt;
+const Favorite = db.favorite;
+const Org = db.org;
+const Score = db.score;
 
 
-exports.createOrg = (req, res) => {
-    const org = new Org({
-        org_name: req.body.org_name,
-        org_city: req.body.org_city,
-        org_state: req.body.org_state
-    });
 
-    org.save((err, org) => {
-        if (err) {
-            res.status(500).send({ message: err });
-            return;
-        } else {
-            res.status(200).send({
-                id: org._id,
-                org_name: org.org_name,
-                org_city: org.org_city,
-                org_state: org.org_state
-            });
-        }
-    });
-};
-
+/*  Create and Export createFavorite  */
 exports.createFavorite = (req, res) => {
     const favorite = new Favorite({
         title: req.body.title,
@@ -86,6 +42,7 @@ exports.createFavorite = (req, res) => {
     });
 };
 
+/*  Create and Export createGroup  */
 exports.createGroup = (req, res) => {
     const group = new Group({
         group_name: req.body.group_name,
@@ -93,7 +50,7 @@ exports.createGroup = (req, res) => {
         subject: req.body.subject,
         teacher_id: req.body.teacher_id,
         hunt_id: req.body.hunt_id,
-        student_id: req.body. student_id
+        student_id: req.body.student_id
     });
 
     group.save((err, group) => {
@@ -109,6 +66,65 @@ exports.createGroup = (req, res) => {
                 teacher_id: group.teacher_id,
                 hunt_id: group.hunt_id,
                 student_id: group.student_id
+            });
+        }
+    });
+};
+
+
+/*  Create and Export CreateOrg  */
+exports.createOrg = (req, res) => {
+    const org = new Org({
+        org_name: req.body.org_name,
+        org_city: req.body.org_city,
+        org_state: req.body.org_state
+    });
+
+    org.save((err, org) => {
+        if (err) {
+            res.status(500).send({ message: err });
+            return;
+        } else {
+            res.status(200).send({
+                id: org._id,
+                org_name: org.org_name,
+                org_city: org.org_city,
+                org_state: org.org_state
+            });
+        }
+    });
+};
+
+/*  Create and Export CreateScore  */
+exports.createScore = (req, res) => {
+    const score = new Score({
+        teacher_id: req.body.teacher_id,
+        hunt_id: req.body.hunt_id,
+        student_id: req.body.student_id,
+        group_id: req.body.group_id,
+        started: req.body.started,
+        finished: req.body.finished,
+        complete: req.body.complete,
+        q_points: req.body.q_points,
+        total: req.body.total
+    });
+
+    score.save((err, score) => {
+        if (err) {
+            res.status(500).send({ message: err });
+            return;
+        } else {
+            res.status(200).send({
+                id: score._id,
+                teacher_id: score.teacher_id,
+                hunt_id: score.hunt_id,
+                student_id: score.student_id,
+                group_id: score.group_id,
+                started: score.started,
+                finished: score.finished,
+                complete: score.complete,
+                q_points: score.q_points,
+                total: score.total
             });
         }
     });
@@ -153,37 +169,3 @@ exports.createGroup = (req, res) => {
 //         }
 //     });
 // };
-
-exports.createScore = (req, res) => {
-    const score = new Score({
-        teacher_id: req.body.teacher_id,
-        hunt_id: req.body.hunt_id,
-        student_id: req.body.student_id,
-        group_id: req.body.group_id,
-        started: req.body.started,
-        finished: req.body.finished,
-        complete: req.body.complete,
-        q_points: req.body.q_points,
-        total: req.body.total
-    });
-
-    score.save((err, score) => {
-        if (err) {
-            res.status(500).send({ message: err });
-            return;
-        } else {
-            res.status(200).send({
-                id: score._id,
-                teacher_id: score.teacher_id,
-                hunt_id: score.hunt_id,
-                student_id:score.student_id,
-                group_id: score.group_id,
-                started: score.started,
-                finished: score.finished,
-                complete: score.complete,
-                q_points: score.q_points,
-                total: score.total
-            });
-        }
-    });
-};

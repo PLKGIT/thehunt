@@ -41,4 +41,5 @@ const favoriteSchema = new Schema({
 
 const Favorite = mongoose.model("favorite", favoriteSchema);
 
+/*  Exporting Schema  */
 module.exports = Favorite;

@@ -57,4 +57,5 @@ const huntSchema = new Schema({
 
 const Hunt = mongoose.model("hunt", huntSchema);
 
+/*  Exporting Schema  */
 module.exports = Hunt;

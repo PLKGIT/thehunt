@@ -1,15 +1,17 @@
 /*  React  */
 import React, { Component } from 'react';
 
+/*  User Routes  */
 import UserService from "../services/user.service";
 import AdminComponents from "../components/AdminTab";
 
 /*  React Router  */
 import { Link } from "react-router-dom";
 
-/* Styling */
+/*  Styling  */
 import "../styles/App.scss";
 
+/*  Create and Export BoardAmin  */
 export default class BoardAdmin extends Component {
   constructor(props) {
     super(props);

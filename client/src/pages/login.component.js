@@ -1,8 +1,12 @@
+/*  React  */
 import React, { Component } from "react";
+
+/*  React Validation  */
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 
+/*  Auth Service  */
 import AuthService from "../services/auth.service";
 
 const required = value => {
@@ -15,6 +19,7 @@ const required = value => {
   }
 };
 
+/*  Create and Export Login  */
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -82,13 +87,6 @@ export default class Login extends Component {
   render() {
     return (
       <div className="col-md-6">
-        {/* <div className="card card-container">
-          <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile-img"
-            className="profile-img-card"
-          /> */}
-
           <Form
             onSubmit={this.handleLogin}
             ref={c => {

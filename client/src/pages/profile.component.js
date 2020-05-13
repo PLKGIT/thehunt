@@ -1,11 +1,14 @@
 /*  React   */
 import React, { Component } from "react";
+
 /*  Auth Service   */
 import AuthService from "../services/auth.service";
-/*  React Bootstrap Components  */
+
+/*  React Bootstrap  */
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+/*  Create and Export Profile  */
 export default class Profile extends Component {
   constructor(props) {
     super(props);

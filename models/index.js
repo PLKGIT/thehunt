@@ -1,3 +1,4 @@
+/*  Mongoose  */
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
@@ -14,4 +15,5 @@ db.role = require("./role.model");
 db.org = require("./org");
 db.ROLES = ["user", "teacher", "admin"];
 
+/*  Exporting db  */
 module.exports = db;

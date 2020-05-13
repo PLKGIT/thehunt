@@ -4,8 +4,6 @@ import React from 'react';
 /*  App SCSS  */
 import "../../styles/App.scss";
 
-import Navbar from 'react-bootstrap/Navbar'
-
 /*  Create Footer */
 function Footer() {
     return (

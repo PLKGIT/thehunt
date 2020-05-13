@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 /*  React Router  */
 import { Link } from "react-router-dom";
 
+/*  React Bootstrap  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
@@ -30,14 +31,7 @@ class TeacherManageHunts extends Component {
          
         </Tabs>
       </div>
-        {/* <h5 className="text-info">
-          LIST
-        <ul>
-            <li>All Created Hunts - sorted by pending, active, complete</li>
-            <li>Hunt Reports</li>
-          </ul>
-        FORM (EDITS)
-        </h5> */}
+
         <h5 className="text-info text-center">
       <Link to="/" className="link"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px"/>Unlock It Home</Link>
         </h5>

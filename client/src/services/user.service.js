@@ -1,8 +1,13 @@
+/*  Axios  */
 import axios from 'axios';
+
+/*  authHeader  */
 import authHeader from './auth-header';
 
+/*  App URL with Landing Page  */
 const API_URL = "https://unlock-it.herokuapp.com/api/land/";
 
+/*  Create UserService  */
 class UserService {
   getPublicContent() {
     return axios.get(API_URL + 'all');
@@ -21,4 +26,5 @@ class UserService {
   }
 }
 
+/*  Export UserService  */
 export default new UserService();

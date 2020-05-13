@@ -1,5 +1,7 @@
+/*  Mongoose  */
 const mongoose = require("mongoose");
 
+/*  Schema  */
 const Role = mongoose.model(
   "Role",
   new mongoose.Schema({
@@ -7,4 +9,5 @@ const Role = mongoose.model(
   })
 );
 
+/*  Exporting Schema  */
 module.exports = Role;

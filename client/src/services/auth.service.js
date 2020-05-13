@@ -1,7 +1,10 @@
+/*  Axios  */
 import axios from "axios";
 
+/*  App URL  */
 const API_URL = "https://unlock-it.herokuapp.com/api/auth/";
 
+/*  Create AuthService  */
 class AuthService {
   login(email, password) {
     return axios
@@ -38,4 +41,5 @@ class AuthService {
   }
 }
 
+/*  Export AuthService  */
 export default new AuthService();

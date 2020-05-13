@@ -1,7 +1,10 @@
+/*  React  */
 import React, { Component } from 'react';
+
+/*  Axios  */
 import Axios from 'axios';
 
-
+/*  Create EditNewHunt  */
 class EditNewHunt extends Component {
     state = {
         clues: JSON.parse(localStorage.getItem("clues")),
@@ -105,5 +108,5 @@ class EditNewHunt extends Component {
     }
 
 }
-
+/*  Export EditNewHunt  */
 export default EditNewHunt

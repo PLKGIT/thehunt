@@ -12,14 +12,6 @@ class Admin extends Component {
       <div className="container">
         <br />
         <h1 className="text-center text-secondary">ADMIN DASHBOARD</h1>
-        {/* <h5 className="text-info">
-          TABBED OPTIONS
-        <ul>
-            <li>Add/Edit Org</li>
-            <li>Add/Edit a Teacher</li>
-            <li>Add/Edit a Student</li>
-          </ul>
-        </h5> */}
         <AdminComponents/>
         <h5 className="text-info text-center">
       <Link to="/"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px"/>Unlock It Home</Link>

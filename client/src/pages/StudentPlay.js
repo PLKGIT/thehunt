@@ -1,14 +1,14 @@
+/*  React  */
 import React, { Component } from 'react';
+
+/*  React-dom  */
 import { render } from 'react-dom';
-//import { Link } from "react-router-dom";
+
+/*  Map Component  */
 import Map from "../components/Map/Map.js"
 
-
+/*  Create and Export StudentPlay  */
 class StudentPlay extends Component {
-    // constructor() {
-    //   super();
-    // }
-  
     render() {
       return (
        
@@ -25,7 +25,6 @@ class StudentPlay extends Component {
   }
   
 render(<StudentPlay />, document.getElementById('root'));
-
 
 /*  Export StudentPlay  */
 export default StudentPlay;

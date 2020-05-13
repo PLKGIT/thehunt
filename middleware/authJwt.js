@@ -1,9 +1,13 @@
+/*  JWT Configuration  */
 const jwt = require("jsonwebtoken");
 const config = require("../config/auth.config.js");
+
+/*  User and Role Models  */
 const db = require("../models");
 const User = db.user;
 const Role = db.role;
 
+/*  Verification  */
 verifyToken = (req, res, next) => {
   let token = req.headers["x-access-token"];
 
@@ -20,6 +24,7 @@ verifyToken = (req, res, next) => {
   });
 };
 
+/*  Admin Role Configuration  */
 isAdmin = (req, res, next) => {
   User.findById(req.userId).exec((err, user) => {
     if (err) {
@@ -51,6 +56,7 @@ isAdmin = (req, res, next) => {
   });
 };
 
+/*  Teacher Role Setup  */
 isTeacher = (req, res, next) => {
   User.findById(req.userId).exec((err, user) => {
     if (err) {
@@ -82,9 +88,12 @@ isTeacher = (req, res, next) => {
   });
 };
 
+/*  Creating authJWT  */
 const authJwt = {
   verifyToken,
   isAdmin,
   isTeacher
 };
+
+/*  Exporting authJWT  */
 module.exports = authJwt;

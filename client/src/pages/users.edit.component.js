@@ -1,13 +1,15 @@
 /*  React  */
 import React, { Component } from "react";
-/*  React Bootstrap Components  */
-import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
-import Card from "react-bootstrap/Card";
+
+/*  React Bootstrap  */
+// import Table from "react-bootstrap/Table";
+// import Form from "react-bootstrap/Form";
+// import Card from "react-bootstrap/Card";
 
 /*  Axios Calls  */
 import DataService from "../utils/data.service";
 
+/*  Create UserAll  */
 class UserAll extends Component {
   state = {
     username: "",
@@ -276,5 +278,5 @@ class UserAll extends Component {
   }
 }
 
-/*  Export Student  */
+/*  Export UserAll  */
 export default UserAll;
