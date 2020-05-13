@@ -9,7 +9,7 @@ Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis,
 * Allow students to explore the world from their very own homes
 
 ### Project Images
-![](https://res.cloudinary.com/damplk/image/upload/v1589382828/unlockit/unlockit-demo_gh5qjv.gif)
+![unlockit](https://res.cloudinary.com/damplk/image/upload/v1589382828/unlockit/unlockit-demo_gh5qjv.gif)
 
 ## Technology Details
 
@@ -27,7 +27,7 @@ Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis,
 * https://github.com/PLKGIT/thehunt
 * Version control system
 
-#### HTML and CSS
+#### JSX and CSS
 UI/UX design and styling and frontend content
 
 #### Google Fonts
