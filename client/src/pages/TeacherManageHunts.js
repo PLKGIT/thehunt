@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 /*  React Router  */
 import { Link } from "react-router-dom";
 
+/*  Hunt Components  */
+import History from "../../pages/hunts.history";
+
 /*  React Bootstrap  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -24,11 +27,9 @@ class TeacherManageHunts extends Component {
         </h5>
         <div id="tabWrapper">
         <Tabs eventKey="home" id="admintabbed">
-          <Tab eventKey="home" title="Hunts History">
-            <h6>Teacher Hunt History</h6>
+          <Tab eventKey="home" title="Hunts History"> 
+          <History/>
           </Tab>
-          
-         
         </Tabs>
       </div>
 

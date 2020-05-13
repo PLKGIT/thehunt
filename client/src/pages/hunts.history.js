@@ -11,7 +11,7 @@ class HuntsAll extends Component {
         title: "",
         category: "",
         description: "",
-        image: "",
+        image_url: "",
         teacher_id: "",
         data1: [],
         datafirst: [],
@@ -44,6 +44,9 @@ class HuntsAll extends Component {
                         <table className="table-bordered">
                             <tbody>
                                 <tr>
+                                <th>
+                                        <b>No.</b>
+                                    </th>
                                     <th>
                                         <b>Hunt Id</b>
                                     </th>
@@ -66,11 +69,11 @@ class HuntsAll extends Component {
                                 {this.state.data1.map((item, index) => (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
-                                        <td>{item.hunt_id}</td>
+                                        <td>{item._id}</td>
                                         <td>{item.title}</td>
                                         <td>{item.category}</td>
                                         <td>{item.description}</td>
-                                        <td>{item.image}</td>
+                                        <td>{item.image_url}</td>
                                         <td>{item.teacher_id}</td>
                                         <td>
                                         </td>
