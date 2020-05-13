@@ -11,6 +11,9 @@ import OrgProfile from "../../pages/org.profile.component";
 /*  User Components  */
 import Users from "../../pages/users.edit.component";
 
+/*  Hunt Components  */
+import Hunts from "../../pages/hunts.history";
+
 /*  React Bootstrap  */
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -29,6 +32,9 @@ class AdminComponents extends React.Component {
           {/* <Tab className="text-black" eventKey="profile" title="Edit Users">
             <Users/>
           </Tab> */}
+          <Tab className="text-black" eventKey="profile" title="Hunt History">
+            <Hunts/>
+          </Tab>
           <Tab className="text-black" eventKey="contact" title="Edit Org">
             <Row></Row>
             <Row>

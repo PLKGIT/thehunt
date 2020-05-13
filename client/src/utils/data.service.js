@@ -47,6 +47,14 @@ class DataService {
                 return res.data;
             })
     }
+
+    getHuntDetails() {
+        return axios.get(API_URL + 'dbhunt')
+            .then(res => {
+                console.log(res.data);
+                return res.data;
+            })
+    }
     getUserDetails() {
         return axios.get(API_URL + 'dbusers')
             .then(res => {
