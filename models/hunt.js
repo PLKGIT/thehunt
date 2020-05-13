@@ -5,11 +5,11 @@ const Schema = mongoose.Schema;
 /*  Schema  */
 const huntSchema = new Schema({
     teacher_id: {
-        type: mongoose.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId
         // required: true
     },
     favorite_id: {
-        type: mongoose.Types.ObjectId
+        type: mongoose.Schema.Types.ObjectId
     },
     title: {
         type: String

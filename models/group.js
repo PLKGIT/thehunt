@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 /*  Schema  */
 const groupSchema = new Schema({
     teacher_id: {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true
     },
     group_name: {
