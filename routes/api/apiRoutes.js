@@ -98,11 +98,11 @@ module.exports = function (app) {
     app.post(
       "/api/createhunt", function (req, res) {
         console.log("app.post function hit")
-        Hunt.create(req.body)
+        db.hunt.create(req.body)
       });
-      
+
     app.get("/api/createhunt", function (req, res) {
-      Hunt.find({}, function (err, found) {
+      db.hunt.find({}, function (err, found) {
         if (err) {
           console.log(err)
         } else {

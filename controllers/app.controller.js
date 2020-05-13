@@ -85,45 +85,45 @@ exports.createGroup = (req, res) => {
     });
 };
 
-exports.createHunt = (req, res) => {
-    const Hunt = new Hunt({
-        teacher_id: req.body.teacher_id,
-        favorite_id: req.body.favorite_id,
-        title: req.body.title,
-        created_by: req.body.created_by,
-        category: req.body.category,
-        image_url: req.body.image_url,
-        description: req.body.description,
-        hunt_data: req.body.hunt_data,
-        status: req.body.status,
-        start_date: req.body.start_date,
-        end_date: req.body.end_date,
-        share: req.body.share
-    });
+// exports.createHunt = (req, res) => {
+//     const Hunt = new Hunt({
+//         teacher_id: req.body.teacher_id,
+//         favorite_id: req.body.favorite_id,
+//         title: req.body.title,
+//         created_by: req.body.created_by,
+//         category: req.body.category,
+//         image_url: req.body.image_url,
+//         description: req.body.description,
+//         hunt_data: req.body.hunt_data,
+//         status: req.body.status,
+//         start_date: req.body.start_date,
+//         end_date: req.body.end_date,
+//         share: req.body.share
+//     });
 
-    Hunt.save((err, hunt) => {
-        if (err) {
-            res.status(500).send({ message: err });
-            return;
-        } else {
-            res.status(200).send({
-                id: hunt._id,
-                teacher_id: hunt.teacher_id,
-                favorite_id: hunt.favorite_id,
-                title: hunt.title,
-                created_by: hunt.created_by,
-                category:hunt.category,
-                image_url: hunt.image_url,
-                description: hunt.description,
-                hunt_data: hunt.hunt_data,
-                status: hunt.status,
-                start_date: hunt.start_date,
-                end_date: hunt.end_date,
-                share: hunt.share
-            });
-        }
-    });
-};
+//     Hunt.save((err, hunt) => {
+//         if (err) {
+//             res.status(500).send({ message: err });
+//             return;
+//         } else {
+//             res.status(200).send({
+//                 id: hunt._id,
+//                 teacher_id: hunt.teacher_id,
+//                 favorite_id: hunt.favorite_id,
+//                 title: hunt.title,
+//                 created_by: hunt.created_by,
+//                 category:hunt.category,
+//                 image_url: hunt.image_url,
+//                 description: hunt.description,
+//                 hunt_data: hunt.hunt_data,
+//                 status: hunt.status,
+//                 start_date: hunt.start_date,
+//                 end_date: hunt.end_date,
+//                 share: hunt.share
+//             });
+//         }
+//     });
+// };
 
 exports.createScore = (req, res) => {
     const Score = new Score({
