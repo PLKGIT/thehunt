@@ -95,11 +95,14 @@ module.exports = function (app) {
   //   });
   // });
 
-    app.post(
-      "/api/createhunt", function (req, res) {
-        console.log("app.post function hit")
-        db.hunt.create(req.body)
-      });
+    // app.post(
+    //   "/api/createhunt", function (req, res) {
+    //     console.log("app.post function hit")
+    //     db.hunt.create(req.body)
+    //   });
+
+      app.post(
+        "/api/createhunt", controller.createHunt);
 
     app.get("/api/createhunt", function (req, res) {
       db.hunt.find({}, function (err, found) {
