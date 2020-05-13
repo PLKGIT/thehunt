@@ -27,7 +27,7 @@ Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis,
 * https://github.com/PLKGIT/thehunt
 * Version control system
 
-#### JSX and CSS
+#### JSX and SCSS
 UI/UX design and styling and frontend content
 
 #### Google Fonts

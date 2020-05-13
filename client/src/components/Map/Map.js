@@ -7,9 +7,6 @@ import { Input, FormBtn } from "../Form/Form.js"
 /*  Axios  */
 import Axios from "axios";
 
-/*  React Bootstrap  */
-import Badge from 'react-bootstrap/Badge';
-
 /*  Styling  */
 import "../../styles/studentPlay.scss"
 
@@ -368,13 +365,13 @@ class Map extends Component {
                                         >
                                             {this.state.displayText}
                                         </p>
-                                        <h4><Badge className="bg-white text-black">Score: </Badge> {this.state.score}</h4>
+                                        <p>Score: {this.state.score}</p>
                                     </form>
                                 </div>
                                 </div>
                                 <div className="row">
                                     <form className="form playForm">
-                                    <h4><Badge className="bg-white text-black">Clue:</Badge> {this.state.currentClue}</h4>
+                                        <p>Clue: {this.state.currentClue}</p>
                                         {/* <p>{this.state.correctAnswer}</p>
                                         <p>{this.state.location}</p>
                                         <p>{this.state.numClues}</p> */}
