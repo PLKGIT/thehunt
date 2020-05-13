@@ -181,26 +181,26 @@ class Map extends Component {
           </div>
 
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-4 customCol">
               <div className="row custom3">
                 <form>
                   <Input
                     className="location"
-                    id="clue"
+                    id="clue" style={{marginBottom: "15px"}}
                     value={this.state.clue}
                     onChange={this.handleInputChange}
                     name="clue"
                     placeholder="Clue (required)"
                   />
                   <Input
-                    className="answer"
+                    className="answer" style={{marginBottom: "15px"}}
                     value={this.state.answer}
                     onChange={this.handleInputChange}
                     name="answer"
                     placeholder="Answer (required)"
                   />
                   <Input
-                    className="location"
+                    className="location" style={{marginBottom: "15px"}}
                     value={this.state.location}
                     onChange={this.handleInputChange}
                     name="location"
@@ -210,7 +210,7 @@ class Map extends Component {
               </div>
               <div className="row secondRow">
                 <form>
-                  <FormBtn className="nav btn"
+                  <FormBtn className="nav btn" style={{marginBottom: "15px"}}
                     onClick={this.renderMap}
                     value={this.state.location}
                     disabled={!(this.state.answer || this.state.location)}

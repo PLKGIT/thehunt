@@ -341,7 +341,7 @@ class Map extends Component {
 
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row content">
                         <div className="col-m-4">
                             <div className="row">
 
@@ -361,6 +361,7 @@ class Map extends Component {
                                         </p>
                                         <p>Score: {this.state.score}</p>
                                     </form>
+                                </div>
                                 </div>
                                 <div className="row">
                                     <form className="form playForm">
@@ -392,6 +393,8 @@ class Map extends Component {
                                         </FormBtn>
                                     </form>
                                 </div>
+                                <div className="row lastRow">
+                                    <div className="col-m-6">
                                 <form className="form playForm">
                                     <FormBtn
                                         onClick={this.displayClue}
@@ -399,6 +402,10 @@ class Map extends Component {
                                     >
                                         Next Question
                                     </FormBtn>
+                                    </form>
+                                    </div>
+                                    <div className="col-m-6 completeHunt">
+                                <form className="form playForm">
                                     <FormBtn
                                         onClick={(event) => {
                                             event.preventDefault()
@@ -409,10 +416,11 @@ class Map extends Component {
                                     {/* <Link to="/studenthistory">
                                     Complete Hunt</Link> */}
                                 </form>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="col-m-8">
+                        <div className="col-m-8 mapDisplay">
                             <div style={{ width: 500, height: 500 }} id={this.props.id} />
                         </div>
                         
