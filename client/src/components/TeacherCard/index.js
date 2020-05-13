@@ -64,7 +64,7 @@ class TeacherCard extends Component {
           </div>
 
           <Link to="/teachercreategroup" style={{ textDecoration: 'none', lineHeight:'3em'}}>  <div class="card-footer">
-                        Create a group for students.
+                         Create a new group for students.
           </div></Link>
                 </div>
             </div>

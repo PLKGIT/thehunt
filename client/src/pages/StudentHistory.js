@@ -10,7 +10,7 @@ class StudentHistory extends Component {
         return (
         <div className="container">
             <br />
-            <h1 className="text-center text-secondary">HUNTS HISTORY</h1>
+            <h1 className="text-center">HUNTS HISTORY</h1>
             <h5 className="text-secondary">
                 NAVIGATION
                 <ul>
@@ -21,7 +21,7 @@ class StudentHistory extends Component {
                 HUNTS HISTORY CONTENT
       </h5>
       <h5 className="text-info text-center">
-      <Link to="/"><img src="./images/unlock.png" alt="Still Lock" width="75px"/>Unlock It Home</Link>
+      <Link to="/" className="link"><img src="./images/transparentlock.gif" alt="Still Lock" width="75px"/>Unlock It Home</Link>
         </h5>
             <br />
         </div>

@@ -7,22 +7,27 @@
     margin-left: auto;
     margin-right: auto;
 }
-​
 .content{
     justify-content: center;
     margin-top:30px;
 }
-​
 .mapDisplay{
     margin-left: 50px;
 }
 .row{
     margin-bottom: 10px;
 }
-​
 .lastRow{
     margin-top:25px;
 }
 .completeHunt{
     margin-left: 5px;
+}
+
+.customBtn{
+    background-color: black;
+    color:white;
+    border: none;
+    border-radius: 4px;
+    padding:10px;
 }

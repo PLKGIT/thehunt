@@ -49,7 +49,7 @@ require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 
 /*  App Routes  */
-require('./routes/apis/apiRoutes')(app);
+require('./routes/api/apiRoutes')(app);
 
 
 /*  Connect to MongoDB */

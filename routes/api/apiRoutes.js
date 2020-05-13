@@ -32,18 +32,6 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/userget", function (req, res) {
-    User.find({}, function (err, found) {
-      if (err) {
-        console.log(err);
-        res.send(err);
-      }
-      else {
-        res.send(data);
-      }
-    });
-  });
-
   app.post("/api/userremove", function (req, res) {
     User.remove({ _id: req.body.id }, function (err, found) {
       if (err) {

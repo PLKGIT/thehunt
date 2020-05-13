@@ -3,22 +3,41 @@ import DataService from "../utils/data.service";
 
 /*  React Bootstrap Components  */
 import Form from 'react-bootstrap/Form';
-import Card from "react-bootstrap/Card";
 
+/*  Create and Export Org  */
 export default class Org extends Component {
     constructor(props) {
         super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCreate = this.handleCreate.bind(this);
+        this.handleRemove = this.handleRemove.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeCity = this.onChangeCity.bind(this);
         this.onChangeState = this.onChangeState.bind(this);
 
         this.state = {
+            id: "",
             org_name: "",
             org_city: "",
             org_state: ""
         }
     }
+    componentDidMount() {
+        DataService.getOrgDetails()
+            .then((data) => {
+                console.log(data[0]._id)
+                console.log(data[0].org_name)
+                console.log(data[0].org_city)
+                console.log(data[0].org_state)
+                this.setState({
+                    id: data[0]._id,
+                    org_name: data[0].org_name,
+                    org_city: data[0].org_city,
+                    org_state: data[0].org_state
+                })
+            })
+    }
+
 
     onChangeName(e) {
         this.setState({
@@ -38,10 +57,29 @@ export default class Org extends Component {
         });
     }
 
-    handleSubmit(e) {
+    handleUpdate(e) {
         e.preventDefault();
 
-        DataService.createorg(
+        DataService.updateOrg(
+            this.state.id,
+            this.state.org_name,
+            this.state.org_city,
+            this.state.org_state
+        )
+    }
+
+    handleRemove(e) {
+        e.preventDefault();
+
+        DataService.removeOrg(
+            this.state.id
+        )
+    }
+
+    handleCreate(e) {
+        e.preventDefault();
+
+        DataService.createOrg(
             this.state.org_name,
             this.state.org_city,
             this.state.org_state
@@ -50,14 +88,10 @@ export default class Org extends Component {
 
     render() {
         return (
-            <Card>
-                <Card.Body>
-                    <Card.Text>
-                    <div className="form-wrapper">
-                <Form onSubmit={this.handleSubmit}>
-
+            <div className="form-wrapper">
+                <Form onSubmit={this.handleUpdate}>
                     <Form.Group controlId="name">
-                        <Form.Label>Organization</Form.Label>
+                        <Form.Label className="text-white">Name</Form.Label>
                         <Form.Control
                             type="text"
                             name="org_name"
@@ -67,7 +101,7 @@ export default class Org extends Component {
                         />
                     </Form.Group>
                     <Form.Group controlId="city">
-                        <Form.Label>City</Form.Label>
+                        <Form.Label className="text-white">City</Form.Label>
                         <Form.Control
                             type="text"
                             name="org_city"
@@ -78,7 +112,7 @@ export default class Org extends Component {
                     </Form.Group>
 
                     <Form.Group controlId="state">
-                        <Form.Label>State</Form.Label>
+                        <Form.Label className="text-white">State</Form.Label>
                         <Form.Control
                             type="text"
                             name="org_state"
@@ -87,16 +121,17 @@ export default class Org extends Component {
                             onChange={this.onChangeState}
                         />
                     </Form.Group>
-                    <div className="form-group">
-                        <button className="btn btn-primary btn-block">Update Org</button>
-                    </div>
-
+                    {/* <div className="form-group">
+                        <button className="btn btn-primary btn-block" onSubmit={this.handleUpdate}>Update Org</button>
+                    </div> */}
+                    {/* <div className="form-group">
+                        <button className="btn btn-primary btn-block">Remove Org</button>
+                    </div> */}
+                    {/* <div className="form-group">
+                        <button className="btn btn-primary btn-block" onSubmit={this.handleCreate}>Create Org</button>
+                    </div> */}
                 </Form >
             </div >
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-            
         );
     }
 }
