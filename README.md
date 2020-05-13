@@ -9,7 +9,7 @@ Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis,
 * Allow students to explore the world from their very own homes
 
 ### Project Images
-![](https://res.cloudinary.com/damplk/image/upload/v1588292809/portal/unlock_lat1l9.gif)
+![](https://res.cloudinary.com/damplk/image/upload/v1589382828/unlockit/unlockit-demo_gh5qjv.gif)
 
 ## Technology Details
 
@@ -20,9 +20,6 @@ Unlock It! is a virtual scavenger hunt. As a result of the 2020 Covid-19 crisis,
 
 #### Open Trivia Database
 * https://www.opentdb.com
-
-#### Emoji
-* 
 
 ### Technologies, Libraries, and Tools Used**
 
@@ -105,10 +102,22 @@ UI/UX design and styling and frontend content
 #### Collections
 * Org
 * User
+* Role
 * Group
 * Favorite
 * Hunt
 * Score
+
+![](https://res.cloudinary.com/damplk/image/upload/v1589381685/unlockit/schema_01_l872tw.png)
+
+#### Schemas
+![](https://res.cloudinary.com/damplk/image/upload/v1589381685/unlockit/schema_02_vf5aor.png)
+![](https://res.cloudinary.com/damplk/image/upload/v1589381684/unlockit/schema_03_pflndi.png)
+![](https://res.cloudinary.com/damplk/image/upload/v1589381684/unlockit/schema_04_mpjwgs.png)
+![](https://res.cloudinary.com/damplk/image/upload/v1589381684/unlockit/schema_05_go5ma1.png)
+![](https://res.cloudinary.com/damplk/image/upload/v1589381684/unlockit/schema_06_rkwg8u.png)
+![](https://res.cloudinary.com/damplk/image/upload/v1589381684/unlockit/schema_07_ntubak.png)
+![](https://res.cloudinary.com/damplk/image/upload/v1589381684/unlockit/schema_08_pt6scx.png)
 
 ### Project Assets
 

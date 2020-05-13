@@ -23,13 +23,13 @@ class AdminComponents extends React.Component {
     return (
       <div className="tabWrapper" >
         <Tabs eventKey="home" id="admintabbed">
-          <Tab eventKey="home" title="Register Users" >
+          <Tab className="text-black" eventKey="home" title="Register Users" >
             <Register />
           </Tab>
-          <Tab eventKey="profile" title="Edit Users">
+          <Tab className="text-black" eventKey="profile" title="Edit Users">
             <Users/>
           </Tab>
-          <Tab eventKey="contact" title="Edit Org">
+          <Tab className="text-black" eventKey="contact" title="Edit Org">
             <Row></Row>
             <Row>
               <Col>

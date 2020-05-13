@@ -284,20 +284,6 @@ class Map extends Component {
               <div style={{ width: 500, height: 500 }} id={this.props.id} />
               <div className="form">
                 <form className="form">
-                  {/* <p>Questions will appear here</p> */}
-                  {/* <Input
-                            value={this.state.answer}
-                            onChange={this.handleInputChange}
-                            name="answer"
-                            placeholder="Type your answer here"
-                        >
-                        </Input>
-                        <FormBtn
-                            onClick={this.handleFormSubmit}
-                            className="form"
-                        >
-                            Check your answer
-                        </FormBtn> */}
                 </form>
               </div>
             </div>

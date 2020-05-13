@@ -25,7 +25,7 @@ class TeacherManageHunts extends Component {
         <div id="tabWrapper">
         <Tabs eventKey="home" id="admintabbed">
           <Tab eventKey="home" title="Hunts History">
-            <p>hello Hunts history please</p>
+            <h6>Teacher Hunt History</h6>
           </Tab>
           
          

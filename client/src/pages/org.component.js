@@ -41,6 +41,22 @@ export default class Org extends Component {
             })
     }
 
+    componentDidUpdate() {
+        DataService.getOrgDetails()
+            .then((data) => {
+                console.log(data[0]._id)
+                console.log(data[0].org_name)
+                console.log(data[0].org_city)
+                console.log(data[0].org_state)
+                this.setState({
+                    id: data[0]._id,
+                    org_name: data[0].org_name,
+                    org_city: data[0].org_city,
+                    org_state: data[0].org_state
+                })
+            })
+    }
+
 
     onChangeName(e) {
         this.setState({
@@ -69,7 +85,6 @@ export default class Org extends Component {
             this.state.org_city,
             this.state.org_state
         )
-        window.location.href = "/admin"
     }
 
     handleRemove(e) {
