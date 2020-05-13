@@ -25,7 +25,7 @@ const favoriteSchema = new Schema({
         required: true
     },
     hunt_data: {
-        type: Map,
+        type: Array,
         required: true
     },
     rating: {

@@ -11,6 +11,18 @@ const huntSchema = new Schema({
     favorite_id: {
         type: String
     },
+    title: {
+        type: String
+        // required: true
+    },
+    created_by: {
+        type: String
+        // required: true
+    },
+    category: {
+        type: String
+        // required: true
+    },
     image_url: {
         type: String
         // required: true
