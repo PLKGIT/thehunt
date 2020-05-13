@@ -125,26 +125,42 @@ class Map extends Component {
     }
   };
 
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   // modal saying "Hunt Added"
+  //   // redirect to 'Manage Hunts' page
+  //   var obj = { id: this.state.id, clue: this.state.clue, answer: this.state.answer, location: this.state.location }
+  //   this.state.clues.push(obj)
+  //   // const json = JSON.stringify(this.state.clues);
+  //   // localStorage.setItem("clues", json)
+  //   console.log(this.state.clues)
+  //   Axios.post("/api/createhunt", {
+  //     teacher_id: this.state.teacherId,
+  //     title: this.state.title,
+  //     category: this.state.category,
+  //     image_url: this.state.imageUrl,
+  //     description: this.state.description,
+  //     hunt_data: this.state.clues
+  //   })
+  //   console.log("axios.post function hit")
+  //   window.location.href = "/teachermanagehunts"
+  // }
+
   handleFormSubmit = event => {
     event.preventDefault();
-    // modal saying "Hunt Added"
-    // redirect to 'Manage Hunts' page
     var obj = { id: this.state.id, clue: this.state.clue, answer: this.state.answer, location: this.state.location }
     this.state.clues.push(obj)
-    // const json = JSON.stringify(this.state.clues);
-    // localStorage.setItem("clues", json)
     console.log(this.state.clues)
-    Axios.post("/api/createhunt", {
-      teacher_id: this.state.teacherId,
-      title: this.state.title,
-      category: this.state.category,
-      image_url: this.state.imageUrl,
-      description: this.state.description,
-      hunt_data: this.state.clues
-    })
-    console.log("axios.post function hit")
-    // window.location.href = "/teachermanagehunts"
-  }
+
+    DataService.createHunt(
+     this.state.teacherId,
+     this.state.title,
+     this.state.category,
+     this.state.imageUrl,
+     this.state.description,
+     this.state.clues
+      )
+    }
 
 
   render() {
