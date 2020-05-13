@@ -71,7 +71,7 @@ class App extends Component {
         <div>
           <Nav className="navbar navbar-expand  fixed-top">
             <Link to={"/"} className="navbar-brand">
-              <span className="text-white"><h6>Unlock It!&emsp;</h6></span>
+              <span className="text-white" ><h1 style={{fontSize:"3em"}}>Unlock It!&emsp;</h1></span>
             </Link>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">

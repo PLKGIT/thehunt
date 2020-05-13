@@ -11,6 +11,7 @@ class StudentPlay extends Component {
   
     render() {
       return (
+       
         <Map
           id="myMap"
           options={{

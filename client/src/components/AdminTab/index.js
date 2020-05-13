@@ -15,12 +15,13 @@ import Tabs from 'react-bootstrap/Tabs';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
 class AdminComponents extends React.Component {
   render() {
     return (
-      <div id="tabWrapper">
+      <div className="tabWrapper" >
         <Tabs eventKey="home" id="admintabbed">
-          <Tab eventKey="home" title="Register Users">
+          <Tab eventKey="home" title="Register Users" >
             <Register />
           </Tab>
           <Tab eventKey="profile" title="Edit Users">

@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div id="banner">
         <div id="cloud-scroll">
           <div class="homeText">
-            <h2 class="welcome">Welcome to Unlock It!
+            <h2 class="welcome" style={{fontSize:"2.5em"}}>Welcome to Unlock It!
             <img src="../images/transparentlock.gif"/></h2>
             <h2>The Hunt is on!</h2>
           </div>
