@@ -360,71 +360,70 @@ class Map extends Component {
                                         >
                                         Start Quiz
                                         </FormBtn> */}
-
-                                        <p
+                                        <h5 style={{ fontWeight: "900px" , marginBottom: "30px"}}>Score: {this.state.score}</h5>
+                                        <h5 style={{ marginBottom: "30px" }}
                                             className={this.state.status === "correct" ? "playPageCorrect" : "playPageIncorrect"}
                                         >
                                             {this.state.displayText}
-                                        </p>
-                                        <p>Score: {this.state.score}</p>
+                                        </h5>
                                     </form>
                                 </div>
-                                </div>
-                                <div className="row">
-                                    <form className="form playForm">
-                                        <p>Clue: {this.state.currentClue}</p>
-                                        {/* <p>{this.state.correctAnswer}</p>
+                            </div>
+                            <div className="row">
+                                <form className="form playForm">
+                                <h5 style={{ fontWeight: "900px"}}>Clue: {this.state.currentClue}</h5>
+                                    {/* <p>{this.state.correctAnswer}</p>
                                         <p>{this.state.location}</p>
                                         <p>{this.state.numClues}</p> */}
-                                    </form>
-                                </div>
-                                <div className="row">
-                                    <form className="form playForm">
-                                        <Input
-                                            value={this.state.studentAnswer}
-                                            onChange={this.handleInputChange}
-                                            name="answer"
-                                            placeholder="Type your answer here"
-                                        >
-                                        </Input>
-                                    </form>
-                                </div>
-                                <div className="row">
-                                    <form className="form playForm">
-                                        <FormBtn 
-                                            onClick={this.handleFormSubmit}
-                                            disabled={this.state.mapSearched}
-                                            className="form customBtn"
-                                        >
-                                            Check your answer
-                                        </FormBtn>
-                                    </form>
-                                </div>
-                                <div className="row lastRow">
-                                    <div className="col-m-6">
-                                <form className="form playForm ">
-                                    <FormBtn
-                                    className="customBtn"
-                                        onClick={this.displayClue}
-                                        disabled={!this.state.mapSearched}
+                                </form>
+                            </div>
+                            <div className="row">
+                                <form className="form playForm">
+                                    <Input
+                                        value={this.state.studentAnswer}
+                                        onChange={this.handleInputChange}
+                                        name="answer"
+                                        placeholder="Type your answer here"
                                     >
-                                        Next Question
-                                    </FormBtn>
-                                    </form>
-                                    </div>
-                                    <div className="col-m-6 completeHunt">
+                                    </Input>
+                                </form>
+                            </div>
+                            <div className="row">
                                 <form className="form playForm">
                                     <FormBtn
-                                    className="customBtn"
-                                        onClick={(event) => {
-                                            event.preventDefault()
-                                            window.location.href = "/studenthistory"
-                                        }}
-                                    >Complete Hunt
-                                    </FormBtn>
-                                    {/* <Link to="/studenthistory">
-                                    Complete Hunt</Link> */}
+                                        onClick={this.handleFormSubmit}
+                                        disabled={this.state.mapSearched}
+                                        className="form customBtn"
+                                    >
+                                        Check your answer
+                                        </FormBtn>
                                 </form>
+                            </div>
+                            <div className="row lastRow">
+                                <div className="col-m-6">
+                                    <form className="form playForm ">
+                                        <FormBtn
+                                            className="customBtn"
+                                            onClick={this.displayClue}
+                                            disabled={!this.state.mapSearched}
+                                        >
+                                            Next Question
+                                    </FormBtn>
+                                    </form>
+                                </div>
+                                <div className="col-m-6 completeHunt">
+                                    <form className="form playForm">
+                                        <FormBtn
+                                            className="customBtn"
+                                            onClick={(event) => {
+                                                event.preventDefault()
+                                                window.location.href = "/studenthistory"
+                                            }}
+                                        >Complete Hunt
+                                    </FormBtn>
+                                        {/* <Link to="/studenthistory">
+                                    Complete Hunt</Link> */}
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +431,7 @@ class Map extends Component {
                         <div className="col-m-8 mapDisplay">
                             <div style={{ width: 500, height: 500 }} id={this.props.id} />
                         </div>
-                        
+
                     </div>
                 </div>
             </>

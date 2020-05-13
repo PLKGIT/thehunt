@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "animate.css": "^4.1.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "bootstrap-icons": "^1.0.0-alpha3",
@@ -13,12 +14,12 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-table": "^4.3.1",
+    "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "react-table": "^7.0.4",
-    "react-validation": "^3.0.7",
-    "react-bootstrap-validation": "^0.1.11"
+    "react-validation": "^3.0.7"
   },
   "scripts": {
     "start": "react-scripts start",

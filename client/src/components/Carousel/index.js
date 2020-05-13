@@ -101,8 +101,8 @@ class Carousel extends Component {
         return (
             <div className="carousel">
                 <figure>
+                <Link className="link" to="/studentplay"><img src="/images/world.png" alt="world" /><h3>Landmarks</h3></Link>
                     <Link className="link" to="/studentplay"><img src="/images/animals.png" alt="animals" /><h3>Animals</h3></Link>
-                    <Link className="link" to="/studentplay"><img src="/images/world.png" alt="world" /><h3>Landmarks</h3></Link>
                     <Link className="link" to="/studentplay"><img src="/images/inventor.png" alt="inventor" /><h3>Inventors</h3></Link>
                     <Link className="link" to="/studentplay"><img src="/images/hunt.png" alt="coming soon" /><h3>Coming Soon</h3></Link>
                     <Link className="link" to="/studentplay"><img src="/images/bulb.png" alt="bulb" /><h3>Inventors</h3></Link>

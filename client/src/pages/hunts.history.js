@@ -73,8 +73,8 @@ class HuntsAll extends Component {
                                         <td>{item.title}</td>
                                         <td>{item.category}</td>
                                         <td>{item.description}</td>
-                                        <td>{item.image_url}</td>
-                                        <td>{item.teacher_id}</td>
+                                        <td><img src={item.image_url} width="50px"/></td>
+                                        {/* <td>{item.teacher_id}</td> */}
                                         <td>
                                         </td>
                                     </tr>
