@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 /*  Hunt Components  */
-import HuntHistory from "../../pages/hunts.history";
+import HuntHistory from "../pages/hunts.history";
 
 /*  React Bootstrap  */
 import Tab from 'react-bootstrap/Tab';
