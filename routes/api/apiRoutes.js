@@ -84,24 +84,25 @@ module.exports = function (app) {
   app.post(
     "/api/creategroup", controller.createGroup);
 
-  app.get("/dbhunt", function (req, res) {
-    Hunt.find({}, function (err, found) {
-      if (err) {
-        console.log(err);
-      }
-      else {
-        res.json(found);
-      }
-    });
-  });
+  // app.get("/dbhunt", function (req, res) {
+  //   Hunt.find({}, function (err, found) {
+  //     if (err) {
+  //       console.log(err);
+  //     }
+  //     else {
+  //       res.json(found);
+  //     }
+  //   });
+  // });
 
     app.post(
       "/api/createhunt", function (req, res) {
         console.log("app.post function hit")
-        db.Hunt.create(req.body)
+        Hunt.create(req.body)
       });
+      
     app.get("/api/createhunt", function (req, res) {
-      db.Hunt.find({}, function (err, found) {
+      Hunt.find({}, function (err, found) {
         if (err) {
           console.log(err)
         } else {
