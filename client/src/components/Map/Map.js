@@ -3,6 +3,7 @@ import { Input, FormBtn } from "../Form/Form.js"
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
+
 /* Styling */
 import "../../styles/studentPlay.scss"
 
@@ -384,10 +385,10 @@ class Map extends Component {
                                 </div>
                                 <div className="row">
                                     <form className="form playForm">
-                                        <FormBtn
+                                        <FormBtn 
                                             onClick={this.handleFormSubmit}
                                             disabled={this.state.mapSearched}
-                                            className="form"
+                                            className="form customBtn"
                                         >
                                             Check your answer
                                         </FormBtn>
@@ -395,8 +396,9 @@ class Map extends Component {
                                 </div>
                                 <div className="row lastRow">
                                     <div className="col-m-6">
-                                <form className="form playForm">
+                                <form className="form playForm ">
                                     <FormBtn
+                                    className="customBtn"
                                         onClick={this.displayClue}
                                         disabled={!this.state.mapSearched}
                                     >
@@ -407,6 +409,7 @@ class Map extends Component {
                                     <div className="col-m-6 completeHunt">
                                 <form className="form playForm">
                                     <FormBtn
+                                    className="customBtn"
                                         onClick={(event) => {
                                             event.preventDefault()
                                             window.location.href = "/studenthistory"
