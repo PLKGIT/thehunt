@@ -224,6 +224,7 @@ class Map extends Component {
         this.setState({ similarity: 0 })
         this.setState({ displayText: "" })
         this.setState({ mapSearched: false })
+        this.setState({ studentAnswer: "" })
         var count = this.state.question
         var obj = this.state.clues[count]
         var thisObj = obj.clue
@@ -380,7 +381,7 @@ class Map extends Component {
                                 <div className="row">
                                     <form className="form playForm">
                                         <Input
-                                            value={this.state.answer}
+                                            value={this.state.studentAnswer}
                                             onChange={this.handleInputChange}
                                             name="answer"
                                             placeholder="Type your answer here"
