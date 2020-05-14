@@ -45,7 +45,6 @@ class HuntsAll extends Component {
                     <div className="col-auto">
                         <table className="table-bordered">
                             <tbody>
-                                <thead>
                                     <tr>
                                         <th>
                                             <b>#</b>
@@ -69,7 +68,6 @@ class HuntsAll extends Component {
                                         <b>Teacher Id</b>
                                     </th> */}
                                     </tr>
-                                </thead>
                                 {this.state.data1.map((item, index) => (
                                     <tr key={index}>
                                         <td>{index + 1}</td>

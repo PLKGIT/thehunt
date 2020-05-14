@@ -47,7 +47,6 @@ class UserAll extends Component {
                     <div className="col-auto">
                         <table className="table-bordered">
                             <tbody>
-                                <thead>
                    <tr>
                     <th>
                       <b>Id</b>
@@ -74,7 +73,6 @@ class UserAll extends Component {
                       <b>Delete</b>
                     </th>
                   </tr>
-                                </thead>
                                 {this.state.data1.map((item, index) => (
                     <tr key={index}>
                       <td>{index + 1}</td>
