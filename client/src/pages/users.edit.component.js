@@ -66,12 +66,6 @@ class UserAll extends Component {
                     <th>
                       <b>Roles</b>
                     </th>
-                    <th>
-                      <b>Edit</b>
-                    </th>
-                    <th>
-                      <b>Delete</b>
-                    </th>
                   </tr>
                                 {this.state.data1.map((item, index) => (
                     <tr key={index}>

@@ -362,7 +362,7 @@ class Map extends Component {
                                         </FormBtn> */}
                                         <h5 style={{ fontWeight: "900px" , marginBottom: "30px"}}>Score: {this.state.score}</h5>
                                         <h5 style={{ marginBottom: "30px" }}
-                                            className={this.state.status === "correct" ? "playPageCorrect" : "playPageIncorrect"}
+                                            className={this.state.status === "correct" ? "animate__heartBeat" : "wrong"}
                                         >
                                             {this.state.displayText}
                                         </h5>

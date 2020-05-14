@@ -31,3 +31,19 @@
     border-radius: 4px;
     padding:10px;
 }
+
+.animate__heartBeat{
+    color: green;
+    text-shadow: 1px 1px 1px white;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.wrong{
+    color: red;
+    text-shadow: 1px 1px 1px white;
+    font-weight: 900;
+    font-size: 1.5em;
+    animation: shakeX;
+    animation-duration: 2s;
+}
