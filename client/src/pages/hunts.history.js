@@ -39,33 +39,37 @@ class HuntsAll extends Component {
                 <div className="row">
                     <h2>Hunts History</h2>
                 </div>
-                <div className="row">
-                    
+
+
+                <div className="row justify-content-center">
+                    <div className="col-auto">
                         <table className="table-bordered">
                             <tbody>
-                                <tr>
-                                <th>
-                                        <b>No.</b>
-                                    </th>
-                                    <th>
-                                        <b>Hunt Id</b>
-                                    </th>
-                                    <th>
-                                        <b>Title</b>
-                                    </th>
-                                    <th>
-                                        <b>Category</b>
-                                    </th>
-                                    <th>
-                                        <b>Description</b>
-                                    </th>
-                                    <th>
-                                        <b>Image</b>
-                                    </th>
-                                    <th>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <b>#</b>
+                                        </th>
+                                        <th>
+                                            <b>Hunt Id</b>
+                                        </th>
+                                        <th>
+                                            <b>Title</b>
+                                        </th>
+                                        <th>
+                                            <b>Category</b>
+                                        </th>
+                                        <th>
+                                            <b>Description</b>
+                                        </th>
+                                        <th>
+                                            <b>Image</b>
+                                        </th>
+                                        {/* <th>
                                         <b>Teacher Id</b>
-                                    </th>
-                                </tr>
+                                    </th> */}
+                                    </tr>
+                                </thead>
                                 {this.state.data1.map((item, index) => (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
@@ -73,7 +77,7 @@ class HuntsAll extends Component {
                                         <td>{item.title}</td>
                                         <td>{item.category}</td>
                                         <td>{item.description}</td>
-                                        <td><img src={item.image_url} width="50px"/></td>
+                                        <td><img src={item.image_url} width="100px" /></td>
                                         {/* <td>{item.teacher_id}</td> */}
                                         <td>
                                         </td>
@@ -82,6 +86,7 @@ class HuntsAll extends Component {
                             </tbody>
                         </table>
                     </div>
+                </div>
             </div>
         );
     }

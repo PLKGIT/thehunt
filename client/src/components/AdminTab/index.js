@@ -26,9 +26,9 @@ class AdminComponents extends React.Component {
           <Tab className="text-black" eventKey="home" title="Register Users" >
             <Register />
           </Tab>
-          {/* <Tab className="text-black" eventKey="profile" title="Edit Users">
+          <Tab className="text-black" eventKey="profile" title="Edit Users">
             <Users/>
-          </Tab> */}
+          </Tab>
           <Tab className="text-black" eventKey="contact" title="Edit Org">
             <Row></Row>
             <Row>
