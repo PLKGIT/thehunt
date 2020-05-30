@@ -39,10 +39,7 @@ class Map extends Component {
             this.props.options);
     }
 
-
-
     correctMapSearch = () => {
-        // event.preventDefault();
         console.log(this.state.answer)
         var query;
         if (!this.state.location) {
@@ -54,15 +51,11 @@ class Map extends Component {
             query: query,
             fields: ["name", "geometry"],
         };
-        // var request = {
-        //     query: this.state.correctAnswer,
-        //     fields: ['name', 'geometry']
-        // };
+
         var maps = document.getElementById('myMap')
 
         const map = new window.google.maps.Map(
             document.getElementById(this.props.id),
-            // this.props.options.center,
             {
                 zoom: 18,
                 mapTypeId: 'satellite'
@@ -84,7 +77,6 @@ class Map extends Component {
         });
 
         function createMarker(place) {
-
             var marker = new window.google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
@@ -134,25 +126,15 @@ class Map extends Component {
                 this.onScriptLoad()
             })
         }
-        // else {
-        //     this.onScriptLoad()
-        // }
-        // this.huntData()
-        // console.log(" state is below")
-        // console.log(this.state)
-        // await Axios.get("/api/createhunt")
+
         await Axios.get("/dbhunt")
             .then(function (res) {
                 console.log("---------------------")
                 console.log(res.data)
                 console.log("---------------------")
 
-                // var info = res.data[9].hunt_data[0].clue
                 var info = res.data[0].hunt_data
                 console.log("info: " + info)
-                // var clue = this.state.clues.concat(res.data[9])
-                // self.setState({clues: info})
-
 
                 for (var i = 0; i < info.length; i++) {
                     var arr = [];
@@ -167,9 +149,8 @@ class Map extends Component {
         console.log(this.state.clues)
         console.log("self state clues: ")
         console.log(self.state.clues)
-
-        // this.displayClue();
     }
+
     checkSimilarity = () => {
         function similarity(s1, s2) {
             var longer = s1;
@@ -276,19 +257,6 @@ class Map extends Component {
         }
         console.log("score is below")
         console.log(this.state.score)
-        // if (this.state.studentAnswer.toLowerCase() === this.state.correctAnswer.toLowerCase()) {
-        //     this.correctMapSearch();
-        //     this.setState({ status: "correct" })
-        //     this.setState({ displayText: "Congrats! That's correct" })
-        //     console.log("CORRECT! modal will pop up now")
-        //     // this.displayTextBox();
-        // }
-        // else {
-        //     this.setState({ status: "incorrect", displayText: "Wrong!" })
-        //     console.log("WRONG! modal will pop up now")
-        //     // this.displayTextBox();
-        // }
-        // this.displayTextBox();
     }
 
     displayTextBox = () => {
@@ -300,36 +268,6 @@ class Map extends Component {
             this.setState({ displayText: "Oh no! That is not the correct answer.  Please try again." })
         }
     }
-
-    // handleNextQuestion = event => {
-
-    //     event.preventDefault();
-    //     this.setState({mapSearched: false})
-    //     var count = this.state.question;
-    //     if (count < this.state.numClues - 1) {
-    //         this.displayClue();
-    //         count++
-    //         this.setState({ question: count })
-    //     } else {
-    //         this.setState({endOfHunt: true})
-    //         console.log("END OF HUNT")
-    //     }
-    // }
-    // displayClue = event => {
-    //     event.preventDefault();
-    //     this.setState({mapSearched: false})
-    //     var count = this.state.question
-    //     var obj = this.state.clues[count]
-    //     var thisObj = obj.clue
-    //     var thisAns = obj.answer
-    //     var thisLoc = obj.location
-    //     this.setState({ currentClue: thisObj })
-    //     this.setState({ correctAnswer: thisAns })
-    //     this.setState({ location: thisLoc })
-    //     this.setState({ numClues: this.state.clues.length })
-    // }
-
-
 
     render() {
         return (
