@@ -109,9 +109,6 @@ module.exports = function (app) {
     });
   });
 
-  // app.post(
-  //   "/api/createhunt", controller.createHunt);
-
   // Group
   app.get("/dbgroup", function (req, res) {
     Group.find({}, function (err, found) {
@@ -127,16 +124,6 @@ module.exports = function (app) {
 
   app.post(
     "/api/creategroup", controller.createGroup);
-
-
-
-  // app.post(
-  //   "/api/createhunt", function (req, res) {
-  //     console.log("app.post function hit")
-  //     db.hunt.create(req.body)
-  //   });
-
-
 
   // Favorite
   app.get("/dbfavorite", function (req, res) {
