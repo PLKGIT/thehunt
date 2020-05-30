@@ -13,16 +13,6 @@ class Carousel extends Component {
 
     }
 
-    // componentDidMount() {
-
-    //     const script = document.createElement("script");
-
-    //     script.src = "/carousel.js";
-    //     script.async = true;
-
-    //     document.body.appendChild(script);
-    // }
-
     componentDidMount() {
         var carousels = document.querySelectorAll('.carousel');
 
