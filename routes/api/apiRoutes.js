@@ -138,16 +138,6 @@ module.exports = function (app) {
 
 
 
-  // app.get("/api/createhunt", function (req, res) {
-  //   db.hunt.find({}, function (err, found) {
-  //     if (err) {
-  //       console.log(err)
-  //     } else {
-  //       res.json(found)
-  //     }
-  //   })
-  // })
-
   // Favorite
   app.get("/dbfavorite", function (req, res) {
     Favorite.find({}, function (err, found) {
