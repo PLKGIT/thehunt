@@ -154,25 +154,6 @@ class Map extends Component {
     window.location.href = "/teachermanagehunts"
   }
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-
-  //   var obj = { id: this.state.id, clue: this.state.clue, answer: this.state.answer, location: this.state.location }
-  //   this.state.clues.push(obj)
-  //   console.log(this.state.clues)
-
-  //   DataService.createHunt(
-  //    this.state.teacherId,
-  //    this.state.title,
-  //    this.state.category,
-  //    this.state.imageUrl,
-  //    this.state.description,
-  //    this.state.clues
-  //     )
-  //         window.location.href = "/teachermanagehunts"
-  //   }
-
-
   render() {
     return (
       <>
