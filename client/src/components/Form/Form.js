@@ -10,15 +10,6 @@ export function Input(props) {
   );
 }
 
-/*  Export TextArea  */
-// export function TextArea(props) {
-//   return (
-//     <div className="form-group">
-//       <textarea className="form-control" rows="20" {...props} />
-//     </div>
-//   );
-// }
-
 /*  Export FormBtn  */
 export function FormBtn(props) {
   return (
