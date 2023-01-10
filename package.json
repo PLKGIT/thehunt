@@ -35,6 +35,6 @@
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.9.13",
-    "validator": "^13.0.0"
+    "validator": "^13.7.0"
   }
 }
